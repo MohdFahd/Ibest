@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @font-face {
+        font-family: "TheSans-bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("./assets/fonts/TheSans-Bold.otf") format("opentype"); /* Corrected format */
+      }
+      @font-face {
+        font-family: "TheSans-light";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./assets/fonts/The-Sans-Plain.otf") format("opentype"); /* Corrected format */
+      }
+      body {
+        font-family: "TheSans-light";
+        direction: rtl;
+      }
+      .TheSans-bold {
+        font-family: "TheSans-bold" !important ;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mx-auto sm:px-[142px]">
+      <header class="md:flex md:justify-between py-5 h-[215px] hidden">
+        <div class="mt-[26px] pe-40">
+          <img src="./assets/imgs/logo.svg" alt="" />
+        </div>
+        <div class="self-end">
+          <ul class="flex justify-end items-center">
+            <li class="active text-xl px-4 mx-2">
+              <a href="#">المتجر</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <span
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
+                >1</span
+              >
+              <a href="#">جديد</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <a href="#">الأكثر مبيعاً</a>
+            </li>
+
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <a href="#">عروض</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-[26px] relative cursor-pointer">
+          <input
+            type="text"
+            class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
+            placeholder="البحث"
+          />
+          <div
+            class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
+          >
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="flex relative">
+          <img src="./assets/imgs/VectoreHero.svg" width="100%" alt="" />
+          <div class="absolute flex">
+            <h1
+              class="The-Sa TheSans-bold text-white text-3xl my-[83px] mx-[58px]"
+            >
+              انضم الى IBest
+              <br />اكبر مجموعة في عالم الصيانة وقطع الغيار
+            </h1>
+
+            <div class="relative">
+              <div
+                class="bg-[#00A3A0] rounded-full absolute overflow-hidden left-0"
+              ></div>
+              <img src="./assets/imgs/hero.svg" alt="" class="z-20" />
+            </div>
+          </div>
+          <div class="flex top-0 absolute left-0">
+            <div class="mx-4">
+              <div
+                class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
+              >
+                <img src="./assets/icons/UpArrow.svg" alt="" />
+              </div>
+              <div
+                class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
+              >
+                <img src="./assets/icons/downArrow.svg" alt="" />
+              </div>
+            </div>
+            <div>
+              <div
+                class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
+              ></div>
+              <div
+                class="w-[12px] h-[12px] bg-[#00A3A0] rounded-full my-2"
+              ></div>
+              <div
+                class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
+              ></div>
+              <div
+                class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
+              ></div>
+              <div
+                class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <!-- Products -->
+        <div class="flex justify-between flex-wrap my-10">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <div class="flex justify-center w-full">
+              <img
+                src="./assets/imgs/Samsunge.png"
+                width="50%"
+                alt="Samsunge"
+              />
+            </div>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure class="flex justify-center w-full">
+              <img
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">هواوي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img src="./assets/imgs/LT.png" width="40%"" alt="LT.png" />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">هواوي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img src="./assets/imgs/LT.png" width="40%"" alt="LT.png" />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">هواوي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img src="./assets/imgs/LT.png" width="40%"" alt="LT.png" />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">هواوي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img src="./assets/imgs/LT.png" width="40%"" alt="LT.png" />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">هواوي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img src="./assets/imgs/LT.png" width="40%"" alt="LT.png" />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3"
+          >
+            <figure>
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+            <div class="card-body">
+              <h1 class="font-bold text-xl">سامسونج</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="self-end me-9"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Section -->
+        <div
+          class="flex justify-center items-center text-center bg-gradient-to-r from-zinc-400 to-violet-600 rounded-[30px]"
+        >
+          <div class="w-[922px] h-[240px]">
+            <div class="mt-7">
+              <h1
+                class="text-3xl font-bold text-white text-center self-center mt-8"
+              >
+                كون من الخبة في عالم الصيانة وانضم معنا..
+              </h1>
+              <h1 class="text-[26px] text-white mt-2">
+                لعمر اطول وجودة اعلى واستخدام مدى الحياة
+              </h1>
+            </div>
+            <button
+              class="btn text-[24px] bg-[#1458A1] font-normal border-none text-white mt-6"
+            >
+              انضم الان
+            </button>
+          </div>
+        </div>
+        <footer
+          class="flex justify-between footer p-10 bg-base-200 text-base-content bg-transparent w-full"
+        >
+          <nav>
+            <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
+            <a class="link link-hover text-lg font-bold mt-4">العروض</a>
+            <a class="link link-hover text-lg font-bold mt-4">الأكثر مبيعاً</a>
+            <a class="link link-hover text-lg font-bold mt-4">تواصل معنا</a>
+          </nav>
+          <nav class="flex self-end flex-col">
+            <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6>
+            <div class="flex">
+              <a href="" class="cursor-pointer mx-3">
+                <img src="./assets/icons/facebook.svg" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-3">
+                <img src="./assets/icons/Instegram.svg" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-3">
+                <img src="./assets/icons/x.svg" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-3">
+                <img src="./assets/icons/youtube.svg" alt="" />
+              </a>
+            </div>
+          </nav>
+          <nav class="">
+            <img src="./assets/imgs/logo.svg" alt="" />
+            <div class="">
+              <div
+                class="flex border-2 justify-center border-[#1458A1] border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              >
+                <img src="./assets/icons/Apple.svg" class="me-3" alt="" />
+                <h1>App store</h1>
+              </div>
+              <div
+                class="flex border-2 justify-center border-[#1458A1] border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              >
+                <img src="./assets/icons/android.svg" class="me-3" alt="" />
+                <h1>Google Play</h1>
+              </div>
+            </div>
+          </nav>
+        </footer>
+        <footer
+          class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 bg-transparent"
+        >
+          <nav class="md:place-self-center md:justify-self-start">
+            <div class="grid grid-flow-col gap-4 text-base">
+              جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+            </div>
+          </nav>
+          <nav class="md:place-self-center md:justify-self-end">
+            <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+          </nav>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
