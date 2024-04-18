@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @font-face {
+        font-family: "TheSans-bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("./assets/fonts/TheSans-Bold.otf") format("opentype"); /* Corrected format */
+      }
+      @font-face {
+        font-family: "TheSans-light";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./assets/fonts/The-Sans-Plain.otf") format("opentype"); /* Corrected format */
+      }
+      body {
+        font-family: "TheSans-light";
+        direction: rtl;
+      }
+      .TheSans-bold {
+        font-family: "TheSans-bold" !important ;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#FEFEFE]">
+    <header class="bg-white drop-shadow-md">
+      <div class="flex flex-col">
+        <div class="container md:flex md:justify-between py-5 hidden px-10">
+          <div>
+            <img src="./assets/imgs/logo.svg" class="" alt="" />
+          </div>
+          <div class="mt-[26px] relative cursor-pointer">
+            <input
+              type="text"
+              class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
+              placeholder="البحث"
+            />
+            <div
+              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
+            >
+              <img src="./assets/icons/search.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center py-5">
+          <ul class="flex justify-end items-center">
+            <li class="active text-xl px-4 mx-2">
+              <a href="#">المتجر</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <span
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
+                >1</span
+              >
+              <a href="#">جديد</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <a href="#">الأكثر مبيعاً</a>
+            </li>
+
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+            >
+              <a href="#">عروض</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto px-10 my-8">
+      <main>
+        <!-- Path -->
+        <div class="flex justify-start text-lg text-[#00A3A0] font-bold">
+          <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+          <h1>
+            <a href=""> المتجر </a>
+          </h1>
+          <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+          <h1 class="">
+            <a href=""> سامسونج </a>
+          </h1>
+          <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+          <h1 class="">
+            <a href=""> شاشات </a>
+          </h1>
+          <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+          <h1 class="">
+            <a href=""> شاشات داخلية </a>
+          </h1>
+          <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+          <h1 class="text-blue-800">
+            <a href=""> S24 </a>
+          </h1>
+        </div>
+        <!-- Products -->
+        <section class="flex justify-center mt-4">
+          <div class="flex flex-wrap justify-center">
+            <div
+              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2"
+            >
+              <div class="card-body">
+                <h1 class="font-bold text-xl">شاشات داخلية</h1>
+              </div>
+              <img
+                src="./assets/icons/leftArrow.svg"
+                class="self-end me-9"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer
+      style="
+        background: linear-gradient(
+          90deg,
+          #12569c 0%,
+          #0e70a1 77.5%,
+          #0e70a1 77.51%,
+          #0d73a1 100%
+        );
+      "
+    >
+      <div class="container">
+        <div
+          class="flex justify-between footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
+        >
+          <nav>
+            <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
+            <a class="link link-hover text-lg font-bold mt-4">العروض</a>
+            <a class="link link-hover text-lg font-bold mt-4">الأكثر مبيعاً</a>
+            <a class="link link-hover text-lg font-bold mt-4">تواصل معنا</a>
+          </nav>
+          <div class="grid grid-flow-row gap-11">
+            <nav class="self-start">
+              <h6 class="font-bold text-2xl">
+                كون أول من يعلم ليصلك الجديد اول بأول
+              </h6>
+              <div class="grid grid-cols-6 gap-3 my-3">
+                <input
+                  type="text"
+                  placeholder="البريد الالكتروني"
+                  class="p-4 rounded-[10px] col-span-4 text-black"
+                />
+                <button class="btn p-4 rounded-[10px] col-span-2">
+                  اشتراك
+                </button>
+              </div>
+            </nav>
+            <nav class="self-end justify-self-center">
+              <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
+              <div class="flex">
+                <img src="./assets/icons/line.svg" class="" alt="" />
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/facebook.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/Instegram.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/x.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/youtube.svg" alt="" />
+                </a>
+
+                <img src="./assets/icons/line.svg" class="rotate-180" alt="" />
+              </div>
+            </nav>
+          </div>
+
+          <nav class="">
+            <img src="./assets/imgs/logoDark.svg" alt="" />
+            <div class="">
+              <div
+                class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              >
+                <img src="./assets/icons/Apple.svg" class="me-3" alt="" />
+                <h1>App store</h1>
+              </div>
+              <div
+                class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              >
+                <img src="./assets/icons/android.svg" class="me-3" alt="" />
+                <h1>Google Play</h1>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div
+          class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white"
+        >
+          <nav class="md:place-self-center md:justify-self-start">
+            <div class="grid grid-flow-col gap-4 text-base">
+              جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+            </div>
+          </nav>
+          <nav class="md:place-self-center md:justify-self-end">
+            <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

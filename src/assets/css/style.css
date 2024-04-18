@@ -1640,6 +1640,10 @@ html{
   height: 5rem;
 }
 
+.h-\[215px\]{
+  height: 215px;
+}
+
 .max-h-\[420px\]{
   max-height: 420px;
 }
@@ -1702,6 +1706,10 @@ html{
 
 .w-64{
   width: 16rem;
+}
+
+.w-\[215px\]{
+  width: 215px;
 }
 
 .min-w-\[400px\]{
