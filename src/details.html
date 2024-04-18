@@ -28,9 +28,14 @@
         font-family: "TheSans-bold" !important ;
       }
     </style>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
-  <body class="bg-[#FEFEFE]">
+  <body class="bg-[#FEFEFE]" x-data="{ open: false }">
     <header class="bg-white drop-shadow-md">
       <div class="flex flex-col">
         <div class="container md:flex md:justify-between py-5 hidden px-10">
@@ -79,6 +84,13 @@
         </div>
       </div>
     </header>
+    <button @click="open = !open">open</button>
+    <div
+      x-show="open"
+      class="flex justify-center text-xl text-[#00A3A0] shadow-xl w-[80%] font-bold"
+    >
+      شاشات | قطع
+    </div>
     <div class="container mx-auto px-10 my-8">
       <main>
         <!-- Path -->
@@ -104,23 +116,126 @@
             <a href=""> S24 </a>
           </h1>
         </div>
-        <!-- Products -->
-        <section class="flex justify-center mt-4">
-          <div class="flex flex-wrap justify-center">
+        <!-- details -->
+        <section class="my-5">
+          <div class="bg-[#EFEFEF] flex rounded-3xl p-2">
+            <div
+              class="inline-flex justify-start flex-col items-center w-[10%]"
+            >
+              <img
+                src="./assets/imgs/phoneVersions/s24.png"
+                alt="Shoes"
+                width="55%"
+                class="rounded-xl bg-white my-2"
+              />
+              <img
+                src="./assets/imgs/phoneVersions/s24.png"
+                alt="Shoes"
+                width="55%"
+                class="rounded-xl bg-white my-2"
+              />
+              <img
+                src="./assets/imgs/phoneVersions/s24.png"
+                alt="Shoes"
+                width="55%"
+                class="rounded-xl bg-white my-2"
+              />
+              <img
+                src="./assets/imgs/phoneVersions/s24.png"
+                alt="Shoes"
+                width="55%"
+                class="rounded-xl bg-white my-2"
+              />
+            </div>
+            <div class="w-full flex">
+              <div class="">
+                <img
+                  src="./assets/imgs/phoneVersions/s24.png"
+                  alt=""
+                  width="100%"
+                  class="rounded-xl bg-white"
+                />
+              </div>
+
+              <div class="mx-5 w-full relative">
+                <h1 class="text-[22px] font-bold p-2">
+                  شاشات داخلية جلاكسي S24
+                </h1>
+                <h2 class="text-xl font-bold p-2 text-[#1458A1]">وصف المنتج</h2>
+                <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
+                <h2 class="text-xl font-bold p-2 text-[#1458A1]">
+                  الموديلات المتوافقه
+                </h2>
+                <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
+                <h2 class="text-xl font-bold p-2 text-[#1458A1]">الملاحظات</h2>
+                <p class="text-lg font-bold p-2">
+                  هذا منتج خاص ومتوفربمحلات السيفي للصيانه
+                </p>
+                <div class="flex justify-end text-end w-full">
+                  <button
+                    class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3"
+                  >
+                    <img
+                      src="./assets/icons/youtube-watch.svg"
+                      class="mx-2"
+                      alt=""
+                    />
+                    فيديو توضيحي
+                  </button>
+                  <button
+                    class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-black"
+                  >
+                    <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
+                    إضافة للطلب
+                  </button>
+                </div>
+                <img
+                  src="./assets/icons/copy.svg"
+                  class="absolute top-0 left-0 mt-3"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="flex my-5 justify-center flex-row">
+          <img src="./assets/icons/share.svg" alt="" />
+          <h1 class="text-lg text-[#1458A1] font-bold mx-2">مشاركة :</h1>
+          <a href="" class="mx-2">
+            <img src="./assets/icons/whatsapp.svg" alt="" />
+          </a>
+          <a href="" class="mx-2">
+            <img src="./assets/icons/facebook-blue.svg" alt="" />
+          </a>
+          <a href="" class="mx-2">
+            <img src="./assets/icons/Telegram.svg" alt="" />
+          </a>
+          <a href="" class="mx-2">
+            <img src="./assets/icons/x-blue.svg" alt="" />
+          </a>
+
+          <a href="" class="mx-2">
+            <img src="./assets/icons/linkden.svg" alt="" />
+          </a>
+        </div>
+        <!-- More -->
+        <section class="mt-4">
+          <h1 class="text-xl font-bold text-[#1458A1] my-2">المزبد في :</h1>
+          <div class="flex flex-wrap">
             <a
               href="./details.html"
               class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
             >
               <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
+                <div class="card rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
+                  <figure class="p-4">
                     <img
                       src="./assets/imgs/phoneVersions/s24.png"
                       alt="Shoes"
-                      class="rounded-xl"
+                      class="rounded-xl bg-white"
                     />
                   </figure>
-                  <div class="card-body items-center text-center">
+                  <div class="card-body items-center text-center p-7">
                     <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
                   </div>
                 </div>
@@ -131,72 +246,15 @@
               class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
             >
               <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Black.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Gold.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24Gray.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
+                <div class="card rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
+                  <figure class="p-4">
                     <img
                       src="./assets/imgs/phoneVersions/s24.png"
                       alt="Shoes"
-                      class="rounded-xl"
+                      class="rounded-xl bg-white"
                     />
                   </figure>
-                  <div class="card-body items-center text-center">
+                  <div class="card-body items-center text-center p-7">
                     <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
                   </div>
                 </div>
@@ -207,72 +265,15 @@
               class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
             >
               <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Black.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Gold.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24Gray.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
+                <div class="card rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
+                  <figure class="p-4">
                     <img
                       src="./assets/imgs/phoneVersions/s24.png"
                       alt="Shoes"
-                      class="rounded-xl"
+                      class="rounded-xl bg-white"
                     />
                   </figure>
-                  <div class="card-body items-center text-center">
+                  <div class="card-body items-center text-center p-7">
                     <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
                   </div>
                 </div>
@@ -283,72 +284,15 @@
               class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
             >
               <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Black.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Gold.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24Gray.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
+                <div class="card rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
+                  <figure class="p-4">
                     <img
                       src="./assets/imgs/phoneVersions/s24.png"
                       alt="Shoes"
-                      class="rounded-xl"
+                      class="rounded-xl bg-white"
                     />
                   </figure>
-                  <div class="card-body items-center text-center">
+                  <div class="card-body items-center text-center p-7">
                     <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
                   </div>
                 </div>
@@ -359,129 +303,15 @@
               class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
             >
               <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Black.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Gold.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24Gray.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
+                <div class="card rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
+                  <figure class="p-4">
                     <img
                       src="./assets/imgs/phoneVersions/s24.png"
                       alt="Shoes"
-                      class="rounded-xl"
+                      class="rounded-xl bg-white"
                     />
                   </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Black.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24_Gold.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./details.html"
-              class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
-            >
-              <div>
-                <div class="card w-[274px] bg-[#EFEFEF] shadow-md">
-                  <figure class="px-10 pt-10">
-                    <img
-                      src="./assets/imgs/phoneVersions/S24Gray.png"
-                      alt="Shoes"
-                      class="rounded-xl"
-                    />
-                  </figure>
-                  <div class="card-body items-center text-center">
+                  <div class="card-body items-center text-center p-7">
                     <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
                   </div>
                 </div>
