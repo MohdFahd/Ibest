@@ -1409,6 +1409,10 @@ html{
   position: relative;
 }
 
+.inset-0{
+  inset: 0px;
+}
+
 .left-0{
   left: 0px;
 }
@@ -1491,6 +1495,11 @@ html{
   margin-bottom: 0.75rem;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .me-3{
   margin-inline-end: 0.75rem;
 }
@@ -1539,8 +1548,24 @@ html{
   margin-top: 2.5rem;
 }
 
+.ms-4{
+  margin-inline-start: 1rem;
+}
+
+.block{
+  display: block;
+}
+
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
 }
 
 .grid{
@@ -1579,6 +1604,18 @@ html{
   height: 50px;
 }
 
+.h-4{
+  height: 1rem;
+}
+
+.h-0{
+  height: 0px;
+}
+
+.h-1{
+  height: 0.25rem;
+}
+
 .max-h-\[420px\]{
   max-height: 420px;
 }
@@ -1611,6 +1648,14 @@ html{
   width: 0.75rem;
 }
 
+.w-4{
+  width: 1rem;
+}
+
+.w-\[113px\]{
+  width: 113px;
+}
+
 .min-w-\[400px\]{
   min-width: 400px;
 }
@@ -1625,6 +1670,11 @@ html{
 
 .max-w-\[112px\]{
   max-width: 112px;
+}
+
+.rotate-180{
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
@@ -1743,6 +1793,10 @@ html{
   border-width: 2px;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -1763,6 +1817,11 @@ html{
 .border-base-300{
   --tw-border-opacity: 1;
   border-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity)));
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-\[\#00A3A0\]{
@@ -1819,6 +1878,11 @@ html{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1855,6 +1919,10 @@ html{
 
 .p-4{
   padding: 1rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-10{
@@ -1977,6 +2045,16 @@ html{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#1458A1\]{
+  --tw-text-opacity: 1;
+  color: rgb(20 88 161 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1985,6 +2063,16 @@ html{
 
 .drop-shadow-md{
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.invert{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.sepia{
+  --tw-sepia: sepia(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
