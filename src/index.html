@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <style>
       @font-face {
         font-family: "TheSans-bold";
@@ -121,38 +123,79 @@
         </div>
       </div>
     </header>
+
     <div class="container mx-auto px-10 my-8">
       <main>
         <!-- banner -->
+
         <div class="md:flex justify-center hidden">
           <div
-            class="bg-cover bg-no-repeat bg-center flex justify-between w-full relative"
+            class="bg-cover bg-no-repeat bg-center flex justify-between w-full relative swiper mySwiper overflow-hidden"
             style="
               background-image: url('./assets/imgs/VectoreHero.png');
               height: 300px;
             "
           >
-            <div class="flex items-center">
-              <h1 class="The-Sa TheSans-bold text-white text-3xl mx-[58px]">
-                انضم الى IBest
-                <br />اكبر مجموعة في عالم الصيانة وقطع الغيار
-              </h1>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide cursor-pointer" style="display: flex">
+                <div class="flex items-center">
+                  <h1 class="The-Sa TheSans-bold text-white text-3xl mx-[58px]">
+                    انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+                  </h1>
+                </div>
+
+                <div class="overflow-hidden">
+                  <img
+                    src="./assets/imgs/image.png"
+                    width="90%"
+                    class=""
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide cursor-pointer" style="display: flex">
+                <div class="flex items-center">
+                  <h1 class="The-Sa TheSans-bold text-white text-3xl mx-[58px]">
+                    انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+                  </h1>
+                </div>
+
+                <div class="overflow-hidden">
+                  <img
+                    src="./assets/imgs/image.png"
+                    width="90%"
+                    class=""
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide cursor-pointer" style="display: flex">
+                <div class="flex items-center">
+                  <h1 class="The-Sa TheSans-bold text-white text-3xl mx-[58px]">
+                    انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+                  </h1>
+                </div>
+
+                <div class="overflow-hidden">
+                  <img
+                    src="./assets/imgs/image.png"
+                    width="90%"
+                    class=""
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            <div class="max-w-[420px] max-h-[420px] relative">
-              <div class="absolute bg-[#00A3A0] rounded-full flex"></div>
-            </div>
-            <div class="flex">
-              <img src="./assets/imgs/image.png" width="80%" class="" alt="" />
-            </div>
+            <!-- Arrows -->
             <div class="flex top-0 absolute left-0">
               <div class="mx-4">
                 <div
-                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
+                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer swiper-button-prev hover:bg-blue-950"
                 >
-                  <img src="./assets/icons/UpArrow.svg" alt="" />
+                  <img src="./assets/icons/UpArrow.svg" alt="" class="" />
                 </div>
                 <div
-                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
+                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer swiper-button-next hover:bg-blue-950"
                 >
                   <img src="./assets/icons/downArrow.svg" alt="" />
                 </div>
@@ -175,37 +218,6 @@
                 ></div>
               </div>
             </div>
-            <!-- <div class="flex">
-              <div class="mx-4">
-                <div
-                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
-                >
-                  <img src="./assets/icons/UpArrow.svg" alt="" />
-                </div>
-                <div
-                  class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer"
-                >
-                  <img src="./assets/icons/downArrow.svg" alt="" />
-                </div>
-              </div>
-              <div>
-                <div
-                  class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
-                ></div>
-                <div
-                  class="w-[12px] h-[12px] bg-[#00A3A0] rounded-full my-2"
-                ></div>
-                <div
-                  class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
-                ></div>
-                <div
-                  class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
-                ></div>
-                <div
-                  class="w-[12px] h-[12px] bg-[#D9D9D9] rounded-full my-2"
-                ></div>
-              </div>
-            </div> -->
           </div>
         </div>
 
@@ -665,7 +677,7 @@
     >
       <div class="container">
         <div
-          class="flex justify-between footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
+          class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
           <nav>
             <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
@@ -713,7 +725,9 @@
             </nav>
           </div>
 
-          <nav class="mt-6">
+          <nav
+            class="mt-6 flex flex-col justify-center items-center max-sm:w-full"
+          >
             <div
               class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
             >
@@ -742,5 +756,26 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
