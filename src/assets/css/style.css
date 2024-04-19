@@ -2120,6 +2120,10 @@ html{
   align-self: center;
 }
 
+.justify-self-start{
+  justify-self: start;
+}
+
 .justify-self-center{
   justify-self: center;
 }
@@ -2610,6 +2614,10 @@ html{
 
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:flex-col{
+    flex-direction: column;
   }
 
   .md\:justify-between{
