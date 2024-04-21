@@ -7,33 +7,40 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="//unpkg.com/alpinejs"></script>
+    <script src="./assets/js/alpine.js"></script>
 
     <style>
       @font-face {
         font-family: "TheSans-bold";
         font-style: normal;
         font-weight: 700;
-        src: url("./assets/fonts/TheSans-Bold.otf") format("opentype"); /* Corrected format */
+        src: url("./assets/fonts/TheSans-Bold.otf") format("opentype");
+        /* Corrected format */
       }
+
       @font-face {
         font-family: "TheSans-light";
         font-style: normal;
         font-weight: 400;
-        src: url("./assets/fonts/The-Sans-Plain.otf") format("opentype"); /* Corrected format */
+        src: url("./assets/fonts/The-Sans-Plain.otf") format("opentype");
+        /* Corrected format */
       }
+
       body {
         font-family: "TheSans-light";
         direction: rtl;
       }
+
       .TheSans-bold {
-        font-family: "TheSans-bold" !important ;
+        font-family: "TheSans-bold" !important;
       }
+
       .swiper-pagination {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
+
       .swiper-pagination-bullet {
         margin: 2px 0;
         border-radius: 50%;
@@ -41,9 +48,21 @@
         width: 12px;
         height: 12px;
       }
+
       .swiper-pagination-bullet-active {
         color: #fff;
         background: #00a3a0;
+      }
+
+      .active-mobile::after {
+        content: "";
+        width: 70px;
+        height: 5px;
+        background-color: #00a3a0;
+        position: absolute;
+        border-radius: 10px 0px;
+        bottom: 0;
+        right: 0;
       }
     </style>
   </head>
@@ -82,9 +101,8 @@
               class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
               toggleNew = !toggleNew;
-           toggleOffers = false;
-           toggleMostSales = false;
-  "
+              toggleOffers = false;
+              toggleMostSales = false; "
             >
               <span
                 class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0 animate-pulse"
@@ -102,7 +120,6 @@
             >
               <a href="#">الأكثر مبيعاً</a>
             </li>
-
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
@@ -117,6 +134,80 @@
         </div>
       </div>
     </header>
+    <!-- Mobile SideBar -->
+    <div class="flex md:hidden bg-white flex-col z-0">
+      <div class="container md:hidden flex justify-center my-4">
+        <img src="./assets/icons/ibest.svg" class="mx-2" width="70px" alt="" />
+        <img src="./assets/imgs/logo-phone.svg" width="25px" alt="" />
+      </div>
+      <div class="bg-white text-center flex justify-center">
+        <a
+          href="index.html"
+          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative active-mobile"
+        >
+          المتجر
+        </a>
+        <div class="dropdown relative">
+          <div
+            tabindex="0"
+            role="button"
+            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2"
+          >
+            جديد
+            <span
+              class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+              >1</span
+            >
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box"
+          >
+            <li><a href="newes.html" class="text-[#00A3A0]">شاشات</a></li>
+            <li><a href="newes.html" class="text-[#00A3A0]">قطع غيار</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown relative">
+          <div
+            tabindex="0"
+            role="button"
+            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2"
+          >
+            الأكثر مبيعاً
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box"
+          >
+            <li><a href="Trend.html" class="text-[#00A3A0]">شاشات</a></li>
+            <li><a href="Trend.html" class="text-[#00A3A0]">قطع</a></li>
+            <li>
+              <a href="Trend.html" class="text-[#00A3A0]"> أدوات صيانة</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown relative">
+          <div
+            tabindex="0"
+            role="button"
+            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2"
+          >
+            عروض
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box"
+          >
+            <li><a href="Trend.html" class="text-[#00A3A0]">شاشات</a></li>
+            <li><a href="Trend.html" class="text-[#00A3A0]">قطع</a></li>
+            <li>
+              <a href="Trend.html" class="text-[#00A3A0]"> أدوات صيانة</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <div
       x-show="toggleNew"
@@ -193,21 +284,6 @@
       </a>
     </div>
 
-    <div class="flex md:hidden bg-white shadow-md p-4 my-4">
-      <div class="container md:hidden flex justify-between">
-        <div class="mx-2 cursor-pointer">
-          <img src="./assets/icons/menu.svg" width="50px" class="" alt="" />
-        </div>
-        <div
-          class="mx-5 flex justify-center items-center text-3xl text-blue-800 font-extrabold"
-        >
-          <h1>IBest</h1>
-        </div>
-        <div class="mx-5">
-          <img src="./assets/imgs/logo-phone.svg" alt="" />
-        </div>
-      </div>
-    </div>
     <div class="container mx-auto px-10 my-8">
       <main>
         <!-- banner -->
@@ -292,361 +368,162 @@
           </div>
         </div>
 
+        <!-- Mobile Banner -->
+        <div class="flex md:hidden bg-[#1458A1] rounded-lg px-3">
+          <div class="flex justify-center items-center">
+            <h1 class="TheSans-bold text-sm text-white">
+              انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+            </h1>
+          </div>
+          <img src="./assets/imgs/image.png" width="50%" alt="" />
+        </div>
         <!-- Products -->
         <section class="flex justify-center items-center">
-          <div class="flex justify-center md:justify-between flex-wrap my-10">
-            <a href="./parts.html">
+          <div class="flex justify-center md:justify-center flex-wrap my-10">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img
                     src="./assets/imgs/Samsunge.png"
                     width="35%"
-                    alt="Samsunge"
+                    alt="Samsunge.png"
                   />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">سامسونج</h1>
+
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">سامسونج</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
             </a>
-            <a href="./parts.html">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img
                     src="./assets/imgs/huawei.png"
                     width="35%"
-                    alt="huawei"
+                    alt="huawei.png"
                   />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">هواوي</h1>
+
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">هواوي</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
             </a>
-            <a href="./parts.html">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">ال تي</h1>
+
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">ال تي</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
             </a>
-
-            <a href="./parts.html">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img
                     src="./assets/imgs/Xiaomi.png"
                     width="35%"
                     alt="Xiaomi.png"
                   />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">شاومي & ردمي</h1>
+
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
             </a>
-            <a href="./parts.html">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
-                  <img
-                    src="./assets/imgs/Samsunge.png"
-                    width="35%"
-                    alt="Samsunge"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">سامسونج</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/huawei.png"
-                    width="35%"
-                    alt="huawei"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">هواوي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">ال تي</h1>
+
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">ال تي</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
             </a>
-
-            <a href="./parts.html">
+            <a href="./parts.html" class="max-md:w-[90%]">
               <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
+                class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
                 data-tilt
                 data-tilt-scale="1.0"
               >
-                <figure>
+                <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
                   <img
                     src="./assets/imgs/Xiaomi.png"
                     width="35%"
                     alt="Xiaomi.png"
                   />
                 </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">شاومي & ردمي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/Samsunge.png"
-                    width="35%"
-                    alt="Samsunge"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">سامسونج</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/huawei.png"
-                    width="35%"
-                    alt="huawei"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">هواوي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">ال تي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
 
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/Xiaomi.png"
-                    width="35%"
-                    alt="Xiaomi.png"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">شاومي & ردمي</h1>
+                <div
+                  class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+                >
+                  <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
                 </div>
                 <img
                   src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/Samsunge.png"
-                    width="35%"
-                    alt="Samsunge"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">سامسونج</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/huawei.png"
-                    width="35%"
-                    alt="huawei"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">هواوي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">ال تي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
-                  alt=""
-                />
-              </div>
-            </a>
-
-            <a href="./parts.html">
-              <div
-                class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mt-3 mx-1 cursor-pointer"
-                data-tilt
-                data-tilt-scale="1.0"
-              >
-                <figure>
-                  <img
-                    src="./assets/imgs/Xiaomi.png"
-                    width="35%"
-                    alt="Xiaomi.png"
-                  />
-                </figure>
-                <div class="card-body">
-                  <h1 class="font-bold text-xl">شاومي & ردمي</h1>
-                </div>
-                <img
-                  src="./assets/icons/leftArrow.svg"
-                  class="self-end me-9"
+                  class="md:self-end self-center me-9 max-sm:hidden"
                   alt=""
                 />
               </div>
@@ -725,21 +602,21 @@
         </section>
         <!-- Section -->
         <section
-          class="flex justify-center items-center text-center bg-gradient-to-r from-zinc-400 to-violet-600 rounded-[30px]"
+          class="flex justify-center items-center text-center bg-gradient-to-r from-zinc-400 to-violet-600 md:rounded-[30px] rounded-2xl"
         >
-          <div class="w-[922px] h-[240px]">
+          <div class="md:w-[922px] md:h-[240px]">
             <div class="mt-7">
               <h1
-                class="text-xl md:text-3xl font-bold text-white text-center self-center mt-8"
+                class="md:text-3xl font-bold text-white text-center self-center mt-8"
               >
                 كون من الخبة في عالم الصيانة وانضم معنا..
               </h1>
-              <h1 class="text-white mt-2 text-xl md:text-[26px]">
+              <h1 class="text-white mt-2 md:text-[26px]">
                 لعمر اطول وجودة اعلى واستخدام مدى الحياة
               </h1>
             </div>
             <button
-              class="btn text-xl md:text-[24px] bg-[#1458A1] font-normal border-none text-white mt-6"
+              class="btn text-xl md:text-[24px] bg-[#1458A1] font-normal border-none text-white my-6"
             >
               انضم الان
             </button>
@@ -763,10 +640,20 @@
           class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
           <nav>
-            <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
-            <a class="link link-hover text-lg font-bold mt-4">العروض</a>
-            <a class="link link-hover text-lg font-bold mt-4">الأكثر مبيعاً</a>
-            <a class="link link-hover text-lg font-bold mt-4">تواصل معنا</a>
+            <a class="link link-hover text-lg font-bold mt-4" href="index.html"
+              >الرئيسية</a
+            >
+            <a class="link link-hover text-lg font-bold mt-4" href="offers.html"
+              >العروض</a
+            >
+            <a class="link link-hover text-lg font-bold mt-4" href="Trend.html"
+              >الأكثر مبيعاً</a
+            >
+            <a
+              class="link link-hover text-lg font-bold mt-4"
+              href="contactus.html"
+              >تواصل معنا</a
+            >
           </nav>
           <div class="grid grid-flow-row gap-11">
             <nav class="self-start">
@@ -789,7 +676,11 @@
             <nav class="self-end justify-self-center">
               <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
               <div class="flex">
-                <img src="./assets/icons/line.svg" class="" alt="" />
+                <img
+                  src="./assets/icons/line.svg"
+                  class="max-md:hidden"
+                  alt=""
+                />
                 <a href="" class="cursor-pointer mx-2">
                   <img src="./assets/icons/facebook.svg" alt="" />
                 </a>
@@ -803,7 +694,11 @@
                   <img src="./assets/icons/youtube.svg" alt="" />
                 </a>
 
-                <img src="./assets/icons/line.svg" class="rotate-180" alt="" />
+                <img
+                  src="./assets/icons/line.svg"
+                  class="rotate-180 max-md:hidden"
+                  alt=""
+                />
               </div>
             </nav>
           </div>
