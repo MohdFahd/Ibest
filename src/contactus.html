@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="//unpkg.com/alpinejs"></script>
+
+    <style>
+      @font-face {
+        font-family: "TheSans-bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("./assets/fonts/TheSans-Bold.otf") format("opentype"); /* Corrected format */
+      }
+      @font-face {
+        font-family: "TheSans-light";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./assets/fonts/The-Sans-Plain.otf") format("opentype"); /* Corrected format */
+      }
+      body {
+        font-family: "TheSans-light";
+        direction: rtl;
+      }
+      .TheSans-bold {
+        font-family: "TheSans-bold" !important ;
+      }
+      .swiper-pagination {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .swiper-pagination-bullet {
+        margin: 2px 0;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        width: 12px;
+        height: 12px;
+      }
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #00a3a0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-[#FEFEFE]"
+    x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }"
+  >
+    <header class="bg-white drop-shadow-md z-40">
+      <div class="flex flex-col">
+        <div class="container md:flex md:justify-between py-5 hidden px-10">
+          <div>
+            <img src="./assets/imgs/logo.svg" class="" alt="" />
+          </div>
+          <div class="mt-[26px] relative cursor-pointer">
+            <input
+              type="text"
+              class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
+              placeholder="البحث"
+            />
+            <div
+              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
+            >
+              <img src="./assets/icons/search.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="justify-center py-5 hidden md:flex">
+          <ul class="flex justify-end items-center">
+            <li
+              class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]"
+            >
+              <a href="#">المتجر</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleNew = !toggleNew;
+           toggleOffers = false;
+           toggleMostSales = false;
+  "
+            >
+              <span
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0 animate-pulse"
+                >1</span
+              >
+              <a href="#">جديد</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleMostSales = !toggleMostSales;
+                toggleNew = false;
+                toggleOffers = false;
+            "
+            >
+              <a href="#">الأكثر مبيعاً</a>
+            </li>
+
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleOffers = !toggleOffers;
+              toggleNew = false;
+                toggleMostSales = false;
+            "
+            >
+              <a href="#">عروض</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div
+      x-show="toggleNew"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="newes.html"
+        class="text-xl text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع
+      </a>
+    </div>
+
+    <div
+      x-show="toggleMostSales"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        أدوات صيانة
+      </a>
+    </div>
+    <div
+      x-show="toggleOffers"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع غيار
+      </a>
+    </div>
+
+    <div class="flex md:hidden bg-white shadow-md p-4 my-4">
+      <div class="container md:hidden flex justify-between">
+        <div class="mx-2 cursor-pointer">
+          <img src="./assets/icons/menu.svg" width="50px" class="" alt="" />
+        </div>
+        <div
+          class="mx-5 flex justify-center items-center text-3xl text-blue-800 font-extrabold"
+        >
+          <h1>IBest</h1>
+        </div>
+        <div class="mx-5">
+          <img src="./assets/imgs/logo-phone.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-10 my-8">
+      <main>
+        <!-- banner -->
+        <div class="md:flex justify-center hidden">
+          <div class="grid grid-cols-12 bg-[#1458A1] w-full">
+            <div class="col-span-4">
+              <img src="./assets/imgs/contactus.svg" alt="" />
+            </div>
+            <div
+              class="text-3xl font-bold text-white col-span-8 flex flex-col justify-center items-start"
+            >
+              <h1>اتصل بنا</h1>
+              <p>وبقى على تواصل ليصلك كل جديد</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <section class="my-5">
+          <p class="text-2xl w-[50%] leading-9 my-3">
+            يُرجى استخدام نموذج الاتصال أدناه للتواصل معنا وسنعاود الاتصال
+            بك. نتطلع قدماً إلى التواصل معكم!
+          </p>
+          <div class="grid grid-cols-12 my-5 gap-4 ">
+            <div class="col-span-2 flex flex-col">
+              <div class="flex items-center my-3">
+                <img
+                  src="./assets/icons/locationPin.svg"
+                  class="me-1 self-start"
+                  alt=""
+                />
+                <span class="font-bold"
+                  >صنعاء - شارع القصر جوار البوابة الجنوبية
+                </span>
+              </div>
+              <div class="flex items-center my-3">
+                <img
+                  src="./assets/icons/smartphone.svg"
+                  class="me-1 self-start"
+                  alt=""
+                />
+                <span class="font-bold">7769777747 </span>
+              </div>
+              <div class="flex items-center my-3">
+                <img
+                  src="./assets/icons/email.svg"
+                  class="me-1 self-start"
+                  alt=""
+                />
+                <span class="font-bold">admin@alsaifiasa.com </span>
+              </div>
+              <div class="flex items-center my-3">
+                <img
+                  src="./assets/icons/global.svg"
+                  class="me-1 self-start"
+                  alt=""
+                />
+                <span class="font-bold">www.alsaifiasa.com </span>
+              </div>
+            </div>
+            <div class="col-span-10 flex bg-[#F9F9F9] rounded-2xl p-7">
+              <form action="" class="w-full grid gap-2" >
+                <div class="flex flex-col col-span-12 my-2">
+                  <label for="" class="text-[#1458A1]" >
+                    يرجى اختيار نوع الاستفسار الخاص بك:
+                  </label>
+                  <select
+                    name=""
+                    id=""
+                    class="rounded-lg py-2 mt-2 px-2 bg-white w-[50%]"
+                  >
+                    <option value="">المبيعات</option>
+                  </select>
+                </div>
+                <div class="flex flex-col my-2 col-span-6">
+                  <label for="" class="text-[#1458A1]"> الاسم الاول </label>
+                  <input
+                    type="text"
+                    class="rounded-lg py-2 mt-2 px-2 bg-white"
+                    name=""
+                    id=""
+                    placeholder="ضع اسمك الأول"
+                  />
+                </div>
+                <div class="flex flex-col my-2 col-span-6">
+                  <label for="" class="text-[#1458A1]">الاسم الاخير </label>
+                  <input
+                    type="text"
+                    class="rounded-lg py-2 mt-2 px-2 bg-white"
+                    name=""
+                    id=""
+                    placeholder="ضع اسمك الأخير"
+                  />
+                </div>
+                <div class="flex flex-col my-2 col-span-6">
+                  <label for="" class="text-[#1458A1]">البريد الإلكتروني </label>
+                  <input
+                    type="email"
+                    class="rounded-lg py-2 mt-2 px-2 bg-white"
+                    name=""
+                    id=""
+                    required
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="flex flex-col my-3 col-span-6">
+                  <label for="" class="text-[#1458A1]">البريد الإلكتروني </label>
+                  <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" required placeholder="770000000" />
+                </div>
+                <div class="flex flex-col my-3 col-span-12">
+                  <label for="" class="text-[#1458A1]">الرسالة</label>
+                  <textarea name="" id="" cols="30" rows="5" class="rounded-lg py-2 px-2 bg-white mt-1 "></textarea>
+                </div>
+
+                <button class="btn bg-[#00A3A0] text-[#FFFFFF] font-bold text-lg rounded-2xl" >
+                  <img src="./assets/icons/send.svg" alt="">
+                  إرسال
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer
+      style="
+        background: linear-gradient(
+          90deg,
+          #12569c 0%,
+          #0e70a1 77.5%,
+          #0e70a1 77.51%,
+          #0d73a1 100%
+        );
+      "
+    >
+      <div class="container">
+        <div
+          class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
+        >
+          <nav>
+            <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
+            <a class="link link-hover text-lg font-bold mt-4">العروض</a>
+            <a class="link link-hover text-lg font-bold mt-4">الأكثر مبيعاً</a>
+            <a class="link link-hover text-lg font-bold mt-4">تواصل معنا</a>
+          </nav>
+          <div class="grid grid-flow-row gap-11">
+            <nav class="self-start">
+              <h6 class="font-bold text-2xl">
+                كُن أول من يعلم ليصلك كل جديد اولاً بأول
+              </h6>
+              <div class="grid grid-cols-6 gap-3 my-3">
+                <input
+                  type="text"
+                  placeholder="البريد الالكتروني"
+                  class="p-4 rounded-[10px] col-span-4 text-black"
+                />
+                <button
+                  class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none "
+                >
+                  اشتراك
+                </button>
+              </div>
+            </nav>
+            <nav class="self-end justify-self-center">
+              <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
+              <div class="flex">
+                <img src="./assets/icons/line.svg" class="" alt="" />
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/facebook.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/Instegram.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/x.svg" alt="" />
+                </a>
+                <a href="" class="cursor-pointer mx-2">
+                  <img src="./assets/icons/youtube.svg" alt="" />
+                </a>
+
+                <img src="./assets/icons/line.svg" class="rotate-180" alt="" />
+              </div>
+            </nav>
+          </div>
+
+          <nav
+            class="mt-6 flex flex-col justify-center items-center max-sm:w-full"
+          >
+            <div
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+            >
+              <img src="./assets/icons/Apple.svg" class="me-3 px-2" alt="" />
+              <h1>App store</h1>
+            </div>
+            <div
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+            >
+              <img src="./assets/icons/android.svg" class="me-3" alt="" />
+              <h1>Google Play</h1>
+            </div>
+          </nav>
+        </div>
+        <div
+          class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white"
+        >
+          <nav class="md:place-self-center md:justify-self-start">
+            <div class="grid grid-flow-col gap-4 text-base">
+              جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+            </div>
+          </nav>
+          <nav class="md:place-self-center md:justify-self-end">
+            <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".card"), {
+        max: 25,
+        speed: 400,
+      });
+
+      //It also supports NodeList
+      VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
+  </body>
+</html>

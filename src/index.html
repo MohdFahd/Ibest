@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="//unpkg.com/alpinejs"></script>
 
     <style>
       @font-face {
@@ -48,8 +48,11 @@
     </style>
   </head>
 
-  <body class="bg-[#FEFEFE]">
-    <header class="bg-white drop-shadow-md">
+  <body
+    class="bg-[#FEFEFE]"
+    x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }"
+  >
+    <header class="bg-white drop-shadow-md z-40">
       <div class="flex flex-col">
         <div class="container md:flex md:justify-between py-5 hidden px-10">
           <div>
@@ -70,26 +73,43 @@
         </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
-            <li class="active text-xl px-4 mx-2">
+            <li
+              class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]"
+            >
               <a href="#">المتجر</a>
             </li>
             <li
               class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleNew = !toggleNew;
+           toggleOffers = false;
+           toggleMostSales = false;
+  "
             >
               <span
-                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0 animate-pulse"
                 >1</span
               >
               <a href="#">جديد</a>
             </li>
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleMostSales = !toggleMostSales;
+                toggleNew = false;
+                toggleOffers = false;
+            "
             >
               <a href="#">الأكثر مبيعاً</a>
             </li>
 
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
+              toggleOffers = !toggleOffers;
+              toggleNew = false;
+                toggleMostSales = false;
+            "
             >
               <a href="#">عروض</a>
             </li>
@@ -97,6 +117,81 @@
         </div>
       </div>
     </header>
+
+    <div
+      x-show="toggleNew"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="newes.html"
+        class="text-xl text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع</a
+      >
+    </div>
+
+    <div
+      x-show="toggleMostSales"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="Trend.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        أدوات صيانة
+      </a>
+    </div>
+    <div
+      x-show="toggleOffers"
+      class="container bg-white text-center p-5 shadow-md rounded-xl z-0 flex justify-center transition ease-in-out delay-150"
+    >
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        شاشات
+        <span
+          class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
+          >1</span
+        >
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a
+        href="newes.html"
+        class="text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+      >
+        قطع غيار
+      </a>
+    </div>
 
     <div class="flex md:hidden bg-white shadow-md p-4 my-4">
       <div class="container md:hidden flex justify-between">
