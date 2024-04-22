@@ -2773,6 +2773,10 @@ details.collapse summary::-webkit-details-marker{
   text-align: center;
 }
 
+.text-start{
+  text-align: start;
+}
+
 .text-end{
   text-align: end;
 }
