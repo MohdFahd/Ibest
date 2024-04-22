@@ -27,7 +27,7 @@
                 placeholder="البحث"
               />
               <div
-                class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
+                class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
               >
                 <img src="./assets/icons/search.svg" alt="" />
               </div>
@@ -36,25 +36,25 @@
           <div class="justify-center py-5 hidden md:flex">
             <ul class="flex justify-end items-center">
               <li
-                class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]"
+                class="active text-xl px-4 mx-2 hover:bg-[#AAAAAA] hover:text-white text-[#AAAAAA]"
               >
-                <a href="#">المتجر</a>
+                <a href="index.html">المتجر</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleNew = !toggleNew;
               toggleOffers = false;
               toggleMostSales = false; "
               >
                 <span
-                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0 animate-pulse"
+                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
                   >1</span
                 >
                 <a href="#">جديد</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleMostSales = !toggleMostSales;
                 toggleNew = false;
@@ -64,7 +64,7 @@
                 <a href="#">الأكثر مبيعاً</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleOffers = !toggleOffers;
               toggleNew = false;
@@ -137,7 +137,7 @@
         >
           <a
             href="newes.html"
-            class="text-base md:text-xl text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]"
           >
             شاشات
             <span
@@ -148,7 +148,7 @@
           <div class="border-l-2 border-[#00A3A0]"></div>
           <a
             href="newes.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]"
           >
             قطع</a
           >
@@ -159,21 +159,21 @@
         >
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             شاشات
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             قطع غيار
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             أدوات صيانة
           </a>
@@ -183,8 +183,8 @@
           class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
         >
           <a
-            href="newes.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            href="offers.html"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             شاشات
             <span
@@ -192,29 +192,79 @@
               >1</span
             >
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
-            href="newes.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            href="offers.html"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             قطع غيار
           </a>
         </li>
       </ul>
     </header>
+
     <main class="container mx-auto px-10 my-8">
+      <!-- Filter -->
+      <div class="hidden items-center justify-end relative w-full px-2 md:flex">
+        <img
+          src="./assets/icons/filter.svg"
+          width="2%"
+          class="absolute left-2 mt-2 mx-1"
+          alt=""
+        />
+        <select
+          name=""
+          id=""
+          class="rounded-xl py-2 mt-2 bg- white w-[25%] shadow-lg px-2 border-2 border-gray-200"
+        >
+          <option value="">الكل</option>
+          <option value="">سامسونج</option>
+          <option value="">ال جي</option>
+        </select>
+      </div>
+
+      <!-- Mobile Search -->
+      <div
+        class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]"
+      >
+        <div class="flex items-center gap-2 w-[80%] border-none">
+          <input
+            type="text"
+            class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+            placeholder="البحث"
+          />
+        </div>
+        <div x-data="{ isOpen: false }" class="relative">
+          <img
+            @click="isOpen = !isOpen"
+            src="./assets/icons/filter.svg"
+            alt=""
+          />
+          <ul
+            x-show="isOpen"
+            @click.away="isOpen = false"
+            name=""
+            id=""
+            class="menu shadow bg-base-100 rounded-lg absolute top-10 right-0 z-10 px-3"
+          >
+            <li class="font-bold">الكل</li>
+            <li>سامسونج</li>
+            <li>ال تي</li>
+          </ul>
+        </div>
+      </div>
       <!-- Products -->
-      <section class="flex justify-center mt-4">
-        <div class="flex flex-wrap justify-center">
+      <section class="flex mt-4">
+        <div class="flex flex-wrap justify-start">
           <div
-            @click="open = !open"
-            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
           >
             <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
               <figure class="p-4">
                 <img
                   src="./assets/imgs/phoneVersions/S24.png"
                   alt="Shoes"
+                  loading="lazy"
                   class="rounded-xl bg-white"
                 />
               </figure>
@@ -228,14 +278,14 @@
             </div>
           </div>
           <div
-            @click="open = !open"
-            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
           >
             <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
               <figure class="p-4">
                 <img
                   src="./assets/imgs/phoneVersions/S24.png"
                   alt="Shoes"
+                  loading="lazy"
                   class="rounded-xl bg-white"
                 />
               </figure>
@@ -249,14 +299,14 @@
             </div>
           </div>
           <div
-            @click="open = !open"
-            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
           >
             <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
               <figure class="p-4">
                 <img
                   src="./assets/imgs/phoneVersions/S24.png"
                   alt="Shoes"
+                  loading="lazy"
                   class="rounded-xl bg-white"
                 />
               </figure>
@@ -270,14 +320,14 @@
             </div>
           </div>
           <div
-            @click="open = !open"
-            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
           >
             <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
               <figure class="p-4">
                 <img
                   src="./assets/imgs/phoneVersions/S24.png"
                   alt="Shoes"
+                  loading="lazy"
                   class="rounded-xl bg-white"
                 />
               </figure>
@@ -291,14 +341,119 @@
             </div>
           </div>
           <div
-            @click="open = !open"
-            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2"
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
           >
             <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
               <figure class="p-4">
                 <img
                   src="./assets/imgs/phoneVersions/S24.png"
                   alt="Shoes"
+                  loading="lazy"
+                  class="rounded-xl bg-white"
+                />
+              </figure>
+              <div class="card-body items-center text-center p-7">
+                <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
+              </div>
+              <span
+                class="bg-red-500 text-white absolute top-0 px-3 py-2 rounded-tr-xl rounded-bl-xl"
+                >عرض</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
+          >
+            <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
+              <figure class="p-4">
+                <img
+                  src="./assets/imgs/phoneVersions/S24.png"
+                  alt="Shoes"
+                  loading="lazy"
+                  class="rounded-xl bg-white"
+                />
+              </figure>
+              <div class="card-body items-center text-center p-7">
+                <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
+              </div>
+              <span
+                class="bg-red-500 text-white absolute top-0 px-3 py-2 rounded-tr-xl rounded-bl-xl"
+                >عرض</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
+          >
+            <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
+              <figure class="p-4">
+                <img
+                  src="./assets/imgs/phoneVersions/S24.png"
+                  alt="Shoes"
+                  loading="lazy"
+                  class="rounded-xl bg-white"
+                />
+              </figure>
+              <div class="card-body items-center text-center p-7">
+                <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
+              </div>
+              <span
+                class="bg-red-500 text-white absolute top-0 px-3 py-2 rounded-tr-xl rounded-bl-xl"
+                >عرض</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
+          >
+            <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
+              <figure class="p-4">
+                <img
+                  src="./assets/imgs/phoneVersions/S24.png"
+                  alt="Shoes"
+                  loading="lazy"
+                  class="rounded-xl bg-white"
+                />
+              </figure>
+              <div class="card-body items-center text-center p-7">
+                <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
+              </div>
+              <span
+                class="bg-red-500 text-white absolute top-0 px-3 py-2 rounded-tr-xl rounded-bl-xl"
+                >عرض</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
+          >
+            <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
+              <figure class="p-4">
+                <img
+                  src="./assets/imgs/phoneVersions/S24.png"
+                  alt="Shoes"
+                  loading="lazy"
+                  class="rounded-xl bg-white"
+                />
+              </figure>
+              <div class="card-body items-center text-center p-7">
+                <h2 class="card-title">شاشات داخلية جلاكسي S24</h2>
+              </div>
+              <span
+                class="bg-red-500 text-white absolute top-0 px-3 py-2 rounded-tr-xl rounded-bl-xl"
+                >عرض</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2"
+          >
+            <div class="card rounded-3xl w-[274px] bg-white shadow-md relative">
+              <figure class="p-4">
+                <img
+                  src="./assets/imgs/phoneVersions/S24.png"
+                  alt="Shoes"
+                  loading="lazy"
                   class="rounded-xl bg-white"
                 />
               </figure>
@@ -331,10 +486,20 @@
           class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
           <nav>
-            <a class="link link-hover text-lg font-bold mt-4">الرئيسية</a>
-            <a class="link link-hover text-lg font-bold mt-4">العروض</a>
-            <a class="link link-hover text-lg font-bold mt-4">الأكثر مبيعاً</a>
-            <a class="link link-hover text-lg font-bold mt-4">تواصل معنا</a>
+            <a class="link link-hover text-lg font-bold mt-4" href="index.html"
+              >الرئيسية</a
+            >
+            <a class="link link-hover text-lg font-bold mt-4" href="offers.html"
+              >العروض</a
+            >
+            <a class="link link-hover text-lg font-bold mt-4" href="Trend.html"
+              >الأكثر مبيعاً</a
+            >
+            <a
+              class="link link-hover text-lg font-bold mt-4"
+              href="contactus.html"
+              >تواصل معنا</a
+            >
           </nav>
           <div class="grid grid-flow-row gap-11">
             <nav class="self-start">
@@ -357,7 +522,11 @@
             <nav class="self-end justify-self-center">
               <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
               <div class="flex">
-                <img src="./assets/icons/line.svg" class="" alt="" />
+                <img
+                  src="./assets/icons/line.svg"
+                  class="max-md:hidden"
+                  alt=""
+                />
                 <a href="" class="cursor-pointer mx-2">
                   <img src="./assets/icons/facebook.svg" alt="" />
                 </a>
@@ -371,7 +540,11 @@
                   <img src="./assets/icons/youtube.svg" alt="" />
                 </a>
 
-                <img src="./assets/icons/line.svg" class="rotate-180" alt="" />
+                <img
+                  src="./assets/icons/line.svg"
+                  class="rotate-180 max-md:hidden"
+                  alt=""
+                />
               </div>
             </nav>
           </div>
