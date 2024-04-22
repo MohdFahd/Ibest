@@ -2198,6 +2198,10 @@ details.collapse summary::-webkit-details-marker{
   width: 100%;
 }
 
+.w-\[100\%\]{
+  width: 100%;
+}
+
 .min-w-\[400px\]{
   min-width: 400px;
 }
@@ -2493,6 +2497,11 @@ details.collapse summary::-webkit-details-marker{
 .bg-\[\#AAAAAA\]{
   --tw-bg-opacity: 1;
   background-color: rgb(170 170 170 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -2828,6 +2837,21 @@ details.collapse summary::-webkit-details-marker{
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:my-1{
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .max-md\:mx-2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .max-md\:mx-1{
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
   .max-md\:hidden{
     display: none;
   }
@@ -2838,6 +2862,42 @@ details.collapse summary::-webkit-details-marker{
 
   .max-md\:w-\[90\%\]{
     width: 90%;
+  }
+
+  .max-md\:w-full{
+    width: 100%;
+  }
+
+  .max-md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .max-md\:w-auto{
+    width: auto;
+  }
+
+  .max-md\:w-\[full\%\]{
+    width: full%;
+  }
+
+  .max-md\:flex-row{
+    flex-direction: row;
+  }
+
+  .max-md\:flex-col{
+    flex-direction: column;
+  }
+
+  .max-md\:flex-col-reverse{
+    flex-direction: column-reverse;
+  }
+
+  .max-md\:justify-center{
+    justify-content: center;
+  }
+
+  .max-md\:justify-between{
+    justify-content: space-between;
   }
 
   .max-md\:rounded-3xl{
@@ -2857,6 +2917,14 @@ details.collapse summary::-webkit-details-marker{
   .max-sm\:w-full{
     width: 100%;
   }
+
+  .max-sm\:flex-col{
+    flex-direction: column;
+  }
+
+  .max-sm\:items-center{
+    align-items: center;
+  }
 }
 
 @media (min-width: 640px){
@@ -2875,6 +2943,16 @@ details.collapse summary::-webkit-details-marker{
   .md\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .md\:mx-3{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .md\:mx-5{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
   }
 
   .md\:flex{
@@ -2915,6 +2993,10 @@ details.collapse summary::-webkit-details-marker{
 
   .md\:flex-col{
     flex-direction: column;
+  }
+
+  .md\:justify-end{
+    justify-content: flex-end;
   }
 
   .md\:justify-center{
@@ -2958,6 +3040,11 @@ details.collapse summary::-webkit-details-marker{
     padding-bottom: 52px;
   }
 
+  .md\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2973,6 +3060,11 @@ details.collapse summary::-webkit-details-marker{
 
   .md\:text-xl{
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 

@@ -231,34 +231,36 @@
       </div>
       <!-- details -->
       <section class="my-5">
-        <div class="bg-[#EFEFEF] flex rounded-3xl p-2">
-          <div class="inline-flex justify-start flex-col items-center w-[10%]">
+        <div class="bg-[#EFEFEF] flex max-md:flex-col-reverse rounded-3xl p-2">
+          <div
+            class="flex justify-start flex-col max-md:flex-row items-center w-[10%] max-md:w-[40%] max-md:justify-between"
+          >
             <img
               src="./assets/imgs/phoneVersions/S24.png"
               alt="Shoes"
               width="55%"
-              class="rounded-xl bg-white my-2"
+              class="rounded-xl bg-white my-2 max-md:mx-1"
             />
             <img
               src="./assets/imgs/phoneVersions/S24.png"
               alt="Shoes"
               width="55%"
-              class="rounded-xl bg-white my-2"
+              class="rounded-xl bg-white max-md:mx-1"
             />
             <img
               src="./assets/imgs/phoneVersions/S24.png"
               alt="Shoes"
               width="55%"
-              class="rounded-xl bg-white my-2"
+              class="rounded-xl bg-white max-md:mx-1"
             />
             <img
               src="./assets/imgs/phoneVersions/S24.png"
               alt="Shoes"
               width="55%"
-              class="rounded-xl bg-white my-2"
+              class="rounded-xl bg-white max-md:mx-1"
             />
           </div>
-          <div class="w-full flex">
+          <div class="w-full flex max-md:flex-col">
             <div class="">
               <img
                 src="./assets/imgs/phoneVersions/S24.png"
@@ -268,21 +270,23 @@
               />
             </div>
 
-            <div class="mx-5 w-full relative">
+            <div class="md:mx-5 w-full relative">
               <h1 class="text-[22px] font-bold p-2">شاشات داخلية جلاكسي S24</h1>
               <h2 class="text-xl font-bold p-2 text-[#1458A1]">وصف المنتج</h2>
               <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
-              <h2 class="text-xl font-bold p-2 text-[#1458A1]">
+              <h3 class="text-xl font-bold p-2 text-[#1458A1]">
                 الموديلات المتوافقه
-              </h2>
+              </h3>
               <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
-              <h2 class="text-xl font-bold p-2 text-[#1458A1]">الملاحظات</h2>
+              <h3 class="text-xl font-bold p-2 text-[#1458A1]">الملاحظات</h3>
               <p class="text-lg font-bold p-2">
                 هذا منتج خاص ومتوفربمحلات السيفي للصيانه
               </p>
-              <div class="flex justify-end text-end w-full">
+              <div
+                class="flex justify-center md:justify-end w-full max-md:flex-col-reverse"
+              >
                 <button
-                  class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3"
+                  class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1"
                 >
                   <img
                     src="./assets/icons/youtube-watch.svg"
@@ -300,7 +304,7 @@
               </div>
               <img
                 src="./assets/icons/copy.svg"
-                class="absolute top-0 left-0 mt-3"
+                class="absolute top-0 left-0 mt-3 max-md:hidden"
                 alt=""
               />
             </div>
@@ -308,8 +312,10 @@
         </div>
       </section>
       <div class="flex my-5 justify-center flex-row">
-        <img src="./assets/icons/share.svg" alt="" />
-        <h1 class="text-lg text-[#1458A1] font-bold mx-2">مشاركة :</h1>
+        <img src="./assets/icons/share.svg" class="max-md:hidden" alt="" />
+        <h1 class="text-lg text-[#1458A1] font-bold mx-2 max-md:hidden">
+          مشاركة :
+        </h1>
         <a href="" class="mx-2">
           <img src="./assets/icons/whatsapp.svg" alt="" />
         </a>
@@ -329,7 +335,7 @@
       </div>
       <!-- More -->
       <section class="mt-4">
-        <h1 class="text-xl font-bold text-[#1458A1] my-2">المزبد في :</h1>
+        <h2 class="text-xl font-bold text-[#1458A1] my-2">المزبد في :</h2>
         <div class="flex flex-wrap justify-center">
           <a
             href="./details.html"
