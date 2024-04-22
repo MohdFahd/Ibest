@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IBest | عالم الشاشات والقطع</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta Tags -->
+    <title>IBest | عالم الشاشات والقطع</title>
     <meta name="description" content="" />
+    <meta name="robots" content="" />
+    <meta name="canonical" href="" />
+    <meta name="googlebot" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="IBest" />
     <link rel="icon" href="./assets/imgs/logo.ico" type="image/x-icon" />
@@ -362,17 +364,29 @@
             src="./assets/icons/filter.svg"
             alt=""
           />
-          <ul
+          <ol
             x-show="isOpen"
             @click.away="isOpen = false"
             name=""
             id=""
-            class="menu shadow bg-base-100 rounded-lg absolute top-10 right-0 z-10 px-3"
+            class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px]"
           >
-            <li class="font-bold">الكل</li>
-            <li>سامسونج</li>
-            <li>ال تي</li>
-          </ul>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white"
+            >
+              الكل
+            </li>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
+            >
+              سامسونج
+            </li>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
+            >
+              ال تي
+            </li>
+          </ol>
         </div>
       </div>
       <!-- Products -->
