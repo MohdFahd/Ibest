@@ -230,43 +230,45 @@
         </h1>
       </div>
       <!-- details -->
-      <section class="my-5">
+      <section class="my-5" x-data="{ img: 'S24.png' }">
         <div class="bg-[#EFEFEF] flex max-md:flex-col-reverse rounded-3xl p-2">
           <div
-            class="flex justify-start flex-col max-md:flex-row items-center w-[10%] max-md:w-[40%] max-md:justify-between"
+            class="flex justify-start flex-col max-md:flex-row items-center w-[12%] max-md:w-[40%] max-md:justify-between"
           >
             <img
-              src="./assets/imgs/phoneVersions/S24.png"
-              alt="Shoes"
+              @click="img = 'S24_Black.png'"
+              src="./assets/imgs/phoneVersions/S24_Black.png"
+              alt="S24_Black.png"
               width="55%"
-              class="rounded-xl bg-white my-2 max-md:mx-1"
+              class="rounded-xl bg-white my-2 max-md:mx-1 cursor-pointer"
             />
             <img
-              src="./assets/imgs/phoneVersions/S24.png"
-              alt="Shoes"
+              @click="img = 'S24_Gold.png'"
+              src="./assets/imgs/phoneVersions/S24_Gold.png"
+              alt="S24_Gold.png"
               width="55%"
-              class="rounded-xl bg-white max-md:mx-1"
+              class="rounded-xl bg-white max-md:mx-1 cursor-pointer"
             />
             <img
-              src="./assets/imgs/phoneVersions/S24.png"
-              alt="Shoes"
+              @click="img = 'S24Gray.png'"
+              src="./assets/imgs/phoneVersions/S24Gray.png"
+              alt="S24Gray.png"
               width="55%"
-              class="rounded-xl bg-white max-md:mx-1"
+              class="rounded-xl bg-white max-md:mx-1 cursor-pointer"
             />
             <img
-              src="./assets/imgs/phoneVersions/S24.png"
-              alt="Shoes"
+              @click="img = 'S24_Black.png'"
+              src="./assets/imgs/phoneVersions/S24_Black.png"
+              alt="S24_Black.png"
               width="55%"
-              class="rounded-xl bg-white max-md:mx-1"
+              class="rounded-xl bg-white max-md:mx-1 cursor-pointer"
             />
           </div>
           <div class="w-full flex max-md:flex-col">
             <div class="">
               <img
-                src="./assets/imgs/phoneVersions/S24.png"
-                alt=""
-                width="100%"
-                class="rounded-xl bg-white"
+                x-bind:src="'./assets/imgs/phoneVersions/' + img"
+                x-bind:="img"
               />
             </div>
 
