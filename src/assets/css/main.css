@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "TheSans-bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/TheSans-Bold.otf") format("opentype");
+  /* Corrected format */
+}
+
+@font-face {
+  font-family: "TheSans-light";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/The-Sans-Plain.otf") format("opentype");
+  /* Corrected format */
+}
+
+body {
+  font-family: "TheSans-light";
+  direction: rtl;
+}
+
+.TheSans-bold {
+  font-family: "TheSans-bold" !important;
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  margin: 2px 0;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #00a3a0;
+}
+
+.active-mobile::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: #00a3a0;
+  position: absolute;
+  border-radius: 10px 0px;
+  bottom: -5px;
+  right: 0;
+}
