@@ -1022,19 +1022,6 @@ html{
   padding-bottom: 0.5rem;
 }
 
-.hero{
-  display: grid;
-  width: 100%;
-  place-items: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.hero > *{
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
 .input{
   flex-shrink: 1;
   -webkit-appearance: none;
@@ -2271,6 +2258,10 @@ details.collapse summary::-webkit-details-marker{
   display: none;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .h-4{
   height: 1rem;
 }
@@ -2303,8 +2294,8 @@ details.collapse summary::-webkit-details-marker{
   height: 50px;
 }
 
-.min-h-screen{
-  min-height: 100vh;
+.w-10{
+  width: 2.5rem;
 }
 
 .w-4{
@@ -2363,8 +2354,12 @@ details.collapse summary::-webkit-details-marker{
   min-width: 400px;
 }
 
-.max-w-sm{
-  max-width: 24rem;
+.max-w-lg{
+  max-width: 32rem;
+}
+
+.max-w-\[420px\]{
+  max-width: 420px;
 }
 
 .grow{
@@ -2650,6 +2645,11 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2674,6 +2674,11 @@ details.collapse summary::-webkit-details-marker{
 
 .bg-no-repeat{
   background-repeat: no-repeat;
+}
+
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .p-10{
@@ -2895,12 +2900,6 @@ details.collapse summary::-webkit-details-marker{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3009,6 +3008,41 @@ details.collapse summary::-webkit-details-marker{
   outline-offset: 2px;
 }
 
+@media (max-width: 1279px){
+  .max-\[1279px\]\:h-\[24px\]{
+    height: 24px;
+  }
+
+  .max-\[1279px\]\:h-\[30px\]{
+    height: 30px;
+  }
+
+  .max-\[1279px\]\:h-\[25px\]{
+    height: 25px;
+  }
+
+  .max-\[1279px\]\:w-\[24px\]{
+    width: 24px;
+  }
+
+  .max-\[1279px\]\:w-\[30px\]{
+    width: 30px;
+  }
+
+  .max-\[1279px\]\:w-\[25px\]{
+    width: 25px;
+  }
+
+  .max-\[1279px\]\:w-full{
+    width: 100%;
+  }
+
+  .max-\[1279px\]\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media not all and (min-width: 768px){
   .max-md\:mx-1{
     margin-left: 0.25rem;
@@ -3030,14 +3064,6 @@ details.collapse summary::-webkit-details-marker{
 
   .max-md\:w-\[50\%\]{
     width: 50%;
-  }
-
-  .max-md\:w-\[90\%\]{
-    width: 90%;
-  }
-
-  .max-md\:w-\[100\%\]{
-    width: 100%;
   }
 
   .max-md\:flex-row{
@@ -3211,17 +3237,5 @@ details.collapse summary::-webkit-details-marker{
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:hidden{
-    display: none;
-  }
-}
-
-@media (min-width: 1280px){
-  .xl\:flex{
-    display: flex;
   }
 }
