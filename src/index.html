@@ -205,14 +205,10 @@
     </header>
 
     <main class="container mx-auto px-10 my-8">
-      <!-- banner -->
-      <div class="md:flex justify-center hidden">
+      <!-- Desktop Banner -->
+      <div class="max-md:hidden justify-center">
         <div
-          class="bg-cover bg-no-repeat bg-center flex justify-between w-full relative swiper mySwiper overflow-hidden"
-          style="
-            background-image: url('./assets/imgs/VectoreHero.png');
-            height: 300px;
-          "
+          class="bg-cover bg-no-repeat bg-center flex justify-between w-full relative swiper mySwiper h-[300px] bg-[#1458A1] border-none overflow-hidden"
         >
           <div class="swiper-wrapper">
             <div class="swiper-slide cursor-pointer" style="display: flex">
@@ -264,6 +260,11 @@
               </div>
             </div>
           </div>
+          <img
+            src="./assets/imgs/VectoreHero.svg"
+            class="absolute left-[-2px] top-[-1px] w-[10%]"
+            alt=""
+          />
           <!-- Arrows -->
           <div class="flex top-0 absolute left-0">
             <div class="mx-2">
@@ -288,196 +289,238 @@
       </div>
 
       <!-- Mobile Banner -->
-      <div class="flex md:hidden bg-[#1458A1] rounded-lg px-3">
-        <div class="flex justify-center items-center">
-          <h1 class="TheSans-bold text-sm text-white">
-            انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
-          </h1>
+      <div
+        class="flex md:hidden swiper mySwiper bg-[#1458A1] border-none overflow-hidden rounded-lg px-3"
+        style="height: 150px"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex justify-center items-center">
+            <div class="flex justify-center items-center">
+              <h1 class="TheSans-bold text-sm text-white">
+                انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+              </h1>
+            </div>
+            <img src="./assets/imgs/image.png" width="50%" alt="" />
+          </div>
+          <div class="swiper-slide flex justify-center items-center">
+            <div class="flex justify-center items-center">
+              <h1 class="TheSans-bold text-sm text-white">
+                انضم الى IBest اكبر مجموعة في عالم الصيانة وقطع الغيار
+              </h1>
+            </div>
+            <img src="./assets/imgs/image.png" width="50%" alt="" />
+          </div>
         </div>
-        <img src="./assets/imgs/image.png" width="50%" alt="" />
       </div>
 
       <!-- Mobile Search -->
       <div
-        class="flex items-center justify-center relative md:hidden w-[100%] mt-4"
+        class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]"
       >
-        <div
-          class="input input-bordered flex items-center gap-2 w-[80%] rounded-xl shadow-lg"
-        >
-          <input type="text" class="grow" placeholder="البحث" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="w-4 h-4 opacity-70 max-sm:hidden"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
+        <div class="flex items-center gap-2 w-[80%] border-none">
+          <input
+            type="text"
+            class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+            placeholder="البحث"
+          />
         </div>
-        <div
-          class="flex items-center justify-center rounded-xl py-2 bg-white shadow-lg px-2 border-2 border-gray-200 ms-2"
-        >
-          <select name="" id="">
-            <option value="">الكل</option>
-            <option value="">سامسونج</option>
-            <option value="">ال جي</option>
-          </select>
+        <div x-data="{ isOpen: false }" class="relative">
+          <img
+            @click="isOpen = !isOpen"
+            src="./assets/icons/filter.svg"
+            alt=""
+          />
+          <ul
+            x-show="isOpen"
+            @click.away="isOpen = false"
+            name=""
+            id=""
+            class="menu shadow bg-base-100 rounded-lg absolute top-10 right-0 z-10 px-3"
+          >
+            <li class="font-bold">الكل</li>
+            <li>سامسونج</li>
+            <li>ال تي</li>
+          </ul>
         </div>
       </div>
       <!-- Products -->
       <section class="flex justify-center items-center">
         <div class="flex justify-center md:justify-center flex-wrap my-10">
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img
-                  src="./assets/imgs/Samsunge.png"
-                  width="35%"
-                  alt="Samsunge.png"
-                />
-              </figure>
-
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">سامسونج</h1>
-              </div>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
               <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge.png"
               />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">سامسونج</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img
-                  src="./assets/imgs/huawei.png"
-                  width="35%"
-                  alt="huawei.png"
-                />
-              </figure>
-
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">هواوي</h1>
-              </div>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
               <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
               />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">هواوي</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
-              </figure>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
+              <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
+            </figure>
 
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">ال تي</h1>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
-              />
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">ال تي</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img
-                  src="./assets/imgs/Xiaomi.png"
-                  width="35%"
-                  alt="Xiaomi.png"
-                />
-              </figure>
-
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
-              </div>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
               <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
               />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
-              </figure>
-
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">ال تي</h1>
-              </div>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
               <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
+                src="./assets/imgs/Samsunge.png"
+                width="35%"
+                alt="Samsunge.png"
               />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">سامسونج</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
-          <a href="./parts.html" class="max-md:w-[90%]">
-            <div
-              class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
-              data-tilt
-              data-tilt-scale="1.0"
-            >
-              <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-                <img
-                  src="./assets/imgs/Xiaomi.png"
-                  width="35%"
-                  alt="Xiaomi.png"
-                />
-              </figure>
-
-              <div
-                class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
-              >
-                <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
-              </div>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
               <img
-                src="./assets/icons/leftArrow.svg"
-                class="md:self-end self-center me-9 max-sm:hidden"
-                alt=""
+                src="./assets/imgs/huawei.png"
+                width="35%"
+                alt="huawei.png"
               />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">هواوي</h1>
             </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
+          </a>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
+              <img src="./assets/imgs/LT.png" width="35%" alt="LT.png" />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">ال تي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
+          </a>
+          <a
+            href="./parts.html"
+            class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
+          >
+            <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
+              <img
+                src="./assets/imgs/Xiaomi.png"
+                width="35%"
+                alt="Xiaomi.png"
+              />
+            </figure>
+
+            <div
+              class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]"
+            >
+              <h1 class="font-bold md:text-xl">شاومي & ردمي</h1>
+            </div>
+            <img
+              src="./assets/icons/leftArrow.svg"
+              class="md:self-end self-center me-9 max-sm:hidden"
+              alt=""
+            />
           </a>
         </div>
       </section>
