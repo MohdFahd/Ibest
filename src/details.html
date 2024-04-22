@@ -27,7 +27,7 @@
                 placeholder="البحث"
               />
               <div
-                class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
+                class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
               >
                 <img src="./assets/icons/search.svg" alt="" />
               </div>
@@ -36,25 +36,25 @@
           <div class="justify-center py-5 hidden md:flex">
             <ul class="flex justify-end items-center">
               <li
-                class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]"
+                class="active text-xl px-4 mx-2 hover:bg-[#AAAAAA] hover:text-white text-[#AAAAAA]"
               >
                 <a href="index.html">المتجر</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleNew = !toggleNew;
               toggleOffers = false;
               toggleMostSales = false; "
               >
                 <span
-                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0 animate-pulse"
+                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
                   >1</span
                 >
                 <a href="#">جديد</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleMostSales = !toggleMostSales;
                 toggleNew = false;
@@ -64,7 +64,7 @@
                 <a href="#">الأكثر مبيعاً</a>
               </li>
               <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#AAAAAA] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
                 @click="
               toggleOffers = !toggleOffers;
               toggleNew = false;
@@ -137,7 +137,7 @@
         >
           <a
             href="newes.html"
-            class="text-base md:text-xl text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]"
           >
             شاشات
             <span
@@ -148,7 +148,7 @@
           <div class="border-l-2 border-[#00A3A0]"></div>
           <a
             href="newes.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]"
           >
             قطع</a
           >
@@ -159,21 +159,21 @@
         >
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             شاشات
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             قطع غيار
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
             href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             أدوات صيانة
           </a>
@@ -184,7 +184,7 @@
         >
           <a
             href="offers.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             شاشات
             <span
@@ -192,10 +192,10 @@
               >1</span
             >
           </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
+          <div class="border-l-2 border-[#AAAAAA]"></div>
           <a
             href="offers.html"
-            class="text-base md:text-xl font-bold text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
+            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
           >
             قطع غيار
           </a>
@@ -205,26 +205,28 @@
 
     <main class="container mx-auto px-10 my-8">
       <!-- Path -->
-      <div class="flex justify-start text-lg text-[#00A3A0] font-bold">
-        <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+      <div
+        class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold max-sm:hidden"
+      >
+        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
         <h1>
-          <a href=""> المتجر </a>
+          <a href="./index.html"> المتجر </a>
         </h1>
-        <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
         <h1 class="">
-          <a href=""> سامسونج </a>
+          <a href="./parts.html"> سامسونج </a>
         </h1>
-        <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
         <h1 class="">
-          <a href=""> شاشات </a>
+          <a href="./lists.html"> شاشات </a>
         </h1>
-        <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
         <h1 class="">
-          <a href=""> شاشات داخلية </a>
+          <a href="./kinds.html"> شاشات داخلية </a>
         </h1>
-        <img src="./assets/icons/leftArrow.svg" class="mx-2" lt="" />
+        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
         <h1 class="text-blue-800">
-          <a href=""> S24 </a>
+          <a href="./versions.html"> S24 </a>
         </h1>
       </div>
       <!-- details -->
