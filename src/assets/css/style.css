@@ -3335,6 +3335,11 @@ details.collapse summary::-webkit-details-marker{
     width: 1rem;
   }
 
+  .max-md\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .max-md\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
