@@ -209,25 +209,25 @@
         class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold max-sm:hidden"
       >
         <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1>
+        <h2>
           <a href="./index.html"> المتجر </a>
-        </h1>
+        </h2>
         <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1 class="">
+        <h2 class="">
           <a href="./parts.html"> سامسونج </a>
-        </h1>
+        </h2>
         <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1 class="">
+        <h2 class="">
           <a href="./lists.html"> شاشات </a>
-        </h1>
+        </h2>
         <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1 class="">
+        <h2 class="">
           <a href="./kinds.html"> شاشات داخلية </a>
-        </h1>
+        </h2>
         <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1 class="text-blue-800">
+        <h2 class="text-blue-800">
           <a href="./versions.html"> S24 </a>
-        </h1>
+        </h2>
       </div>
       <!-- details -->
       <section class="my-5" x-data="{ img: 'S24.png' }">
@@ -267,6 +267,7 @@
           <div class="w-full flex max-md:flex-col">
             <div class="">
               <img
+                x-transition
                 x-bind:src="'./assets/imgs/phoneVersions/' + img"
                 x-bind:="img"
               />
@@ -275,12 +276,12 @@
             <div class="md:mx-5 w-full relative">
               <h1 class="text-[22px] font-bold p-2">شاشات داخلية جلاكسي S24</h1>
               <h2 class="text-xl font-bold p-2 text-[#1458A1]">وصف المنتج</h2>
-              <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
-              <h3 class="text-xl font-bold p-2 text-[#1458A1]">
+              <p class="text-xl font-bold p-2">s24 ultra , s24 plus</p>
+              <h2 class="text-xl font-bold p-2 text-[#1458A1]">
                 الموديلات المتوافقه
-              </h3>
-              <h3 class="text-xl font-bold p-2">s24 ultra , s24 plus</h3>
-              <h3 class="text-xl font-bold p-2 text-[#1458A1]">الملاحظات</h3>
+              </h2>
+              <p class="text-xl font-bold p-2">s24 ultra , s24 plus</p>
+              <h2 class="text-xl font-bold p-2 text-[#1458A1]">الملاحظات</h2>
               <p class="text-lg font-bold p-2">
                 هذا منتج خاص ومتوفربمحلات السيفي للصيانه
               </p>
@@ -315,9 +316,9 @@
       </section>
       <div class="flex my-5 justify-center flex-row">
         <img src="./assets/icons/share.svg" class="max-md:hidden" alt="" />
-        <h1 class="text-lg text-[#1458A1] font-bold mx-2 max-md:hidden">
+        <h2 class="text-lg text-[#1458A1] font-bold mx-2 max-md:hidden">
           مشاركة :
-        </h1>
+        </h2>
         <a href="" class="mx-2">
           <img src="./assets/icons/whatsapp.svg" alt="" />
         </a>
@@ -451,7 +452,7 @@
     >
       <div class="container">
         <div
-          class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
+          class="flex md:justify-between justify-center md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
           <nav>
             <a class="link link-hover text-lg font-bold mt-4" href="index.html"
@@ -469,8 +470,10 @@
               >تواصل معنا</a
             >
           </nav>
-          <div class="grid grid-flow-row gap-11">
-            <nav class="self-start">
+          <div class="grid grid-flow-row gap-11 max-md:w-full">
+            <nav
+              class="self-start max-md:self-center justify-self-center max-md:w-full"
+            >
               <h6 class="font-bold text-2xl">
                 كُن أول من يعلم ليصلك كل جديد اولاً بأول
               </h6>
@@ -481,7 +484,7 @@
                   class="p-4 rounded-[10px] col-span-4 text-black"
                 />
                 <button
-                  class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold"
+                  class="btn p-4 rounded-[10px] col-span-2 bg-[#AAAAAA] text-[#FFFFFF] font-bold border-none"
                 >
                   اشتراك
                 </button>
@@ -518,20 +521,26 @@
           </div>
 
           <nav
-            class="mt-6 flex flex-col justify-center items-center max-sm:w-full"
+            class="mt-6 flex flex-col justify-center items-center max-md:w-full"
           >
-            <div
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+            <a
+              href=""
+              title=""
+              target=""
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
               <img src="./assets/icons/Apple.svg" class="me-3 px-2" alt="" />
-              <h1>App store</h1>
-            </div>
-            <div
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              <h2>App store</h2>
+            </a>
+            <a
+              href=""
+              title=""
+              target=""
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
               <img src="./assets/icons/android.svg" class="me-3" alt="" />
-              <h1>Google Play</h1>
-            </div>
+              <h2>Google Play</h2>
+            </a>
           </nav>
         </div>
         <div

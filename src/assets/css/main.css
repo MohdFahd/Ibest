@@ -13,6 +13,20 @@
   src: url("../fonts/The-Sans-Plain.otf") format("opentype");
   /* Corrected format */
 }
+@font-face {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/icomoon.ttf") format("opentype");
+  /* Corrected format */
+}
+@font-face {
+  font-family: "icomoonw";
+  font-style: normal;s
+  font-weight: 400;
+  src: url("../fonts/icomoon.woff") format("opentype");
+  /* Corrected format */
+}
 
 body {
   font-family: "TheSans-light";

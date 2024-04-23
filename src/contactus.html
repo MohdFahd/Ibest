@@ -354,7 +354,7 @@
     >
       <div class="container">
         <div
-          class="flex justify-between md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
+          class="flex md:justify-between justify-center md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
           <nav>
             <a class="link link-hover text-lg font-bold mt-4" href="index.html"
@@ -372,8 +372,10 @@
               >تواصل معنا</a
             >
           </nav>
-          <div class="grid grid-flow-row gap-11">
-            <nav class="self-start">
+          <div class="grid grid-flow-row gap-11 max-md:w-full">
+            <nav
+              class="self-start max-md:self-center justify-self-center max-md:w-full"
+            >
               <h6 class="font-bold text-2xl">
                 كُن أول من يعلم ليصلك كل جديد اولاً بأول
               </h6>
@@ -384,7 +386,7 @@
                   class="p-4 rounded-[10px] col-span-4 text-black"
                 />
                 <button
-                  class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold"
+                  class="btn p-4 rounded-[10px] col-span-2 bg-[#AAAAAA] text-[#FFFFFF] font-bold border-none"
                 >
                   اشتراك
                 </button>
@@ -421,20 +423,26 @@
           </div>
 
           <nav
-            class="mt-6 flex flex-col justify-center items-center max-sm:w-full"
+            class="mt-6 flex flex-col justify-center items-center max-md:w-full"
           >
-            <div
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+            <a
+              href=""
+              title=""
+              target=""
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
               <img src="./assets/icons/Apple.svg" class="me-3 px-2" alt="" />
-              <h1>App store</h1>
-            </div>
-            <div
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-gray-100"
+              <h2>App store</h2>
+            </a>
+            <a
+              href=""
+              title=""
+              target=""
+              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
               <img src="./assets/icons/android.svg" class="me-3" alt="" />
-              <h1>Google Play</h1>
-            </div>
+              <h2>Google Play</h2>
+            </a>
           </nav>
         </div>
         <div
