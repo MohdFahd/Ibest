@@ -1,612 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta Tags -->
-    <title>IBest | عالم الشاشات والقطع</title>
-    <meta name="description" content="" />
-    <meta name="robots" content="index,follow" />
-    <meta name="canonical" href="" />
-    <meta name="googlebot" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="IBest" />
-    <link rel="icon" href="./assets/imgs/logo.ico" type="image/x-icon" />
-    <link rel="manifest" href="" />
-    <meta name="msapplication-TileColor" content="#2c2b7c" />
-    <meta name="msapplication-TileImage" content="" />
-    <meta name="theme-color" content="#fff" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta property="fb:app_id" content="" />
-    <meta property="og:locale" content="ar_AR" />
-    <meta property="article:author" content="" />
-    <meta property="article:section" content="" />
-    <meta property="fb:pages" content="" />
 
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content=" " />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:creator" content="" />
-    <meta name="twitter:image:src" content="" />
-    <meta name="twitter:image:alt" content="" />
-    <meta name="twitter:domain" content="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Tags -->
+  <title>IBest | عالم الشاشات والقطع</title>
+  <meta name="description" content="" />
+  <meta name="robots" content="index,follow" />
+  <meta name="canonical" href="" />
+  <meta name="googlebot" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="IBest" />
+  <link rel="icon" href="./assets/imgs/logo.ico" type="image/x-icon" />
+  <link rel="manifest" href="" />
+  <meta name="msapplication-TileColor" content="#2c2b7c" />
+  <meta name="msapplication-TileImage" content="" />
+  <meta name="theme-color" content="#fff" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="fb:app_id" content="" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="article:author" content="" />
+  <meta property="article:section" content="" />
+  <meta property="fb:pages" content="" />
 
-    <!-- styles link -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="./assets/js/alpine.js"></script>
-  </head>
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:title" content=" " />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:creator" content="" />
+  <meta name="twitter:image:src" content="" />
+  <meta name="twitter:image:alt" content="" />
+  <meta name="twitter:domain" content="" />
 
-  <body class="bg-[#FEFEFE]">
-    <header
-      x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }"
-    >
-      <nav class="bg-white drop-shadow-md z-40">
-        <div class="flex flex-col">
-          <div class="container md:flex md:justify-between py-5 hidden px-10">
-            <div>
-              <img src="./assets/imgs/logo.svg" class="" alt="" />
-            </div>
-            <div class="mt-[26px] relative cursor-pointer">
-              <input
-                type="text"
-                class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
-                placeholder="البحث"
-              />
-              <div
-                class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
-              >
-                <img src="./assets/icons/search.svg" alt="" />
-              </div>
+  <!-- styles link -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="./assets/js/alpine.js"></script>
+</head>
+
+<body class="bg-[#FEFEFE]">
+  <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
+    <nav class="bg-white drop-shadow-md z-40">
+      <div class="flex flex-col">
+        <div class="container md:flex md:justify-between py-5 hidden px-10">
+          <div>
+            <img src="./assets/imgs/logo.svg" class="" alt="" />
+          </div>
+          <div class="mt-[26px] relative cursor-pointer">
+            <input type="text" class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
+              placeholder="البحث" />
+            <div
+              class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              <img src="./assets/icons/search.svg" alt="" />
             </div>
           </div>
-          <div class="justify-center py-5 hidden md:flex">
-            <ul class="flex justify-end items-center">
-              <li
-                class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]"
-              >
-                <a href="index.html">المتجر</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+        </div>
+        <div class="justify-center py-5 hidden md:flex">
+          <ul class="flex justify-end items-center">
+            <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
+              <a href="index.html">المتجر</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
               toggleNew = !toggleNew;
               toggleOffers = false;
-              toggleMostSales = false; "
-              >
-                <span
-                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
-                  >1</span
-                >
-                <a href="#">جديد</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+              toggleMostSales = false; ">
+              <span
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0">1</span>
+              <a href="#">جديد</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
               toggleMostSales = !toggleMostSales;
                 toggleNew = false;
                 toggleOffers = false;
-            "
-              >
-                <a href="#">الأكثر مبيعاً</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+            ">
+              <a href="#">الأكثر مبيعاً</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
               toggleOffers = !toggleOffers;
               toggleNew = false;
                 toggleMostSales = false;
-            "
-              >
-                <a href="#">عروض</a>
-              </li>
-            </ul>
-          </div>
+            ">
+              <a href="#">عروض</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- Mobile SideBar -->
-      <nav class="flex md:hidden bg-white flex-col z-0">
-        <div class="container md:hidden flex justify-center my-4">
-          <img
-            src="./assets/icons/ibest.svg"
-            class="mx-2"
-            width="70px"
-            alt=""
-          />
-          <img src="./assets/imgs/logo-phone.svg" width="25px" alt="" />
-        </div>
-        <div class="bg-white text-center flex justify-center">
-          <a
-            href="index.html"
-            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative active-mobile"
-          >
-            المتجر
-          </a>
-          <button
-            @click="
+      </div>
+    </nav>
+    <!-- Mobile SideBar -->
+    <nav class="flex md:hidden bg-white flex-col z-0">
+      <div class="container md:hidden flex justify-center my-4">
+        <img src="./assets/icons/ibest.svg" class="mx-2" width="70px" alt="" />
+        <img src="./assets/imgs/logo-phone.svg" width="25px" alt="" />
+      </div>
+      <div class="bg-white text-center flex justify-center">
+        <a href="index.html"
+          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative active-mobile">
+          المتجر
+        </a>
+        <button @click="
               toggleNew = !toggleNew;
               toggleOffers = false;
-              toggleMostSales = false; "
-            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative"
-          >
-            جديد
+              toggleMostSales = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+          جديد
 
-            <span
-              class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
-              >1</span
-            >
-          </button>
-          <button
-            @click="
+          <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+        </button>
+        <button @click="
             toggleMostSales = !toggleMostSales;
                 toggleNew = false;
-                toggleOffers = false; "
-            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative"
-          >
-            الأكثر مبيعاً
-          </button>
-          <button
-            @click="
+                toggleOffers = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+          الأكثر مبيعاً
+        </button>
+        <button @click="
               toggleOffers = !toggleOffers;
               toggleNew = false;
                 toggleMostSales = false;"
-            class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative"
-          >
-            عروض
-          </button>
-        </div>
-      </nav>
-      <!-- list of links -->
-      <ul class="">
-        <li
-          x-show="toggleNew"
-          class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
-        >
-          <a
-            href="newes.html"
-            class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]"
-          >
-            شاشات
-            <span
-              class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
-              >1</span
-            >
-          </a>
-          <div class="border-l-2 border-[#00A3A0]"></div>
-          <a
-            href="newes.html"
-            class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]"
-          >
-            قطع</a
-          >
-        </li>
-        <li
-          x-show="toggleMostSales"
-          class="container text-center bg-white w-[90%] p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
-        >
-          <a
-            href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            شاشات
-          </a>
-          <div class="border-l-2 border-[#AAAAAA]"></div>
-          <a
-            href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            قطع غيار
-          </a>
-          <div class="border-l-2 border-[#AAAAAA]"></div>
-          <a
-            href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            أدوات صيانة
-          </a>
-        </li>
-        <li
-          x-show="toggleOffers"
-          class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
-        >
-          <a
-            href="offers.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            شاشات
-          </a>
-          <div class="border-l-2 border-[#AAAAAA]"></div>
-          <a
-            href="offers.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            قطع غيار
-          </a>
-          <div class="border-l-2 border-[#AAAAAA]"></div>
-
-          <a
-            href="Trend.html"
-            class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-          >
-            أدوات صيانة
-          </a>
-        </li>
-      </ul>
-    </header>
-
-    <main class="container mx-auto px-10 my-8">
-      <!-- Path -->
-      <div
-        class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold max-sm:hidden"
-      >
-        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <span>
-          <a href="./index.html"> المتجر </a>
-        </span>
-        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <span class="">
-          <a href="./parts.html"> سامسونج </a>
-        </span>
-        <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
-        <h1 class="text-blue-800 cursor-pointer">شاشات</h1>
+          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+          عروض
+        </button>
       </div>
-      <!-- Mobile Search -->
-      <div
-        class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]"
-      >
-        <div class="flex items-center gap-2 w-[80%] border-none">
-          <input
-            type="text"
-            class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
-            placeholder="البحث"
-          />
-        </div>
+    </nav>
+    <!-- list of links -->
+    <ul class="">
+      <li x-show="toggleNew"
+        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        <a href="newes.html"
+          class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
+          شاشات
+          <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+        </a>
+        <div class="border-l-2 border-[#00A3A0]"></div>
+        <a href="newes.html"
+          class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
+          قطع</a>
+      </li>
+      <li x-show="toggleMostSales"
+        class="container text-center bg-white w-[90%] p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        <a href="Trend.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          شاشات
+        </a>
+        <div class="border-l-2 border-[#AAAAAA]"></div>
+        <a href="Trend.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          قطع غيار
+        </a>
+        <div class="border-l-2 border-[#AAAAAA]"></div>
+        <a href="Trend.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          أدوات صيانة
+        </a>
+      </li>
+      <li x-show="toggleOffers"
+        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        <a href="offers.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          شاشات
+        </a>
+        <div class="border-l-2 border-[#AAAAAA]"></div>
+        <a href="offers.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          قطع غيار
+        </a>
+        <div class="border-l-2 border-[#AAAAAA]"></div>
 
-        <div x-data="{ isOpen: false }" class="relative">
-          <img
-            loading="lazy"
-            @click="isOpen = !isOpen"
-            src="./assets/icons/filter.svg"
-            title=""
-            alt=""
-          />
-          <ol
-            x-show="isOpen"
-            @click.away="isOpen = false"
-            name=""
-            id=""
-            class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg"
-          >
-            <li
-              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white"
-            >
-              الكل
-            </li>
-            <li
-              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
-            >
-              سامسونج
-            </li>
-            <li
-              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
-            >
-              ال تي
-            </li>
-          </ol>
-        </div>
+        <a href="Trend.html"
+          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+          أدوات صيانة
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="container mx-auto px-10 my-8">
+    <!-- Path -->
+    <div class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold max-sm:hidden">
+      <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
+      <span>
+        <a href="./index.html"> المتجر </a>
+      </span>
+      <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
+      <span class="">
+        <a href="./parts.html"> سامسونج </a>
+      </span>
+      <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2" lt="" />
+      <h1 class="text-blue-800 cursor-pointer">شاشات</h1>
+    </div>
+    <!-- Mobile Search -->
+    <div
+      class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]">
+      <div class="flex items-center gap-2 w-[80%] border-none">
+        <input type="text"
+          class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+          placeholder="البحث" />
       </div>
-      <!-- Products -->
-      <section class="flex justify-center mt-4">
-        <div class="flex flex-wrap justify-center">
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات داخلية</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
-            </div>
-          </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات تاب</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+      <div x-data="{ isOpen: false }" class="relative">
+        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
+        <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
+          class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
+            الكل
+          </li>
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
+            سامسونج
+          </li>
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
+            ال تي
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!-- Products -->
+    <section class="flex justify-center mt-4">
+      <div class="flex flex-wrap justify-center">
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 - A015</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 CORE - A013</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات داخلية</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات تاب</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 - A015</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 CORE - A013</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
-          </a>
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات داخلية</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
-            </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات تاب</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات داخلية</h2>
+            </div>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 - A015</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 CORE - A013</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
-          </a>
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات داخلية</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
-            </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات تاب</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات داخلية</h2>
+            </div>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 - A015</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 CORE - A013</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
-          </a>
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات داخلية</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
-            </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">شاشات تاب</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
-          </a>
-
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 - A015</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
-          </a>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-          <a href="./kinds.html">
-            <div
-              class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer"
-            >
-              <div class="card-body">
-                <h2 class="font-bold text-xl">A01 CORE - A013</h2>
-              </div>
-              <img
-                src="./assets/icons/leftArrow.svg"
-                class="self-end me-9"
-                alt=""
-              />
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
-          </a>
-        </div>
-      </section>
-    </main>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
 
-    <footer
-      style="
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 - A015</h2>
+            </div>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
+
+        <a href="./kinds.html">
+          <div
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body">
+              <h2 class="font-bold text-xl">A01 CORE - A013</h2>
+            </div>
+            <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="
         background: linear-gradient(
           90deg,
           #12569c 0%,
@@ -614,139 +435,88 @@
           #0e70a1 77.51%,
           #0d73a1 100%
         );
-      "
-    >
-      <div class="container">
-        <div
-          class="flex md:justify-between justify-center md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
-        >
-          <nav>
-            <a class="link link-hover text-lg font-bold mt-4" href="index.html"
-              >الرئيسية</a
-            >
-            <a class="link link-hover text-lg font-bold mt-4" href="offers.html"
-              >العروض</a
-            >
-            <a class="link link-hover text-lg font-bold mt-4" href="Trend.html"
-              >الأكثر مبيعاً</a
-            >
-            <a
-              class="link link-hover text-lg font-bold mt-4"
-              href="contactus.html"
-              >تواصل معنا</a
-            >
-          </nav>
-          <div class="grid grid-flow-row gap-11 max-md:w-full">
-            <nav
-              class="self-start max-md:self-center justify-self-center max-md:w-full"
-            >
-              <h6 class="font-bold text-2xl max-md:text-xl">
-                كُن أول من يعلم ليصلك كل جديد اولاً بأول
-              </h6>
-              <div class="grid grid-cols-6 gap-3 my-3">
-                <input
-                  type="text"
-                  placeholder="البريد الالكتروني"
-                  class="p-4 rounded-[10px] col-span-4 text-black"
-                />
-                <button
-                  class="btn p-4 rounded-[10px] col-span-2 bg-[#AAAAAA] text-[#FFFFFF] font-bold border-none"
-                >
-                  اشتراك
-                </button>
-              </div>
-            </nav>
-            <nav class="self-end justify-self-center">
-              <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
-              <div class="flex">
-                <img
-                  src="./assets/icons/line.svg"
-                  class="max-md:hidden"
-                  title=""
-                  alt=""
-                />
-                <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/facebook.svg" title="" alt="" />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/Instegram.svg" title="" alt="" />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/x.svg" title="" alt="" />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/youtube.svg" title="" alt="" />
-                </a>
-
-                <img
-                  src="./assets/icons/line.svg"
-                  class="rotate-180 max-md:hidden"
-                  title=""
-                  alt=""
-                />
-              </div>
-            </nav>
-          </div>
-
-          <nav
-            class="mt-6 flex flex-col justify-center items-center max-md:w-full"
-          >
-            <a
-              href=""
-              title=""
-              target=""
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
-            >
-              <img
-                src="./assets/icons/Apple.svg"
-                class="me-3 px-2"
-                title=""
-                alt=""
-              />
-              <h2>App store</h2>
-            </a>
-            <a
-              href=""
-              title=""
-              target=""
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
-            >
-              <img
-                src="./assets/icons/android.svg"
-                class="me-3"
-                title=""
-                alt=""
-              />
-              <h2>Google Play</h2>
-            </a>
-          </nav>
-        </div>
-        <div
-          class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white"
-        >
-          <nav class="md:place-self-center md:justify-self-start">
-            <div class="grid grid-flow-col gap-4 text-base">
-              جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+      ">
+    <div class="container">
+      <div
+        class="flex md:justify-between justify-center md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white">
+        <nav>
+          <a class="link link-hover text-lg font-bold mt-4" href="index.html">الرئيسية</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="offers.html">العروض</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="Trend.html">الأكثر مبيعاً</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="contactus.html">تواصل معنا</a>
+        </nav>
+        <div class="grid grid-flow-row gap-11 max-md:w-full">
+          <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
+            <h6 class="font-bold text-2xl max-md:text-xl">
+              كُن أول من يعلم ليصلك كل جديد اولاً بأول
+            </h6>
+            <div class="grid grid-cols-6 gap-3 my-3">
+              <input type="text" placeholder="البريد الالكتروني" class="p-4 rounded-[10px] col-span-4 text-black" />
+              <button class="btn p-4 rounded-[10px] col-span-2 bg-[#AAAAAA] text-[#FFFFFF] font-bold border-none">
+                اشتراك
+              </button>
             </div>
           </nav>
-          <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
-            <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+          <nav class="self-end justify-self-center">
+            <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
+            <div class="flex">
+              <img src="./assets/icons/line.svg" class="max-md:hidden" title="" alt="" />
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/facebook.svg" title="" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/Instegram.svg" title="" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/x.svg" title="" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/youtube.svg" title="" alt="" />
+              </a>
+
+              <img src="./assets/icons/line.svg" class="rotate-180 max-md:hidden" title="" alt="" />
+            </div>
           </nav>
         </div>
+
+        <nav class="mt-6 flex flex-col justify-center items-center max-md:w-full">
+          <a href="" title="" target=""
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
+            <h2>App store</h2>
+          </a>
+          <a href="" title="" target=""
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            <img src="./assets/icons/android.svg" class="me-3" title="" alt="" />
+            <h2>Google Play</h2>
+          </a>
+        </nav>
       </div>
-    </footer>
+      <div class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white">
+        <nav class="md:place-self-center md:justify-self-start">
+          <div class="grid grid-flow-col gap-4 text-base">
+            جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+          </div>
+        </nav>
+        <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
+          <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
-    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-      VanillaTilt.init(document.querySelector(".card"), {
-        max: 25,
-        speed: 400,
-      });
+  <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".card"), {
+      max: 25,
+      speed: 400,
+    });
 
-      //It also supports NodeList
-      VanillaTilt.init(document.querySelectorAll(".card"));
-    </script>
-    <!-- alpine.js -->
-    <script src="./assets/js/alpine.js"></script>
-  </body>
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".card"));
+  </script>
+  <!-- alpine.js -->
+  <script src="./assets/js/alpine.js"></script>
+</body>
+
 </html>
