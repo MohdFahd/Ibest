@@ -42,6 +42,11 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="./assets/js/alpine.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://i.icomoon.io/public/temp/332271c2fd/UntitledProject/style.css"
+    />
   </head>
 
   <body class="bg-[#FEFEFE]">
@@ -52,7 +57,7 @@
         <div class="flex flex-col">
           <div class="container md:flex md:justify-between py-5 hidden px-10">
             <div>
-              <img src="./assets/imgs/logo.svg" class="" alt="" />
+              <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
             </div>
             <div class="mt-[26px] relative cursor-pointer">
               <input
@@ -63,7 +68,7 @@
               <div
                 class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
               >
-                <img src="./assets/icons/search.svg" alt="" />
+                <img src="./assets/icons/search.svg" title="" alt="" />
               </div>
             </div>
           </div>
@@ -118,9 +123,15 @@
             src="./assets/icons/ibest.svg"
             class="mx-2"
             width="70px"
+            title=""
             alt=""
           />
-          <img src="./assets/imgs/logo-phone.svg" width="25px" alt="" />
+          <img
+            src="./assets/imgs/logo-phone.svg"
+            width="25px"
+            title=""
+            alt=""
+          />
         </div>
         <div class="bg-white text-center flex justify-center">
           <a
@@ -243,7 +254,6 @@
 
     <main class="container mx-auto px-10 my-8">
       <!-- Desktop Banner -->
-
       <div
         class="hidden md:block swiper mySwiper rounded-3xl w-full max-h-[300px] border-none overflow-hidden bg-transparent relative"
       >
@@ -253,6 +263,7 @@
               loading="lazy"
               src="./assets/imgs/image.png"
               class="object-cover w-full h-auto overflow-hidden"
+              title=""
               alt=""
             />
           </div>
@@ -261,6 +272,7 @@
               loading="lazy"
               src="./assets/imgs/image.png"
               class="object-cover w-full h-auto overflow-hidden"
+              title=""
               alt=""
             />
           </div>
@@ -269,6 +281,7 @@
               loading="lazy"
               src="./assets/imgs/image.png"
               class="object-cover w-full h-auto overflow-hidden"
+              title=""
               alt=""
             />
           </div>
@@ -277,6 +290,7 @@
           loading="lazy"
           src="./assets/imgs/VectoreHero.svg"
           class="absolute left-0 top-0 w-[10%]"
+          title=""
           alt=""
         />
         <!-- Arrows -->
@@ -288,6 +302,7 @@
               <img
                 loading="lazy"
                 src="./assets/icons/UpArrow.svg"
+                title=""
                 alt=""
                 class=""
               />
@@ -295,7 +310,12 @@
             <div
               class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer swiper-button-next hover:bg-blue-950"
             >
-              <img loading="lazy" src="./assets/icons/downArrow.svg" alt="" />
+              <img
+                loading="lazy"
+                src="./assets/icons/downArrow.svg"
+                title=""
+                alt=""
+              />
             </div>
           </div>
           <div class="swiper-pagination">
@@ -323,7 +343,7 @@
               loading="lazy"
               src="./assets/imgs/image.png"
               width="50%"
-              alt=""
+              title="" alt=""
             />
           </div>
           <div class="swiper-slide flex justify-center items-center">
@@ -336,7 +356,7 @@
               loading="lazy"
               src="./assets/imgs/image.png"
               width="50%"
-              alt=""
+              title="" alt=""
             />
           </div>
         </div>
@@ -353,11 +373,13 @@
             placeholder="البحث"
           />
         </div>
+
         <div x-data="{ isOpen: false }" class="relative">
           <img
             loading="lazy"
             @click="isOpen = !isOpen"
             src="./assets/icons/filter.svg"
+            title=""
             alt=""
           />
           <ol
@@ -386,15 +408,16 @@
         </div>
       </div>
       <h1
-        class="md:text-3xl font-bold text-[#1458A1] text-center self-center mt-8"
+        class="md:text-3xl font-bold text-[#1458A1] text-center self-center mt-8 text-xl"
       >
-        عالم الشاشات والقطع | IBest
+        عالم الشاشات والقطع | IBest <span class="icon-search bg-black"></span>
       </h1>
       <!-- Products -->
       <section class="flex justify-center items-center">
         <div class="flex justify-center md:justify-center flex-wrap my-10">
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -402,6 +425,7 @@
                 loading="lazy"
                 src="./assets/imgs/Samsunge.png"
                 width="35%"
+                title=""
                 alt="Samsunge.png"
               />
             </figure>
@@ -415,11 +439,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -427,6 +453,7 @@
                 loading="lazy"
                 src="./assets/imgs/huawei.png"
                 width="35%"
+                title=""
                 alt="huawei.png"
               />
             </figure>
@@ -440,11 +467,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -452,6 +481,7 @@
                 loading="lazy"
                 src="./assets/imgs/LT.png"
                 width="35%"
+                title=""
                 alt="LT.png"
               />
             </figure>
@@ -465,11 +495,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -477,6 +509,7 @@
                 loading="lazy"
                 src="./assets/imgs/Xiaomi.png"
                 width="35%"
+                title=""
                 alt="Xiaomi.png"
               />
             </figure>
@@ -490,11 +523,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -502,6 +537,7 @@
                 loading="lazy"
                 src="./assets/imgs/Samsunge.png"
                 width="35%"
+                title=""
                 alt="Samsunge.png"
               />
             </figure>
@@ -515,11 +551,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -527,6 +565,7 @@
                 loading="lazy"
                 src="./assets/imgs/huawei.png"
                 width="35%"
+                title=""
                 alt="huawei.png"
               />
             </figure>
@@ -540,11 +579,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -552,6 +593,7 @@
                 loading="lazy"
                 src="./assets/imgs/LT.png"
                 width="35%"
+                title=""
                 alt="LT.png"
               />
             </figure>
@@ -565,11 +607,13 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
           <a
             href="./parts.html"
+            title=""
             class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 border-gray-500 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl"
           >
             <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
@@ -577,6 +621,7 @@
                 loading="lazy"
                 src="./assets/imgs/Xiaomi.png"
                 width="35%"
+                title=""
                 alt="Xiaomi.png"
               />
             </figure>
@@ -590,79 +635,136 @@
               loading="lazy"
               src="./assets/icons/leftArrow.svg"
               class="md:self-end self-center me-9 max-sm:hidden"
+              title=""
               alt=""
             />
           </a>
         </div>
       </section>
+
       <!-- Most search -->
       <section class="my-3">
         <h2 class="text-xl font-bold text-[#1458A1] my-2">الاكثر بحثاً :</h2>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           iPhone 12
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy Note 20
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Huawei Mate 30
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy S21
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy S21
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy Note 20
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Huawei Mate 30
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           iPhone 12
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy Note 20
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Huawei Mate 30
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
         <div
-          class="inline-flex bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
+          class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4"
         >
           Samsung Galaxy S21
-          <img src="./assets/icons/search-dark.svg" class="ms-4" alt="" />
+          <img
+            src="./assets/icons/search-dark.svg"
+            class="ms-4"
+            title=""
+            alt=""
+          />
         </div>
       </section>
       <!-- Section -->
@@ -674,7 +776,7 @@
             <h2
               class="md:text-3xl font-bold text-white text-center self-center mt-8"
             >
-              كون من الخبة في عالم الصيانة وانضم معنا..
+              كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h2>
             <h2 class="text-white mt-2 md:text-[26px]">
               لعمر اطول وجودة اعلى واستخدام مدى الحياة
@@ -724,7 +826,7 @@
             <nav
               class="self-start max-md:self-center justify-self-center max-md:w-full"
             >
-              <h6 class="font-bold text-2xl">
+              <h6 class="font-bold text-2xl max-md:text-xl">
                 كُن أول من يعلم ليصلك كل جديد اولاً بأول
               </h6>
               <div class="grid grid-cols-6 gap-3 my-3">
@@ -746,24 +848,26 @@
                 <img
                   src="./assets/icons/line.svg"
                   class="max-md:hidden"
+                  title=""
                   alt=""
                 />
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/facebook.svg" alt="" />
+                  <img src="./assets/icons/facebook.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/Instegram.svg" alt="" />
+                  <img src="./assets/icons/Instegram.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/x.svg" alt="" />
+                  <img src="./assets/icons/x.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/youtube.svg" alt="" />
+                  <img src="./assets/icons/youtube.svg" title="" alt="" />
                 </a>
 
                 <img
                   src="./assets/icons/line.svg"
                   class="rotate-180 max-md:hidden"
+                  title=""
                   alt=""
                 />
               </div>
@@ -779,7 +883,12 @@
               target=""
               class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
-              <img src="./assets/icons/Apple.svg" class="me-3 px-2" alt="" />
+              <img
+                src="./assets/icons/Apple.svg"
+                class="me-3 px-2"
+                title=""
+                alt=""
+              />
               <h2>App store</h2>
             </a>
             <a
@@ -788,7 +897,12 @@
               target=""
               class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
-              <img src="./assets/icons/android.svg" class="me-3" alt="" />
+              <img
+                src="./assets/icons/android.svg"
+                class="me-3"
+                title=""
+                alt=""
+              />
               <h2>Google Play</h2>
             </a>
           </nav>
@@ -801,7 +915,7 @@
               جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
             </div>
           </nav>
-          <nav class="md:place-self-center md:justify-self-end">
+          <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
             <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
           </nav>
         </div>

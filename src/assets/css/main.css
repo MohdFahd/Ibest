@@ -52,3 +52,17 @@ body {
   bottom: -5px;
   right: 0;
 }
+input:focus,
+textarea:focus {
+  border: #1458a1;
+  outline-color: #1458a1;
+}
+.search-tag:hover {
+  background: #1458a1;
+  color: #fff;
+}
+
+.search-tag:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7454%)
+    hue-rotate(221deg) brightness(103%) contrast(102%);
+}

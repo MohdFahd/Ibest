@@ -259,12 +259,14 @@
 
       <!-- Contact Us -->
       <section class="my-5">
-        <p class="text-2xl w-[50%] leading-9 my-3">
+        <p class="text-2xl w-[50%] leading-9 my-3 max-md:text-lg max-md:w-full">
           يُرجى استخدام نموذج الاتصال أدناه للتواصل معنا وسنعاود الاتصال
           بك. نتطلع قدماً إلى التواصل معكم!
         </p>
-        <div class="grid grid-cols-12 my-5 gap-4">
-          <div class="col-span-2 flex flex-col">
+        <div
+          class="grid grid-cols-12 my-5 gap-4 max-md:grid-cols-1 max-md:grid-rows-2"
+        >
+          <div class="col-span-2 flex flex-col max-md:row-span-2">
             <div class="flex items-center my-3">
               <img
                 src="./assets/icons/locationPin.svg"
@@ -309,12 +311,12 @@
                 <select
                   name=""
                   id=""
-                  class="rounded-lg py-2 mt-2 px-2 bg-white w-[50%]"
+                  class="rounded-lg py-2 mt-2 px-2 bg-white"
                 >
                   <option value="">المبيعات</option>
                 </select>
               </div>
-              <div class="flex flex-col my-2 col-span-6">
+              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
                 <label for="" class="text-[#1458A1]"> الاسم الاول </label>
                 <input
                   type="text"
@@ -324,7 +326,7 @@
                   placeholder="ضع اسمك الأول"
                 />
               </div>
-              <div class="flex flex-col my-2 col-span-6">
+              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
                 <label for="" class="text-[#1458A1]">الاسم الاخير </label>
                 <input
                   type="text"
@@ -334,7 +336,7 @@
                   placeholder="ضع اسمك الأخير"
                 />
               </div>
-              <div class="flex flex-col my-2 col-span-6">
+              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
                 <label for="" class="text-[#1458A1]">البريد الإلكتروني </label>
                 <input
                   type="email"
@@ -345,7 +347,7 @@
                   placeholder="example@gmail.com"
                 />
               </div>
-              <div class="flex flex-col my-3 col-span-6">
+              <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
                 <label for="" class="text-[#1458A1]">البريد الإلكتروني </label>
                 <input
                   type="number"
@@ -361,14 +363,13 @@
                 <textarea
                   name=""
                   id=""
-                  cols="30"
                   rows="5"
                   class="rounded-lg py-2 px-2 bg-white mt-1"
                 ></textarea>
               </div>
 
               <button
-                class="btn bg-[#00A3A0] text-[#FFFFFF] font-bold text-lg rounded-2xl"
+                class="btn bg-[#00A3A0] text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-[#1458A1]"
               >
                 <img src="./assets/icons/send.svg" alt="" />
                 إرسال
@@ -414,7 +415,7 @@
             <nav
               class="self-start max-md:self-center justify-self-center max-md:w-full"
             >
-              <h6 class="font-bold text-2xl">
+              <h6 class="font-bold text-2xl max-md:text-xl">
                 كُن أول من يعلم ليصلك كل جديد اولاً بأول
               </h6>
               <div class="grid grid-cols-6 gap-3 my-3">
@@ -436,24 +437,26 @@
                 <img
                   src="./assets/icons/line.svg"
                   class="max-md:hidden"
+                  title=""
                   alt=""
                 />
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/facebook.svg" alt="" />
+                  <img src="./assets/icons/facebook.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/Instegram.svg" alt="" />
+                  <img src="./assets/icons/Instegram.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/x.svg" alt="" />
+                  <img src="./assets/icons/x.svg" title="" alt="" />
                 </a>
                 <a href="" class="cursor-pointer mx-2">
-                  <img src="./assets/icons/youtube.svg" alt="" />
+                  <img src="./assets/icons/youtube.svg" title="" alt="" />
                 </a>
 
                 <img
                   src="./assets/icons/line.svg"
                   class="rotate-180 max-md:hidden"
+                  title=""
                   alt=""
                 />
               </div>
@@ -469,7 +472,12 @@
               target=""
               class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
-              <img src="./assets/icons/Apple.svg" class="me-3 px-2" alt="" />
+              <img
+                src="./assets/icons/Apple.svg"
+                class="me-3 px-2"
+                title=""
+                alt=""
+              />
               <h2>App store</h2>
             </a>
             <a
@@ -478,7 +486,12 @@
               target=""
               class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]"
             >
-              <img src="./assets/icons/android.svg" class="me-3" alt="" />
+              <img
+                src="./assets/icons/android.svg"
+                class="me-3"
+                title=""
+                alt=""
+              />
               <h2>Google Play</h2>
             </a>
           </nav>
@@ -491,7 +504,7 @@
               جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
             </div>
           </nav>
-          <nav class="md:place-self-center md:justify-self-end">
+          <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
             <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
           </nav>
         </div>
