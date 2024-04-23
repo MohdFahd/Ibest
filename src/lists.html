@@ -268,23 +268,38 @@
             placeholder="البحث"
           />
         </div>
+
         <div x-data="{ isOpen: false }" class="relative">
           <img
+            loading="lazy"
             @click="isOpen = !isOpen"
             src="./assets/icons/filter.svg"
+            title=""
             alt=""
           />
-          <ul
+          <ol
             x-show="isOpen"
             @click.away="isOpen = false"
             name=""
             id=""
-            class="menu shadow bg-base-100 rounded-lg absolute top-10 right-0 z-10 px-3"
+            class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg"
           >
-            <li class="font-bold">الكل</li>
-            <li>سامسونج</li>
-            <li>ال تي</li>
-          </ul>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white"
+            >
+              الكل
+            </li>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
+            >
+              سامسونج
+            </li>
+            <li
+              class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white"
+            >
+              ال تي
+            </li>
+          </ol>
         </div>
       </div>
       <!-- Products -->
