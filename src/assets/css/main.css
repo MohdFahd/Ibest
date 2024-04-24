@@ -65,4 +65,14 @@ textarea:focus {
 .search-tag:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7454%)
     hue-rotate(221deg) brightness(103%) contrast(102%);
+
+
+    
+}
+
+.banner{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }

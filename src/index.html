@@ -47,9 +47,9 @@
 
 <body class="bg-[#FEFEFE]">
   <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
-    <nav class="bg-white drop-shadow-md z-40">
+    <nav class="bg-white drop-shadow-md z-40 ">
       <div class="flex flex-col">
-        <div class="container md:flex md:justify-between py-5 hidden px-10">
+        <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10  ">
           <div>
             <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
           </div>
@@ -107,13 +107,14 @@
       </div>
       <div class="bg-white text-center flex justify-center">
         <a href="index.html"
-          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative active-mobile">
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative active">
           المتجر
         </a>
         <button @click="
               toggleNew = !toggleNew;
               toggleOffers = false;
-              toggleMostSales = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+              toggleMostSales = false; "
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           جديد
 
           <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
@@ -121,14 +122,15 @@
         <button @click="
             toggleMostSales = !toggleMostSales;
                 toggleNew = false;
-                toggleOffers = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+                toggleOffers = false; "
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           الأكثر مبيعاً
         </button>
         <button @click="
               toggleOffers = !toggleOffers;
               toggleNew = false;
                 toggleMostSales = false;"
-          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           عروض
         </button>
       </div>
@@ -136,7 +138,7 @@
     <!-- list of links -->
     <ul class="">
       <li x-show="toggleNew"
-        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300">
         <a href="newes.html"
           class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
           شاشات
@@ -148,7 +150,7 @@
           قطع</a>
       </li>
       <li x-show="toggleMostSales"
-        class="container text-center bg-white w-[90%] p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0  p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
         <a href="Trend.html"
           class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
           شاشات
@@ -165,7 +167,7 @@
         </a>
       </li>
       <li x-show="toggleOffers"
-        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container bg-white w-[90%] text-center  p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
         <a href="offers.html"
           class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
           شاشات
@@ -188,14 +190,14 @@
   <main class="container mx-auto px-10 my-8">
     <!-- Desktop Banner -->
     <div
-      class="hidden md:block swiper mySwiper rounded-3xl w-full max-h-[300px] border-none overflow-hidden bg-transparent relative">
+      class="hidden md:block swiper mySwiper rounded-3xl  max-h-[300px] border-none overflow-hidden bg-transparent relative">
       <div class="swiper-wrapper">
         <div class="swiper-slide cursor-pointer overflow-hidden">
           <img loading="lazy" src="./assets/imgs/image.png" class="object-cover w-full h-auto overflow-hidden" title=""
             alt="" />
         </div>
         <div class="swiper-slide cursor-pointer overflow-hidden">
-          <img loading="lazy" src="./assets/imgs/image.png" class="object-cover w-full h-auto overflow-hidden" title=""
+          <img loading="lazy" src="./assets/imgs/image.png" class="object-cover h-auto overflow-hidden" title=""
             alt="" />
         </div>
         <div class="swiper-slide cursor-pointer overflow-hidden">
@@ -259,14 +261,12 @@
       </div> -->
 
     <!-- Mobile Search -->
-    <div
-      class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]">
-      <div class="flex items-center gap-2 w-[80%] border-none">
+    <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
+      <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
         <input type="text"
           class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
           placeholder="البحث" />
       </div>
-
       <div x-data="{ isOpen: false }" class="relative">
         <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
         <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
@@ -287,102 +287,66 @@
       عالم الشاشات والقطع | IBest
     </h1>
     <!-- Products -->
-    <section class="flex justify-center items-center">
-      <div class="flex justify-center md:justify-center flex-wrap my-10">
+    <section class="flex justify-center my-5">
+      <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="35%" title="" alt="Samsunge.png" />
+          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl">
+          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="60%" title="" alt="Samsunge.png" />
           </figure>
 
           <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
             <h2 class="font-bold md:text-xl">سامسونج</h2>
           </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
+          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
             title="" alt="" />
         </a>
         <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/huawei.png" width="35%" title="" alt="huawei.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">هواوي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/LT.png" width="35%" title="" alt="LT.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">ال تي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/Xiaomi.png" width="35%" title="" alt="Xiaomi.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">شاومي & ردمي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="35%" title="" alt="Samsunge.png" />
+          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl">
+          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="60%" title="" alt="Samsunge.png" />
           </figure>
 
           <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
             <h2 class="font-bold md:text-xl">سامسونج</h2>
           </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
+          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
             title="" alt="" />
         </a>
         <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/huawei.png" width="35%" title="" alt="huawei.png" />
+          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl">
+          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+            <img loading="lazy" src="./assets/imgs/huawei.png" width="60%" title="" alt="huawei.png" />
           </figure>
 
           <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
             <h2 class="font-bold md:text-xl">هواوي</h2>
           </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
+          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
             title="" alt="" />
         </a>
         <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/LT.png" width="35%" title="" alt="LT.png" />
+          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl">
+          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+            <img loading="lazy" src="./assets/imgs/LT.png" width="60%" title="" alt="LT.png" />
           </figure>
 
           <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
             <h2 class="font-bold md:text-xl">ال تي</h2>
           </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
+          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
             title="" alt="" />
         </a>
         <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-[52px] md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 mx-1 cursor-pointer max-md:rounded-3xl">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%]">
-            <img loading="lazy" src="./assets/imgs/Xiaomi.png" width="35%" title="" alt="Xiaomi.png" />
+          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl">
+          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+            <img loading="lazy" src="./assets/imgs/Xiaomi.png" width="60%" title="" alt="Xiaomi.png" />
           </figure>
 
           <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
             <h2 class="font-bold md:text-xl">شاومي & ردمي</h2>
           </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center me-9 max-sm:hidden"
+          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
             title="" alt="" />
         </a>
       </div>
@@ -448,7 +412,8 @@
             لعمر اطول وجودة اعلى واستخدام مدى الحياة
           </h2>
         </div>
-        <button class="btn text-xl md:text-[24px] bg-[#1458A1] font-normal border-none text-white my-6">
+        <button
+          class="btn text-xl md:text-[24px] bg-[#1458A1] hover:bg-[#1458A1] hover:opacity-70 font-normal border-none text-white my-6">
           انضم الان
         </button>
       </div>

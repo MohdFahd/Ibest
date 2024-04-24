@@ -47,18 +47,18 @@
 
 <body class="bg-[#FEFEFE]">
   <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
-    <nav class="bg-white drop-shadow-md z-40">
+    <nav class="bg-white drop-shadow-md z-40 ">
       <div class="flex flex-col">
-        <div class="container md:flex md:justify-between py-5 hidden px-10">
+        <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10  ">
           <div>
-            <img src="./assets/imgs/logo.svg" class="" alt="" />
+            <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
           </div>
           <div class="mt-[26px] relative cursor-pointer">
             <input type="text" class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
               placeholder="البحث" />
             <div
-              class="bg-[#AAAAAA] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
-              <img src="./assets/icons/search.svg" alt="" />
+              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              <img src="./assets/icons/search.svg" title="" alt="" />
             </div>
           </div>
         </div>
@@ -70,9 +70,9 @@
             <li
               class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; ">
+                toggleNew = !toggleNew;
+                toggleOffers = false;
+                toggleMostSales = false; ">
               <span
                 class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0">1</span>
               <a href="#">جديد</a>
@@ -80,19 +80,19 @@
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false;
-            ">
+                toggleMostSales = !toggleMostSales;
+                  toggleNew = false;
+                  toggleOffers = false;
+              ">
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;
-            ">
+                toggleOffers = !toggleOffers;
+                toggleNew = false;
+                  toggleMostSales = false;
+              ">
               <a href="#">عروض</a>
             </li>
           </ul>
@@ -102,33 +102,35 @@
     <!-- Mobile SideBar -->
     <nav class="flex md:hidden bg-white flex-col z-0">
       <div class="container md:hidden flex justify-center my-4">
-        <img src="./assets/icons/ibest.svg" class="mx-2" width="70px" alt="" />
-        <img src="./assets/imgs/logo-phone.svg" width="25px" alt="" />
+        <img src="./assets/icons/ibest.svg" class="mx-2" width="70px" title="" alt="" />
+        <img src="./assets/imgs/logo-phone.svg" width="25px" title="" alt="" />
       </div>
       <div class="bg-white text-center flex justify-center">
         <a href="index.html"
-          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative active-mobile">
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative active">
           المتجر
         </a>
         <button @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+                toggleNew = !toggleNew;
+                toggleOffers = false;
+                toggleMostSales = false; "
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           جديد
 
           <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
         </button>
         <button @click="
-            toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false; " class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+              toggleMostSales = !toggleMostSales;
+                  toggleNew = false;
+                  toggleOffers = false; "
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           الأكثر مبيعاً
         </button>
         <button @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;"
-          class="text-[#00A3A0] px-4 flex cursor-pointer rounded-lg mx-1 py-2 relative">
+                toggleOffers = !toggleOffers;
+                toggleNew = false;
+                  toggleMostSales = false;"
+          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
           عروض
         </button>
       </div>
@@ -136,7 +138,7 @@
     <!-- list of links -->
     <ul class="">
       <li x-show="toggleNew"
-        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300">
         <a href="newes.html"
           class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
           شاشات
@@ -148,7 +150,7 @@
           قطع</a>
       </li>
       <li x-show="toggleMostSales"
-        class="container text-center bg-white w-[90%] p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0  p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
         <a href="Trend.html"
           class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
           شاشات
@@ -165,7 +167,7 @@
         </a>
       </li>
       <li x-show="toggleOffers"
-        class="container bg-white w-[90%] text-center p-5 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+        class="container bg-white w-[90%] text-center  p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
         <a href="offers.html"
           class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
           شاشات
@@ -200,14 +202,12 @@
       <h1 class="text-blue-800 cursor-pointer">شاشات</h1>
     </div>
     <!-- Mobile Search -->
-    <div
-      class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]">
-      <div class="flex items-center gap-2 w-[80%] border-none">
+    <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
+      <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
         <input type="text"
           class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
           placeholder="البحث" />
       </div>
-
       <div x-data="{ isOpen: false }" class="relative">
         <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
         <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
@@ -226,11 +226,11 @@
     </div>
     <!-- Products -->
     <section class="flex justify-center mt-4">
-      <div class="flex flex-wrap justify-center">
+      <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center  ">
               <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -239,8 +239,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -249,8 +249,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -259,8 +259,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -269,8 +269,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -279,8 +279,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -289,8 +289,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -299,8 +299,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -308,8 +308,8 @@
         </a>
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -318,8 +318,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -328,8 +328,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -338,8 +338,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -347,8 +347,8 @@
         </a>
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -357,8 +357,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -367,8 +367,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -377,8 +377,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -386,8 +386,8 @@
         </a>
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات داخلية</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -396,8 +396,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">شاشات تاب</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -406,8 +406,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 - A015</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
@@ -416,8 +416,8 @@
 
         <a href="./kinds.html">
           <div
-            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-[52px] flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
-            <div class="card-body">
+            class="card w-[274px] h-[274px] bg-base-100 shadow-xl py-9 flex justify-between flex-col items-center mx-2 my-2 cursor-pointer">
+            <div class="card-body flex justify-center items-center">
               <h2 class="font-bold text-xl">A01 CORE - A013</h2>
             </div>
             <img src="./assets/icons/leftArrow.svg" class="self-end me-9" alt="" />
