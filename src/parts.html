@@ -62,6 +62,10 @@
             </div>
           </div>
         </div>
+        <div class=" flex justify-center max-md:hidden">
+          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          </div>
+        </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
             <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
@@ -204,7 +208,8 @@
           placeholder="البحث" />
       </div>
       <div x-data="{ isOpen: false }" class="relative">
-        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
+        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
+          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
         <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
           class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
           <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">

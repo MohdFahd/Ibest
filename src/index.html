@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -43,11 +43,12 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <script src="./assets/js/alpine.js"></script>
+
 </head>
 
 <body class="bg-[#FEFEFE]">
-  <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
-    <nav class="bg-white drop-shadow-md z-40 ">
+  <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }" class="relative">
+    <nav class="bg-white drop-shadow-md z-10 ">
       <div class="flex flex-col">
         <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10  ">
           <div>
@@ -136,9 +137,9 @@
       </div>
     </nav>
     <!-- list of links -->
-    <ul class="">
+    <ul class="navlist">
       <li x-show="toggleNew"
-        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300">
+        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 ">
         <a href="newes.html"
           class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
           شاشات
@@ -190,24 +191,30 @@
   <main class="container mx-auto px-10 my-8">
     <!-- Desktop Banner -->
     <div
-      class="hidden md:block swiper mySwiper rounded-3xl  max-h-[300px] border-none overflow-hidden bg-transparent relative">
+      class="md:block swiper mySwiper rounded-3xl max-h-[300px] max-md:max-h-[200px] border-none overflow-hidden relative">
       <div class="swiper-wrapper">
-        <div class="swiper-slide cursor-pointer overflow-hidden">
-          <img loading="lazy" src="./assets/imgs/image.png" class="object-cover w-full h-auto overflow-hidden" title=""
-            alt="" />
+        <div class="swiper-slide cursor-pointer overflow-hidden  ">
+          <img loading="lazy" src="./assets/imgs/image.png"
+            class="h-[350px] object-fill rounded-xl bg-white w-full max-md:hidden " title="" alt="" />
+          <div class="bg-[#1458a1] w-full h-[200px] flex justify-center items-center text-white">Slide Space</div>
         </div>
-        <div class="swiper-slide cursor-pointer overflow-hidden">
-          <img loading="lazy" src="./assets/imgs/image.png" class="object-cover h-auto overflow-hidden" title=""
-            alt="" />
+        <div class="swiper-slide cursor-pointer overflow-hidden  ">
+          <img loading="lazy" src="./assets/imgs/image.png"
+            class="h-[350px] object-fill rounded-xl bg-white w-full max-md:hidden " title="" alt="" />
+          <div class="bg-[#1458a1] w-full h-[200px] flex justify-center items-center text-white">Slide Space</div>
         </div>
-        <div class="swiper-slide cursor-pointer overflow-hidden">
-          <img loading="lazy" src="./assets/imgs/image.png" class="object-cover w-full h-auto overflow-hidden" title=""
-            alt="" />
+        <div class="swiper-slide cursor-pointer overflow-hidden  ">
+          <img loading="lazy" src="./assets/imgs/image.png"
+            class="h-[350px] object-fill rounded-xl bg-white w-full max-md:hidden " title="" alt="" />
+          <div class="bg-[#1458a1] w-full h-[200px] flex justify-center items-center text-white">Slide Space</div>
         </div>
+
+
       </div>
-      <img loading="lazy" src="./assets/imgs/VectoreHero.svg" class="absolute left-0 top-0 w-[10%]" title="" alt="" />
+      <img loading="lazy" src="./assets/imgs/VectoreHero.svg" class="absolute left-0 top-0 w-[10%] max-md:hidden "
+        title="" alt="" />
       <!-- Arrows -->
-      <div class="flex top-0 absolute left-0">
+      <div class="flex top-0 absolute left-0 max-md:hidden ">
         <div class="mx-2">
           <div
             class="w-[40px] h-[40px] bg-[#F2F4F4] rounded-full flex justify-center items-center my-2 cursor-pointer swiper-button-prev hover:bg-blue-950">
@@ -224,6 +231,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
 
     <!-- Mobile Banner -->
     <!-- <div
@@ -268,7 +276,8 @@
           placeholder="البحث" />
       </div>
       <div x-data="{ isOpen: false }" class="relative">
-        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
+        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
+          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
         <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
           class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
           <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">

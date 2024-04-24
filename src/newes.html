@@ -62,6 +62,10 @@
             </div>
           </div>
         </div>
+        <div class=" flex justify-center max-md:hidden">
+          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          </div>
+        </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
             <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
@@ -189,26 +193,28 @@
 
   <main class="container mx-auto px-10 my-8">
     <!-- Filter -->
-    <div class="hidden items-center justify-end relative w-full px-2 md:flex">
-      <img src="./assets/icons/filter.svg" width="2%" class="absolute left-2 mt-2 mx-1" alt="" />
-      <select name="" id="" class="rounded-xl py-2 mt-2 bg- white w-[25%] shadow-lg px-2 border-2 border-gray-200">
-        <option value="">الكل</option>
-        <option value="">سامسونج</option>
-        <option value="">ال جي</option>
-      </select>
+    <div class="flex  justify-end  ">
+      <div
+        class="hidden items-end justify-end md:flex bg-[#00a3a0] text-white shadow-lg  border-2 border-gray-200 rounded-xl py-2 mt-2 w-[25%] ">
+        <img src="./assets/icons/filter.svg" width="10%" class="mr-2" alt="" />
+        <select name="" id="" class="w-full bg-transparent focus:outline-none ">
+          <option value="" class="text-black">الكل</option>
+          <option value="" class="text-black">سامسونج</option>
+          <option value="" class="text-black">ال جي</option>
+        </select>
+      </div>
     </div>
 
     <!-- Mobile Search -->
-    <div
-      class="flex items-center justify-center relative md:hidden w-[100%] mt-4 rounded-xl shadow-sm p-2 bg-[#F2F4F4]">
-      <div class="flex items-center gap-2 w-[80%] border-none">
+    <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
+      <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
         <input type="text"
           class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
           placeholder="البحث" />
       </div>
-
       <div x-data="{ isOpen: false }" class="relative">
-        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
+        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
+          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
         <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
           class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
           <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
@@ -224,7 +230,7 @@
       </div>
     </div>
     <!-- Products -->
-    <section class="flex mt-4">
+    <section class="flex mt-4 ">
       <div class="flex flex-wrap justify-start">
         <a href="./details.html" title=""
           class="card rounded-3xl w-[274px] bg-white shadow-md relative flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-auto my-2">

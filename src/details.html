@@ -62,6 +62,10 @@
             </div>
           </div>
         </div>
+        <div class=" flex justify-center max-md:hidden">
+          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          </div>
+        </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
             <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
@@ -211,83 +215,91 @@
         <a href="./versions.html"> S24 </a>
       </h2>
     </div>
-        <!-- Mobile Search -->
-        <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
-          <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
-            <input type="text"
-              class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
-              placeholder="البحث" />
-          </div>
-          <div x-data="{ isOpen: false }" class="relative">
-            <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg" title="" alt="" />
-            <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
-              class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
-              <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
-                الكل
-              </li>
-              <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-                سامسونج
-              </li>
-              <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-                ال تي
-              </li>
-            </ol>
-          </div>
-        </div>
+    <!-- Mobile Search -->
+    <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
+      <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
+        <input type="text"
+          class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+          placeholder="البحث" />
+      </div>
+      <div x-data="{ isOpen: false }" class="relative">
+        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
+          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
+        <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
+          class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
+            الكل
+          </li>
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
+            سامسونج
+          </li>
+          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
+            ال تي
+          </li>
+        </ol>
+      </div>
+    </div>
     <!-- details -->
-    <section class="my-5" x-data="{ img: 'S24.png' }">
-      <div class="bg-[#EFEFEF] flex max-md:flex-col rounded-3xl p-2">
-        <div class="flex justify-start flex-row max-md:flex-col-reverse items-center max-md:justify-between ">
-          <div class="flex flex-col w-[20%] bg justify-center items-center ">
-            <img @click="img = 'S24_Black.png'" src="./assets/imgs/phoneVersions/S24_Black.png" alt="S24_Black.png"
-              class="rounded-xl bg-white my-2 max-md:mx-1 cursor-pointer w-[70%]  " />
-            <img @click="img = 'S24_Black.png'" src="./assets/imgs/phoneVersions/S24_Black.png" alt="S24_Black.png"
-              class="rounded-xl bg-white my-2 max-md:mx-1 cursor-pointer w-[70%]" />
-            <img @click="img = 'S24_Black.png'" src="./assets/imgs/phoneVersions/S24_Black.png" alt="S24_Black.png"
-              class="rounded-xl bg-white my-2 max-md:mx-1 cursor-pointer w-[70%]" />
-            <img @click="img = 'S24_Black.png'" src="./assets/imgs/phoneVersions/S24_Black.png" alt="S24_Black.png"
-              class="rounded-xl bg-white my-2 max-md:mx-1 cursor-pointer w-[70%]" />
-          </div>
-
-
-          <img x-transition x-bind:src="'./assets/imgs/phoneVersions/' + img" width="65%" class="" x-bind:="img" />
-
+    <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col "
+      x-data="{ img: 'S24.png' }">
+      <div class="flex flex-row-reverse max-md:flex-col max-[1024px]:justify-end  ">
+        <div class="pro-img-details mx-3 flex justify-center items-center max-md:justify-start">
+          <img x-transition x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img"
+            class="w-[350px] h-[350px] max-md:w-full max-md:h-auto  object-cover rounded-xl bg-white   " alt="">
         </div>
-        <div class="w-full md:mx-5 relative">
-          <h1 class="text-[22px] font-bold p-1 max-md:p-1 max-md:text-lg">
-            شاشات داخلية جلاكسي S24
-          </h1>
-          <h2 class="text-xl font-bold p-1 max-md:p-1 text-[#1458A1] max-md:text-lg">
-            وصف المنتج
-          </h2>
-          <p class="text-lg font-bold p-1 max-md:p-1max-md:text-lg">
-            s24 ultra , s24 plus
-          </p>
-          <h2 class="text-xl font-bold p-1 max-md:p-1 text-[#1458A1] max-md:text-lg">
-            الموديلات المتوافقه
-          </h2>
-          <p class="text-lg font-bold p-1 max-md:p-1 max-md:text-lg">
-            s24 ultra , s24 plus
-          </p>
-          <h2 class="text-xl font-bold p-1 max-md:p-1 text-[#1458A1] max-md:text-lg">
-            الملاحظات
-          </h2>
-          <p class="text-lg font-bold p-1 max-md:p-1 max-md:text-lg">
-            هذا منتج خاص ومتوفربمحلات السيفي للصيانه
-          </p>
-          <div class="flex justify-center md:justify-end w-full max-md:flex-col-reverse">
-            <button
-              class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1">
-              <img src="./assets/icons/youtube-watch.svg" class="mx-2" alt="" />
-              فيديو توضيحي
-            </button>
-            <button class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-black">
-              <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
-              إضافة للطلب
-            </button>
-          </div>
-          <img src="./assets/icons/copy.svg" class="absolute top-0 left-0 mt-3 max-md:hidden" alt="" />
+        <div class="flex flex-col items-center max-md:flex-row  max-md:justify-center max-md:my-2">
+          <button class="" @click="img = 'S24_Black.png'">
+            <img src=" ./assets/imgs/phoneVersions/S24_Black.png"
+              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1  " alt="">
+          </button>
+          <button class="" @click="img = 'S24_Gold.png'">
+            <img src=" ./assets/imgs/phoneVersions/S24_Gold.png"
+              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+          </button>
+          <button class="" @click="img = 'S24Gray.png'">
+            <img src="./assets/imgs/phoneVersions/S24Gray.png"
+              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+          </button>
+          <button class="" @click="img = 'Samsung-Galaxy-S24-Ultra-Violet-PNG.png'">
+            <img src="./assets/imgs/phoneVersions/Samsung-Galaxy-S24-Ultra-Violet-PNG.png"
+              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+          </button>
         </div>
+      </div>
+      <div class="w-[70%] max-md:w-full ">
+        <h1 class="text-[22px] font-bold p-2 max-md:p-1 max-md:text-lg">
+          شاشات داخلية جلاكسي S24
+        </h1>
+        <h2 class="text-xl font-bold p-2 max-md:p-1 text-[#1458A1] max-md:text-lg">
+          وصف المنتج
+        </h2>
+        <p class="text-lg font-bold p-2 max-md:p-1 max-md:text-base">
+          s24 ultra , s24 plus
+        </p>
+        <h2 class="text-xl font-bold p-2 max-md:p-1 text-[#1458A1] max-md:text-lg">
+          الموديلات المتوافقه
+        </h2>
+        <p class="text-lg font-bold p-2 max-md:p-1 max-md:text-base">
+          s24 ultra , s24 plus
+        </p>
+        <h2 class="text-xl font-bold p-2 max-md:p-1 text-[#1458A1] max-md:text-lg">
+          الملاحظات
+        </h2>
+        <p class="text-lg font-bold p-2 max-md:p-1 max-md:text-base">
+          هذا منتج خاص ومتوفربمحلات السيفي للصيانه
+        </p>
+        <div class="flex justify-center md:justify-end w-full max-md:flex-col-reverse max-md:mt-3">
+          <button
+            class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1">
+            <img src="./assets/icons/youtube-watch.svg" class="mx-2" alt="" />
+            فيديو توضيحي
+          </button>
+          <button class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-black ">
+            <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
+            إضافة للطلب
+          </button>
+        </div>
+        <img src="./assets/icons/copy.svg" class="absolute top-0 left-6 mt-3 max-md:hidden cursor-pointer " alt="" />
       </div>
     </section>
     <div class="flex my-5 justify-center flex-row">
@@ -315,7 +327,7 @@
     <!-- More -->
     <section class="mt-4">
       <h2 class="text-xl font-bold text-[#1458A1] my-2">المزبد في :</h2>
-      <div class="flex flex-wrap justify-center">
+      <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./details.html"
           class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2">
           <div>
