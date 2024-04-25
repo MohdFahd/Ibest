@@ -222,47 +222,56 @@
           class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
           placeholder="البحث" />
       </div>
-      <div x-data="{ isOpen: false }" class="relative">
+      <div x-data="{ isOpen: false }" class="relative" @click.away="isOpen = false">
         <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
           class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
-        <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
-          class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
-            الكل
+        <ul tabindex="0"
+          class="z-[1] menu p-2 shadow bg-base-100 rounded-box max-w-56 mt-3 absolute top-11 left-0 transition-transform duration-300"
+          x-show="isOpen" x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
+          x-transition:enter-end="opacity-100 transform translate-y-0"
+          x-transition:leave="transition ease-in duration-500"
+          x-transition:leave-start="opacity-100 transform translate-y-0"
+          x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+            @click="isOpen = false">
+            سامسونج </li>
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+            @click="isOpen = false">
+            شاومي
           </li>
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-            سامسونج
+          <li class=" p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg " @click="isOpen = false">
+            ال جي
           </li>
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-            ال تي
-          </li>
-        </ol>
+        </ul>
       </div>
     </div>
     <!-- details -->
     <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col "
       x-data="{ img: 'S24.png' }">
-      <div class="flex flex-row-reverse max-md:flex-col max-[1024px]:justify-end  ">
+      <div class="flex flex-row-reverse max-md:flex-col max-[1024px]:justify-end">
         <div class="pro-img-details mx-3 flex justify-center items-center max-md:justify-start">
-          <img x-transition x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img"
-            class="w-[350px] h-[350px] max-md:w-full max-md:h-auto  object-cover rounded-xl bg-white   " alt="">
+          <img x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+            x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img"
+            class="w-[350px] h-[350px] max-md:w-full max-md:h-auto object-cover rounded-xl bg-white transition-opacity duration-500"
+            alt="">
         </div>
         <div class="flex flex-col items-center max-md:flex-row  max-md:justify-center max-md:my-2">
-          <button class="" @click="img = 'S24_Black.png'">
+          <button class="max-md:mr-2" @click="img = 'S24_Black.png'">
             <img src=" ./assets/imgs/phoneVersions/S24_Black.png"
-              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1  " alt="">
+              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1  " alt="">
           </button>
-          <button class="" @click="img = 'S24_Gold.png'">
+          <button class="max-md:mr-2" @click="img = 'S24_Gold.png'">
             <img src=" ./assets/imgs/phoneVersions/S24_Gold.png"
-              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
-          <button class="" @click="img = 'S24Gray.png'">
+          <button class="max-md:mr-2" @click="img = 'S24Gray.png'">
             <img src="./assets/imgs/phoneVersions/S24Gray.png"
-              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
-          <button class="" @click="img = 'Samsung-Galaxy-S24-Ultra-Violet-PNG.png'">
+          <button class="max-md:mr-2" @click="img = 'Samsung-Galaxy-S24-Ultra-Violet-PNG.png'">
             <img src="./assets/imgs/phoneVersions/Samsung-Galaxy-S24-Ultra-Violet-PNG.png"
-              class="w-[80px] h-[80px] object-cover rounded-xl bg-white my-1 " alt="">
+              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
         </div>
       </div>

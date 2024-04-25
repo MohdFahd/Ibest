@@ -215,21 +215,28 @@
           class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
           placeholder="البحث" />
       </div>
-      <div x-data="{ isOpen: false }" class="relative">
+      <div x-data="{ isOpen: false }" class="relative" @click.away="isOpen = false">
         <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
           class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
-        <ol x-show="isOpen" @click.away="isOpen = false" name="" id=""
-          class="menu shadow bg-base-100 rounded-lg absolute top-10 left-0 z-10 w-[200px] text-lg">
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white bg-[#1458A1] text-white">
-            الكل
+        <ul tabindex="0"
+          class="z-[1] menu p-2 shadow bg-base-100 rounded-box max-w-56 mt-3 absolute top-11 left-0 transition-transform duration-300"
+          x-show="isOpen" x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
+          x-transition:enter-end="opacity-100 transform translate-y-0"
+          x-transition:leave="transition ease-in duration-500"
+          x-transition:leave-start="opacity-100 transform translate-y-0"
+          x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+            @click="isOpen = false">
+            سامسونج </li>
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+            @click="isOpen = false">
+            شاومي
           </li>
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-            سامسونج
+          <li class=" p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg " @click="isOpen = false">
+            ال جي
           </li>
-          <li class="rounded-sm px-2 cursor-pointer hover:bg-[#1458A1] hover:text-white">
-            ال تي
-          </li>
-        </ol>
+        </ul>
       </div>
     </div>
     <!-- Products -->
