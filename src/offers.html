@@ -193,16 +193,37 @@
 
   <main class="container mx-auto px-10 my-8">
     <!-- Filter -->
-    <div class="flex  justify-end  ">
-      <div
-        class="hidden items-end justify-end md:flex bg-[#00a3a0] text-white shadow-lg  border-2 border-gray-200 rounded-xl py-2 mt-2 w-[25%] ">
-        <img src="./assets/icons/filter.svg" width="10%" class="mr-2" alt="" />
-        <select name="" id="" class="w-full bg-transparent focus:outline-none ">
-          <option value="" class="text-black">الكل</option>
-          <option value="" class="text-black">سامسونج</option>
-          <option value="" class="text-black">ال جي</option>
-        </select>
+    <div class="flex justify-end relative" x-data="{ toggle: false, buttonText: 'الكل' }" @click.away="toggle = false">
+      <div class="flex justify-end items-end flex-col self-end justify-self-end cursor-pointer " x-bind:=""
+        @click="toggle = !toggle">
+        <div class="flex bg-[#00A3A0] items-center p-3 rounded-2xl w-64 h-[50px] text-white "
+          x-bind:class="{ 'bg-white text-black font-bold shadow-md ': toggle }">
+          <div
+            class="ml-2 transition-transform ease-linear duration-300 w-[38px] h-[38px] delay-100  flex justify-center items-center  "
+            x-bind:class="{ 'transition ease-linear duration-300 bg-[#00A3A0] rounded-lg -translate-x-48 ' : toggle }">
+            <img src="./assets/icons/filter.svg" alt="" class="">
+          </div>
+          <button class="font-bold  transition-transform" tabindex="0" role="button"
+            x-bind:class="{ 'text-black transition ease-linear duration-300 translate-x-10 ': toggle }"
+            x-text="buttonText" x.transition></button>
+        </div>
       </div>
+      <ul tabindex="0"
+        class="z-[1] menu p-2 shadow bg-base-100 rounded-box w-64 mt-3 absolute top-11 transition-transform duration-300"
+        x-show="toggle" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-500"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
+        <li class="border-b-[1px] border-gray-300 py-1  "><a
+            @click="buttonText = 'سامسونج'; toggle = !toggle">سامسونج</a>
+        </li>
+        <li class="border-b-[1px] border-gray-300 py-1  "><a @click="buttonText = 'ال جي'; toggle = !toggle">ال جي</a>
+        </li>
+        <li class=" "><a @click="buttonText = 'شاومي'; toggle = !toggle">شاومي</a>
+        </li>
+      </ul>
     </div>
 
     <!-- Mobile Search -->
@@ -337,31 +358,32 @@
   </main>
 
   <footer style="
-        background: linear-gradient(
-          90deg,
-          #12569c 0%,
-          #0e70a1 77.5%,
-          #0e70a1 77.51%,
-          #0d73a1 100%
-        );
-      ">
+          background: linear-gradient(
+            90deg,
+            #12569c 0%,
+            #0e70a1 77.5%,
+            #0e70a1 77.51%,
+            #0d73a1 100%
+          );
+        ">
     <div class="container">
       <div
-        class="flex md:justify-between justify-center md:flex-row flex-col footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white">
-        <nav>
+        class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white  ">
+        <nav class="max-[1023px]:w-full">
           <a class="link link-hover text-lg font-bold mt-4" href="index.html">الرئيسية</a>
           <a class="link link-hover text-lg font-bold mt-4" href="offers.html">العروض</a>
           <a class="link link-hover text-lg font-bold mt-4" href="Trend.html">الأكثر مبيعاً</a>
           <a class="link link-hover text-lg font-bold mt-4" href="contactus.html">تواصل معنا</a>
         </nav>
-        <div class="grid grid-flow-row gap-11 max-md:w-full">
+        <div class="grid grid-flow-row gap-11 max-md:w-full ">
           <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
             <h6 class="font-bold text-2xl max-md:text-xl">
               كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h6>
             <div class="grid grid-cols-6 gap-3 my-3">
-              <input type="text" placeholder="البريد الالكتروني" class="p-4 rounded-[10px] col-span-4 text-black" />
-              <button class="btn p-4 rounded-[10px] col-span-2 bg-[#AAAAAA] text-[#FFFFFF] font-bold border-none">
+              <input type="text" placeholder="البريد الالكتروني"
+                class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none " />
+              <button class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none">
                 اشتراك
               </button>
             </div>
