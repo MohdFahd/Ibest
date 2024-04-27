@@ -71,11 +71,58 @@ textarea:focus {
   background: #1458a1;
 
 }
-
-
 .banner{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
 }
+.card{
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+
+.card-animation {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+
+}
+
+.card-animation h2, .card-animation img {
+  z-index: 1;
+  color: black;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-animation::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+ .card-animation:hover:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-color: #00A3A0;
+  height: 130%;
+  transition: all 0.2s linear;
+  background-color: #1458A1;
+  animation: rotBGimg 3.5s linear infinite;
+} 
+

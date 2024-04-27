@@ -46,16 +46,17 @@
 
 </head>
 
-<body class="bg-[#FEFEFE]">
-  <header x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }" class="relative">
-    <nav class="bg-white drop-shadow-md ">
+<body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
+  <header class="relative z-50 ">
+    <nav class="bg-white drop-shadow-md">
       <div class="flex flex-col">
         <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10  ">
           <div>
             <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
           </div>
           <div class="mt-[26px] relative cursor-pointer">
-            <input type="text" class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px]"
+            <input type="text"
+              class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none "
               placeholder="البحث" />
             <div
               class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
@@ -102,10 +103,23 @@
     </nav>
     <!-- Mobile SideBar -->
     <nav class="flex md:hidden bg-white flex-col z-0">
-      <div class="container md:hidden flex justify-center my-4">
-        <img src="./assets/icons/ibest.svg" class="mx-2" width="70px" title="" alt="" />
-        <img src="./assets/imgs/logo-phone.svg" width="25px" title="" alt="" />
+      <div class="container md:hidden flex justify-center items-center my-3">
+        <img src="./assets/icons/ibest.svg" class="mx-2" width="90px" title="" alt="" />
       </div>
+      <!-- Mobile Search -->
+      <div class="flex items-center justify-center relative md:hidden w-[100%] my-4 ">
+        <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
+          <input type="text"
+            class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+            placeholder="البحث" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-5 h-5 opacity-70">
+            <path fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+
       <div class="bg-white text-center flex justify-center">
         <a href="index.html"
           class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative active">
@@ -136,65 +150,66 @@
         </button>
       </div>
     </nav>
-    <!-- list of links -->
-    <ul class="navlist ">
-      <li x-show="toggleNew" x-show="toggle" x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
-        x-transition:leave-end="opacity-0 transform translate-y-[-10%]"
-        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 ">
-        <a href="newes.html"
-          class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
-          شاشات
-          <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
-        </a>
-        <div class="border-l-2 border-[#00A3A0]"></div>
-        <a href="newes.html"
-          class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
-          قطع</a>
-      </li>
-      <li x-show="toggleMostSales" x-show="toggle" x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
-        x-transition:leave-end="opacity-0 transform translate-y-[-10%]"
-        class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0  p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
-        <a href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          شاشات
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          قطع غيار
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          أدوات صيانة
-        </a>
-      </li>
-      <li x-show="toggleOffers" x-show="toggle" x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
-        x-transition:leave-end="opacity-0 transform translate-y-[-10%]"
-        class="container bg-white w-[90%] text-center  p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
-        <a href="offers.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          شاشات
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a href="offers.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          قطع غيار
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-
-        <a href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
-          أدوات صيانة
-        </a>
-      </li>
-    </ul>
   </header>
+  <!-- list of links -->
+  <ul class="navlist -z-40 ">
+    <li x-show="toggleNew" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      x-transition:leave-end="opacity-100 transform translate-y-[-150%]"
+      x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
+      class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 z-[-100] ">
+      <a href="newes.html"
+        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
+        شاشات
+        <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+      </a>
+      <div class="border-l-2 border-[#00A3A0]"></div>
+      <a href="newes.html"
+        class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
+        قطع</a>
+    </li>
+    <li x-show="toggleMostSales" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      x-transition:leave-end="opacity-100 transform translate-y-[-150%]"
+      class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0  p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        شاشات
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        أدوات صيانة
+      </a>
+    </li>
+    <li x-show="toggleOffers" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      x-transition:leave-end="opacity-100 transform translate-y-[-150%]"
+      class="container bg-white w-[90%] text-center  p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+      <a href="offers.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1 ">
+        شاشات
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="offers.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
 
-  <main class="container mx-auto px-10 my-8 transition ease-linear duration-300 ">
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        أدوات صيانة
+      </a>
+    </li>
+  </ul>
+  <main class="container mx-auto px-10 my-8 transition ease-linear duration-500 "
+    x-transition:enter="transition ease-out duration-300">
     <!-- Desktop Banner -->
     <div
       class="md:block swiper mySwiper rounded-3xl max-h-[300px] max-md:max-h-[200px] border-none overflow-hidden relative">
@@ -275,123 +290,31 @@
         </div>
       </div> -->
 
-    <!-- Mobile Search -->
-    <div class="flex items-center justify-center relative md:hidden w-[100%] mt-4 ">
-      <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
-        <input type="text"
-          class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
-          placeholder="البحث" />
-      </div>
-      <div x-data="{ isOpen: false }" class="relative" @click.away="isOpen = false">
-        <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
-          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
-        <ul tabindex="0"
-          class="z-[1] menu p-2 shadow bg-base-100 rounded-box max-w-56 mt-3 absolute top-11 left-0 transition-transform duration-300"
-          x-show="isOpen" x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 transform translate-y-[-150%]"
-          x-transition:enter-end="opacity-100 transform translate-y-0"
-          x-transition:leave="transition ease-in duration-500"
-          x-transition:leave-start="opacity-100 transform translate-y-0"
-          x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
-          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
-            @click="isOpen = false">
-            سامسونج </li>
-          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
-            @click="isOpen = false">
-            شاومي
-          </li>
-          <li class=" p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg " @click="isOpen = false">
-            ال جي
-          </li>
-        </ul>
-      </div>
-    </div>
 
 
     <h1 class="md:text-3xl font-bold text-[#1458A1] text-center self-center mt-8 text-xl">
       عالم الشاشات والقطع | IBest
     </h1>
     <!-- Products -->
-    <section class="flex justify-center my-5">
-      <div class="flex flex-wrap justify-start max-md:justify-center ">
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="60%" title="" alt="Samsunge.png" />
-          </figure>
+    <section class="flex flex-wrap justify-start max-md:justify-center bg-  my-5">
+      <a href="./parts.html" title=""
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-2 border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
+          <img loading="lazy" src="./assets/imgs/Samsunge.png" width="60%" title="" alt="Samsunge.png" />
+        </figure>
 
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">سامسونج</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/Samsunge.png" width="60%" title="" alt="Samsunge.png" />
-          </figure>
+        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+          <h2 class="font-bold md:text-xl">سامسونج</h2>
+        </div>
+        <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
+          title="" alt="" />
+      </a>
 
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">سامسونج</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/huawei.png" width="60%" title="" alt="huawei.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">هواوي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/LT.png" width="60%" title="" alt="LT.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">ال تي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/huawei.png" width="60%" title="" alt="huawei.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">هواوي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-        <a href="./parts.html" title=""
-          class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:shadow-xl md:py-5 md:border-none border-2 max-md:shadow-sm border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
-          <figure class="md:w-full md:h-[200px] max-md:w-[50%] ">
-            <img loading="lazy" src="./assets/imgs/LT.png" width="60%" title="" alt="LT.png" />
-          </figure>
-
-          <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
-            <h2 class="font-bold md:text-xl">ال تي</h2>
-          </div>
-          <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
-            title="" alt="" />
-        </a>
-      </div>
     </section>
 
     <!-- Most search -->
-    <section class="my-3">
-      <h2 class="text-xl font-bold text-[#1458A1] my-2">الاكثر بحثاً :</h2>
+    <section class="my-10">
+      <h2 class="text-xl font-bold text-[#1458A1]">الاكثر بحثاً :</h2>
       <div class="inline-flex search-tag bg-[#F2F4F4] rounded-2xl p-3 cursor-pointer font-bold mx-2 mt-4">
         iPhone 12
         <img src="./assets/icons/search-dark.svg" class="ms-4" title="" alt="" />
@@ -480,13 +403,18 @@
             <h6 class="font-bold text-2xl max-md:text-xl">
               كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h6>
-            <div class="grid grid-cols-6 gap-3 my-3">
-              <input type="text" placeholder="البريد الالكتروني"
+            <div x-data="{ isInputFocused: false }" class="grid grid-cols-6 gap-3 my-3">
+              <input type="text" placeholder="البريد الالكتروني" x-on:focus="isInputFocused = true"
+                x-on:blur="isInputFocused = false"
                 class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none " />
-              <button class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none">
-                اشتراك
+              <button
+                class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none hover:bg-[#1458A1]"
+                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-[#00A3A0]': !isInputFocused }"
+                x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
+                x-on:click="isInputFocused = false">
               </button>
             </div>
+
           </nav>
           <nav class="self-end justify-self-center">
             <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
@@ -524,49 +452,48 @@
         </nav>
       </div>
       <div class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white">
-        <nav class="md:place-self-center md:justify-self-start">
-          <div class="grid grid-flow-col gap-4 text-base">
-            جميع الحقوق محفوظة &copy; 2024 مجموعة السيفي
+        <nav class="md:place-self-center md:justify-self-start" x-data="{ currentYear: new Date().getFullYear() }">
+          <div class="grid grid-flow-col gap-2 text-base">
+            جميع الحقوق محفوظة &copy; <span x-text="currentYear"></span> مجموعة السيفي
           </div>
         </nav>
-        <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
+        <nav class=" md:place-self-center md:justify-self-end max-sm:hidden">
           <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
         </nav>
       </div>
     </div>
   </footer>
+  <main class="container mx-auto px-10 my-8 transition ease-linear duration-500 " </main>
+    <script src="./assets/js/swiper.js"></script>
 
-  <script src="./assets/js/swiper.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-
-  <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
-  <script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".card"), {
-      max: 25,
-      speed: 400,
-    });
-
-    //It also supports NodeList
-    VanillaTilt.init(document.querySelectorAll(".card"));
-  </script>
+    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      document.querySelectorAll(".card").forEach(function (card) {
+        VanillaTilt.init(card, {
+          max: 7,
+          speed: 300,
+        });
+      });
+    </script>
 </body>
 
 </html>
