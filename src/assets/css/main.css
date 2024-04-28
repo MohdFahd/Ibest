@@ -92,7 +92,7 @@ textarea:focus {
 
 }
 
-.card-animation h2, .card-animation img {
+.card-animation h2, .card-animation img ,.card-animation div{
   z-index: 1;
   color: black;
 }
