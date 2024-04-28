@@ -2736,6 +2736,10 @@ details.collapse summary::-webkit-details-marker{
   width: 100%;
 }
 
+.w-screen{
+  width: 100vw;
+}
+
 .min-w-\[400px\]{
   min-width: 400px;
 }
