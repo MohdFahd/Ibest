@@ -89,7 +89,6 @@ textarea:focus {
   place-content: center;
   place-items: center;
   overflow: hidden;
-
 }
 
 .card-animation h2, .card-animation img ,.card-animation div{
@@ -126,3 +125,35 @@ textarea:focus {
   animation: rotBGimg 3.5s linear infinite;
 } 
 
+.flip-card {
+  background-color: transparent;
+  width: 274px;
+  height: 274px;
+  perspective: 1000px;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+.flip-card-back {
+  width: 270px;
+  height: 310px;
+  transform: rotateY(180deg);
+}

@@ -2419,6 +2419,10 @@ details.collapse summary::-webkit-details-marker{
   left: 0px;
 }
 
+.left-10{
+  left: 2.5rem;
+}
+
 .left-2{
   left: 0.5rem;
 }
@@ -2433,6 +2437,14 @@ details.collapse summary::-webkit-details-marker{
 
 .top-11{
   top: 2.75rem;
+}
+
+.left-20{
+  left: 5rem;
+}
+
+.right-0{
+  right: 0px;
 }
 
 .-z-0{
@@ -2457,6 +2469,10 @@ details.collapse summary::-webkit-details-marker{
 
 .z-\[1\]{
   z-index: 1;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .col-span-12{
@@ -2620,10 +2636,6 @@ details.collapse summary::-webkit-details-marker{
   margin-top: 26px;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .inline{
   display: inline;
 }
@@ -2738,6 +2750,10 @@ details.collapse summary::-webkit-details-marker{
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[500px\]{
+  width: 500px;
 }
 
 .min-w-\[400px\]{
@@ -2903,6 +2919,10 @@ details.collapse summary::-webkit-details-marker{
   scroll-behavior: smooth;
 }
 
+.text-wrap{
+  text-wrap: wrap;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -2949,10 +2969,6 @@ details.collapse summary::-webkit-details-marker{
 
 .border-\[1px\]{
   border-width: 1px;
-}
-
-.border-\[0px\]{
-  border-width: 0px;
 }
 
 .border-b-\[1px\]{
@@ -3098,13 +3114,20 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\/assets\/imgs\/phoneVersions\/S24\.png\'\)\]{
+  background-image: url('./assets/imgs/phoneVersions/S24.png');
+}
+
+.bg-\[url\(\'\.\.\/assets\/imgs\/phoneVersions\/S24\.png\'\)\]{
+  background-image: url('../assets/imgs/phoneVersions/S24.png');
+}
+
+.bg-\[url\(\'\.\.\/imgs\/phoneVersions\/S24\.png\'\)\]{
+  background-image: url('../imgs/phoneVersions/S24.png');
 }
 
 .from-zinc-400{
@@ -3223,6 +3246,10 @@ details.collapse summary::-webkit-details-marker{
 
 .text-center{
   text-align: center;
+}
+
+.text-end{
+  text-align: end;
 }
 
 .text-2xl{
@@ -3623,10 +3650,6 @@ details.collapse summary::-webkit-details-marker{
     display: none;
   }
 
-  .max-md\:h-\[140px\]{
-    height: 140px;
-  }
-
   .max-md\:h-\[150px\]{
     height: 150px;
   }
@@ -3637,10 +3660,6 @@ details.collapse summary::-webkit-details-marker{
 
   .max-md\:max-h-\[200px\]{
     max-height: 200px;
-  }
-
-  .max-md\:w-\[140px\]{
-    width: 140px;
   }
 
   .max-md\:w-\[150px\]{
@@ -3741,32 +3760,24 @@ details.collapse summary::-webkit-details-marker{
     display: none;
   }
 
-  .max-sm\:h-\[125px\]{
-    height: 125px;
+  .max-sm\:h-\[130px\]{
+    height: 130px;
   }
 
   .max-sm\:h-\[65px\]{
     height: 65px;
   }
 
-  .max-sm\:h-\[130px\]{
-    height: 130px;
-  }
-
   .max-sm\:max-h-\[130px\]{
     max-height: 130px;
   }
 
-  .max-sm\:w-\[125px\]{
-    width: 125px;
+  .max-sm\:w-\[130px\]{
+    width: 130px;
   }
 
   .max-sm\:w-\[5\%\]{
     width: 5%;
-  }
-
-  .max-sm\:w-\[130px\]{
-    width: 130px;
   }
 
   .max-sm\:max-w-\[130px\]{
@@ -3777,14 +3788,14 @@ details.collapse summary::-webkit-details-marker{
     justify-content: flex-start;
   }
 
-  .max-sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .max-sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .max-sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3815,18 +3826,6 @@ details.collapse summary::-webkit-details-marker{
     margin-top: 0.75rem;
   }
 
-  .md\:mt-8{
-    margin-top: 2rem;
-  }
-
-  .md\:mt-7{
-    margin-top: 1.75rem;
-  }
-
-  .md\:mt-4{
-    margin-top: 1rem;
-  }
-
   .md\:mt-5{
     margin-top: 1.25rem;
   }
@@ -3853,10 +3852,6 @@ details.collapse summary::-webkit-details-marker{
 
   .md\:h-\[274px\]{
     height: 274px;
-  }
-
-  .md\:h-\[180px\]{
-    height: 180px;
   }
 
   .md\:w-\[274px\]{
