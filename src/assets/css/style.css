@@ -2419,10 +2419,6 @@ details.collapse summary::-webkit-details-marker{
   left: 0px;
 }
 
-.left-10{
-  left: 2.5rem;
-}
-
 .left-2{
   left: 0.5rem;
 }
@@ -2439,14 +2435,6 @@ details.collapse summary::-webkit-details-marker{
   top: 2.75rem;
 }
 
-.left-20{
-  left: 5rem;
-}
-
-.right-0{
-  right: 0px;
-}
-
 .-z-0{
   z-index: 0;
 }
@@ -2459,6 +2447,10 @@ details.collapse summary::-webkit-details-marker{
   z-index: 0;
 }
 
+.z-10{
+  z-index: 10;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -2469,10 +2461,6 @@ details.collapse summary::-webkit-details-marker{
 
 .z-\[1\]{
   z-index: 1;
-}
-
-.z-10{
-  z-index: 10;
 }
 
 .col-span-12{
@@ -2752,10 +2740,6 @@ details.collapse summary::-webkit-details-marker{
   width: 100vw;
 }
 
-.w-\[500px\]{
-  width: 500px;
-}
-
 .min-w-\[400px\]{
   min-width: 400px;
 }
@@ -2917,10 +2901,6 @@ details.collapse summary::-webkit-details-marker{
 
 .scroll-smooth{
   scroll-behavior: smooth;
-}
-
-.text-wrap{
-  text-wrap: wrap;
 }
 
 .rounded-2xl{
@@ -3114,20 +3094,13 @@ details.collapse summary::-webkit-details-marker{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\.\/assets\/imgs\/phoneVersions\/S24\.png\'\)\]{
-  background-image: url('./assets/imgs/phoneVersions/S24.png');
-}
-
-.bg-\[url\(\'\.\.\/assets\/imgs\/phoneVersions\/S24\.png\'\)\]{
-  background-image: url('../assets/imgs/phoneVersions/S24.png');
-}
-
-.bg-\[url\(\'\.\.\/imgs\/phoneVersions\/S24\.png\'\)\]{
-  background-image: url('../imgs/phoneVersions/S24.png');
 }
 
 .from-zinc-400{

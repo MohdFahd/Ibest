@@ -237,25 +237,17 @@
 
   <main class="container mx-auto px-10 my-8">
     <!-- Path -->
-    <div class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold items-center ">
+    <div class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold items-center text-center  ">
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
-      <span>
-        <a href="./index.html"> المتجر </a>
-      </span>
+      <a href="./index.html"> المتجر </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
-      <span class="">
-        <a href="./parts.html"> سامسونج </a>
-      </span>
+      <a href="./parts.html"> سامسونج </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
-      <span class="">
-        <a href="./lists.html"> شاشات </a>
-      </span>
+      <a href="./lists.html"> شاشات </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
-      <span class="">
-        <a href="./kinds.html"> شاشات داخلية </a>
-      </span>
+      <a href="./kinds.html"> شاشات داخلية </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
-      <h1 class="text-blue-800 cursor-pointer">S24</h1>
+      <h1 class="text-blue-800 cursor-pointer  ">S24</h1>
     </div>
     <!-- details -->
     <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col "
@@ -270,7 +262,7 @@
             x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img" id="pic"
             class="w-[350px] h-[350px] max-md:w-full max-md:h-auto object-cover rounded-xl bg-white transition-opacity duration-500"
             alt="">
-          <div class="rect" id="rect"></div>
+          <div class="rect max-md:hidden" id="rect"></div>
         </div>
 
         <div class="flex flex-col items-center max-md:flex-row  max-md:justify-center max-md:my-2">
@@ -292,7 +284,7 @@
           </button>
         </div>
       </div>
-      <div class="zoom absolute top-0 left-2 text-3xl text-[#1458A1] text-end z-10 max-md:hidden p-3 font-bold "
+      <div class="zoom   absolute top-0 left-2 text-3xl text-[#1458A1] text-end z-10 max-md:hidden p-3 font-bold "
         style="background-image: url('./assets/imgs/phoneVersions/S24.png');" id="zoom">
         Preview
       </div>
