@@ -42,7 +42,6 @@
   <!-- styles link -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <script src="./assets/js/alpine.js"></script>
   <style>
     .rect {
       margin-top: 30px;
@@ -72,7 +71,7 @@
   </style>
 </head>
 
-<body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
+<body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false,showVideo:false, }">
   <header class="relative z-50 ">
     <nav class="bg-white drop-shadow-md">
       <div class="flex flex-col">
@@ -90,6 +89,10 @@
             </div>
           </div>
         </div>
+        <div class=" flex justify-center max-md:hidden">
+          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          </div>
+        </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
             <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
@@ -98,9 +101,9 @@
             <li
               class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; ">
+                toggleNew = !toggleNew;
+                toggleOffers = false;
+                toggleMostSales = false; ">
               <span
                 class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0">1</span>
               <a href="#">جديد</a>
@@ -108,19 +111,19 @@
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false;
-            ">
+                toggleMostSales = !toggleMostSales;
+                  toggleNew = false;
+                  toggleOffers = false;
+              ">
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;
-            ">
+                toggleOffers = !toggleOffers;
+                toggleNew = false;
+                  toggleMostSales = false;
+              ">
               <a href="#">عروض</a>
             </li>
           </ul>
@@ -128,13 +131,14 @@
       </div>
     </nav>
     <!-- Mobile SideBar -->
-    <nav class="flex md:hidden bg-white flex-col z-0">
+    <nav class=" flex md:hidden bg-white flex-col z-0  justify-center">
       <div class="container md:hidden flex justify-center items-center my-3">
         <img src="./assets/icons/ibest.svg" class="mx-2" width="90px" title="" alt="" />
       </div>
-      <!-- Mobile Search -->
-      <div class="flex items-center justify-center relative md:hidden w-[100%] my-4 ">
-        <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
+      <div class="flex justify-center items-center flex-col mx-10 ">
+        <!-- Mobile Search -->
+        <div
+          class="flex items-center justify-center relative md:hidden my-3 border-none bg-[#F2F4F4] p-3 rounded-xl w-full ">
           <input type="text"
             class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
             placeholder="البحث" />
@@ -144,37 +148,33 @@
               clip-rule="evenodd" />
           </svg>
         </div>
+        <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full ">
+          <a href="index.html" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative  active">
+            المتجر
+          </a>
+          <button @click="
+                  toggleNew = !toggleNew;
+                  toggleOffers = false;
+                  toggleMostSales = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            جديد
+
+            <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+          </button>
+          <button @click="
+                toggleMostSales = !toggleMostSales;
+                    toggleNew = false;
+                    toggleOffers = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            الأكثر مبيعاً
+          </button>
+          <button @click="
+                  toggleOffers = !toggleOffers;
+                  toggleNew = false;
+                    toggleMostSales = false;" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            عروض
+          </button>
+        </div>
       </div>
 
-      <div class="bg-white text-center flex justify-center">
-        <a href="index.html"
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative active">
-          المتجر
-        </a>
-        <button @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; "
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          جديد
-
-          <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
-        </button>
-        <button @click="
-            toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false; "
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          الأكثر مبيعاً
-        </button>
-        <button @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;"
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          عروض
-        </button>
-      </div>
     </nav>
   </header>
   <!-- list of links -->
@@ -248,10 +248,11 @@
       <a href="./kinds.html"> شاشات داخلية </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
       <h1 class="text-blue-800 cursor-pointer  ">S24</h1>
+
     </div>
     <!-- details -->
-    <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col "
-      x-data="{ img: 'S24.png' }">
+    <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col z-50"
+      x-data="{ img: 'S24.png',zoom: false }">
       <h1 class="text-[22px] font-extrabold my-2 max-md:text-lg md:hidden text-[#1458A1] ">
         شاشات داخلية جلاكسي S24
       </h1>
@@ -259,7 +260,8 @@
         <div class="pro-img-details mx-3 flex justify-center items-center max-md:justify-start relative picture "
           id="picture">
           <img x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-            x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img" id="pic"
+            x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img" id="pic" @mouseenter="zoom = true"
+            @mouseleave="zoom = false"
             class="w-[350px] h-[350px] max-md:w-full max-md:h-auto object-cover rounded-xl bg-white transition-opacity duration-500"
             alt="">
           <div class="rect max-md:hidden" id="rect"></div>
@@ -284,28 +286,25 @@
           </button>
         </div>
       </div>
-      <div class="zoom   absolute top-0 left-2 text-3xl text-[#1458A1] text-end z-10 max-md:hidden p-3 font-bold "
-        style="background-image: url('./assets/imgs/phoneVersions/S24.png');" id="zoom">
-        Preview
+      <div class="zoom absolute top-0 left-2 text-3xl text-[#1458A1] text-start z-10 max-md:hidden p-3 font-bold"
+        x-show="zoom" style="background-image: url('./assets/imgs/phoneVersions/S24.png');" id="zoom">
+        معاينة
       </div>
       <div class="w-[70%] max-md:w-full flex justify-between flex-col">
-        <div class="p-4">
+        <div class="p-4 copy-info">
           <h1 class="text-[22px] font-bold  max-md:text-lg max-md:hidden ">
             شاشات داخلية جلاكسي S24
           </h1>
-          <h2 class="text-lg font-bold md:mt-3 text-[#1458A1] max-md:text-lg">
-            وصف المنتج
-          </h2>
-          <p class="text-lg font-bold mt-1 max-md:text-lg">
+          <p class="text-lg font-bold mt-6 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-lg font-bold mt-3 text-[#1458A1] max-md:text-lg">
+          <h2 class="text-base font-bold mt-3 text-[#1458A1] ">
             الموديلات المتوافقه
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-lg font-bold mt-3 text-[#1458A1] max-md:text-lg">
+          <h2 class="text-base font-bold mt-3 text-[#1458A1] ">
             الملاحظات
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
@@ -313,26 +312,120 @@
           </p>
         </div>
 
-        <div class="flex justify-center md:justify-end w-full max-md:flex-col-reverse max-md:mt-3 ">
+        <div class="flex justify-center md:justify-end w-full max-md:flex-col-reverse max-md:mt-3 "
+          x-data="{ showForm: false,showNotification:false }">
           <button
-            class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1">
+            class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1"
+            @click="showVideo = !showVideo">
             <img src="./assets/icons/youtube-watch.svg" class="mx-2" alt="" />
             فيديو توضيحي
           </button>
-          <button class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-[#1458A1] ">
+          <button class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-[#1458A1] "
+            @click="showForm = true">
             <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
             إضافة للطلب
           </button>
+          <!-- Open the modal using ID.showModal() method -->
+          <dialog id="my_modal_2" class="modal bg-black bg-opacity-50 " x-bind:open="showForm">
+            <div class="modal-box bg-[#F9F9F9]">
+              <form action="" class=" w-full grid gap-2">
+                <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]"> الاسم الاول </label>
+                  <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id=""
+                    placeholder="ضع اسمك الأول" required />
+                </div>
+                <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]">الاسم الاخير </label>
+                  <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                    placeholder="ضع اسمك الأخير" />
+                </div>
+                <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]">اسم المحل</label>
+                  <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                    placeholder="السيفي ستور " />
+                </div>
+                <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]">المدينة</label>
+                  <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                    placeholder="اليمن - صنعاء" />
+                </div>
+                <div class="flex flex-col my-2 col-span-12 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]">العنوان</label>
+                  <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                    placeholder="صنعاء - شارع الستين الغربي" />
+                </div>
+                <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]"> الهاتف </label>
+                  <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}"
+                    minlength="9" maxlength="9" placeholder="770000000" required />
+                </div>
+                <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
+                  <label for="" class="text-[#1458A1]"> الكمية </label>
+                  <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}"
+                    minlength="9" maxlength="9" placeholder="الكمية" required />
+                </div>
+              </form>
+              <button
+                class="btn flex bg-[#1458A1] text-[#FFFFFF] col-span-5 px-10 lg:px-16 font-bold text-lg rounded-2xl hover:bg-[#1458A1] max-md:col-span-12 mx-3"
+                @click="showForm = false;showNotification = true; setTimeout(() => showNotification = false, 2000)">
+                طلب </button>
+            </div>
+            <form method="dialog" class="modal-backdrop" x-on:click="showForm = false">
+              <button>close</button>
+            </form>
+          </dialog>
+          <dialog id="my_modal_3" class="modal bg-opacity-50 bg-black" x-bind:open="showNotification">
+            <div class="modal-box flex  flex-col justify-center items-center text-center  ">
+              <div>
+                <div id="lottie-container" class=" w-36 "></div>
+              </div>
+              <h3 class="font-bold text-xl text-center">تمت العلمية بنجاح ، شكرا !</h3>
+            </div>
+          </dialog>
         </div>
-        <img src="./assets/icons/copy.svg" class="absolute top-0 left-6 mt-3 max-md:hidden cursor-pointer " alt="" />
+        <div class="absolute top-0 left-6 mt-3 max-md:hidden">
+          <button class="copy" id="copyIcon" class=" cursor-pointer bg-white ">
+            <svg xml:space="preserve" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              class="clipboard">
+              <g>
+                <path fill="currentColor"
+                  d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                </path>
+              </g>
+            </svg>
+            <svg xml:space="preserve" viewBox="0 0 24 24" y="0" x="0" height="18" width="18"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              class="checkmark  ">
+              <g>
+                <path data-original="#000000" fill="currentColor"
+                  d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                </path>
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
-    <div class="flex my-5 justify-center flex-row">
+    <section class="bg-[#00A3A0] rounded-3xl -z-40 " x-show="showVideo"
+      x-transition:enter="transition ease-out duration-500"
+      x-transition:enter-start="opacity-0 transform translate-y-[-50%]"
+      x-transition:leave="transition ease-in duration-500"
+      x-transition:leave-end="opacity-0 transform translate-y-[-50%]">
+      <div class="relative  ">
+        <img src="./assets/icons/close.svg" class="absolute top-0 right-0 bg-white rounded-full cursor-pointer"
+          @click="showVideo = false" alt="">
+      </div>
+      <iframe class="w-full rounded-3xl" height="500" src="https://www.youtube.com/embed/3hPoEmlBQdY" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <div class="flex my-5 justify-center flex-row items-center ">
       <img src="./assets/icons/share.svg" class="max-md:hidden" alt="" />
       <h2 class="text-lg text-[#1458A1] font-bold mx-2 max-md:hidden">
         مشاركة :
       </h2>
-      <a href="" class="mx-2 ">
+      <a href="" class="ml-2">
         <img src="./assets/icons/whatsapp.svg" alt="" />
       </a>
       <a href="" class="mx-2">
@@ -397,14 +490,14 @@
   </main>
 
   <footer style="
-        background: linear-gradient(
-          90deg,
-          #12569c 0%,
-          #0e70a1 77.5%,
-          #0e70a1 77.51%,
-          #0d73a1 100%
-        );
-      ">
+          background: linear-gradient(
+            90deg,
+            #12569c 0%,
+            #0e70a1 77.5%,
+            #0e70a1 77.51%,
+            #0d73a1 100%
+          );
+        ">
     <div class="container">
       <div
         class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white  ">
@@ -416,7 +509,7 @@
         </nav>
         <div class="grid grid-flow-row gap-11 max-md:w-full ">
           <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
-            <h6 class="font-bold text-2xl max-md:text-xl">
+            <h6 class="font-bold text-2xl max-md:text-xl max-sm:text-lg ">
               كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h6>
             <div x-data="{ isInputFocused: false }" class="grid grid-cols-6 gap-3 my-3">
@@ -469,9 +562,11 @@
       </div>
       <div class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white">
         <nav class="md:place-self-center md:justify-self-start" x-data="{ currentYear: new Date().getFullYear() }">
-          <div class="grid grid-flow-col gap-2 text-base">
+          <div class="grid grid-flow-col gap-2 text-base  max-sm:flex max-sm:text-sm ">
             جميع الحقوق محفوظة &copy; <span x-text="currentYear"></span> مجموعة السيفي
           </div>
+          <div class="grid grid-flow-col gap-2 text-base  max-sm:text-sm">
+            صمم بحب في بلاتفورم | Platform 💙</div>
         </nav>
         <nav class=" md:place-self-center md:justify-self-end max-sm:hidden">
           <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
@@ -585,6 +680,28 @@
   </script>
   <!-- alpine.js -->
   <script src="./assets/js/alpine.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.7/build/player/lottie.min.js"></script>
+  <!-- Load and display animation -->
+  <script>
+    // Load animation JSON file
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('lottie-container'),
+      loop: true,
+      autoplay: true,
+      path: './assets/check.json' // Replace 'your-animation.json' with the path to your JSON file
+    });
+
+    document.getElementById('copyIcon').addEventListener('click', function () {
+      var contentToCopy = document.querySelector('.copy-info'); // Select the div to copy its content
+      var range = document.createRange();
+      range.selectNode(contentToCopy);
+      window.getSelection().removeAllRanges(); // Clear previous selections
+      window.getSelection().addRange(range); // Add range to selection
+      document.execCommand('copy'); // Copy the selected content to clipboard
+      window.getSelection().removeAllRanges(); // Clear selection after copying
+    });
+
+  </script>
 </body>
 
 </html>

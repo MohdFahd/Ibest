@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -72,9 +72,9 @@
             <li
               class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; ">
+                toggleNew = !toggleNew;
+                toggleOffers = false;
+                toggleMostSales = false; ">
               <span
                 class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0">1</span>
               <a href="#">جديد</a>
@@ -82,19 +82,19 @@
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false;
-            ">
+                toggleMostSales = !toggleMostSales;
+                  toggleNew = false;
+                  toggleOffers = false;
+              ">
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
               class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;
-            ">
+                toggleOffers = !toggleOffers;
+                toggleNew = false;
+                  toggleMostSales = false;
+              ">
               <a href="#">عروض</a>
             </li>
           </ul>
@@ -102,13 +102,14 @@
       </div>
     </nav>
     <!-- Mobile SideBar -->
-    <nav class="flex md:hidden bg-white flex-col z-0">
+    <nav class=" flex md:hidden bg-white flex-col z-0  justify-center">
       <div class="container md:hidden flex justify-center items-center my-3">
         <img src="./assets/icons/ibest.svg" class="mx-2" width="90px" title="" alt="" />
       </div>
-      <!-- Mobile Search -->
-      <div class="flex items-center justify-center relative md:hidden w-[100%] my-4 ">
-        <div class="flex items-center gap-2 w-[80%] border-none  bg-[#F2F4F4] p-3 rounded-xl ml-2 ">
+      <div class="flex justify-center items-center flex-col mx-10 ">
+        <!-- Mobile Search -->
+        <div
+          class="flex items-center justify-center relative md:hidden my-3 border-none bg-[#F2F4F4] p-3 rounded-xl w-full ">
           <input type="text"
             class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
             placeholder="البحث" />
@@ -118,37 +119,33 @@
               clip-rule="evenodd" />
           </svg>
         </div>
+        <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full ">
+          <a href="index.html" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative  active">
+            المتجر
+          </a>
+          <button @click="
+                  toggleNew = !toggleNew;
+                  toggleOffers = false;
+                  toggleMostSales = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            جديد
+
+            <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+          </button>
+          <button @click="
+                toggleMostSales = !toggleMostSales;
+                    toggleNew = false;
+                    toggleOffers = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            الأكثر مبيعاً
+          </button>
+          <button @click="
+                  toggleOffers = !toggleOffers;
+                  toggleNew = false;
+                    toggleMostSales = false;" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+            عروض
+          </button>
+        </div>
       </div>
 
-      <div class="bg-white text-center flex justify-center">
-        <a href="index.html"
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative active">
-          المتجر
-        </a>
-        <button @click="
-              toggleNew = !toggleNew;
-              toggleOffers = false;
-              toggleMostSales = false; "
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          جديد
-
-          <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
-        </button>
-        <button @click="
-            toggleMostSales = !toggleMostSales;
-                toggleNew = false;
-                toggleOffers = false; "
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          الأكثر مبيعاً
-        </button>
-        <button @click="
-              toggleOffers = !toggleOffers;
-              toggleNew = false;
-                toggleMostSales = false;"
-          class="text-[#00A3A0] sm:px-4 px-2 flex cursor-pointer rounded-lg mx-1 py-2 relative">
-          عروض
-        </button>
-      </div>
     </nav>
   </header>
   <!-- list of links -->
@@ -298,77 +295,84 @@
     <!-- Products -->
     <section class="flex flex-wrap justify-start max-md:justify-center my-5">
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5">
           <img loading="lazy" src="./assets/imgs/Samsunge.png" width="55%" title="" alt="Samsunge.png" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">سامسونج</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/huawei.png" width="55%" title="" alt="huawei" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">هواوي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/LT.png" width="55%" title="" alt="LT.png" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">ال تي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/Xiaomi.png" width="55%" title="" alt="huawei" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">شاومي & ردمي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/huawei.png" width="55%" title="" alt="huawei" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">هواوي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/Xiaomi.png" width="55%" title="" alt="huawei" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">شاومي & ردمي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
           title="" alt="" />
       </a>
       <a href="./parts.html" title=""
-        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none border-[1px] border-gray-100 p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
+        class="card md:w-[274px] md:h-[274px] w-full bg-base-100 md:py-5 md:border-none p-3 flex md:flex-col justify-between flex-row items-center mt-3 ml-[15px] cursor-pointer max-md:rounded-3xl max-[1279px]:mx-auto ">
         <figure class="md:w-full md:h-[200px] max-md:w-[50%] md:mt-5 ">
           <img loading="lazy" src="./assets/imgs/huawei.png" width="55%" title="" alt="huawei" />
         </figure>
-        <div class="card-body md:border-none border-r-2 md:mx-0 mx-3 border-gray-600 rounded-sm max-md:w-[50%]">
+        <div
+          class="card-body md:border-none border-r-[1px] md:mx-0 mx-3 border-gray-300 max-md:rounded-none rounded-sm max-md:w-[50%]">
           <h2 class="font-bold md:text-xl">هواوي</h2>
         </div>
         <img loading="lazy" src="./assets/icons/leftArrow.svg" class="md:self-end self-center m-3 max-sm:hidden"
@@ -464,7 +468,7 @@
         </nav>
         <div class="grid grid-flow-row gap-11 max-md:w-full ">
           <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
-            <h6 class="font-bold text-2xl max-md:text-xl">
+            <h6 class="font-bold text-2xl max-md:text-xl max-sm:text-lg ">
               كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h6>
             <div x-data="{ isInputFocused: false }" class="grid grid-cols-6 gap-3 my-3">
@@ -517,9 +521,11 @@
       </div>
       <div class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white">
         <nav class="md:place-self-center md:justify-self-start" x-data="{ currentYear: new Date().getFullYear() }">
-          <div class="grid grid-flow-col gap-2 text-base">
+          <div class="grid grid-flow-col gap-2 text-base  max-sm:flex max-sm:text-sm ">
             جميع الحقوق محفوظة &copy; <span x-text="currentYear"></span> مجموعة السيفي
           </div>
+          <div class="grid grid-flow-col gap-2 text-base  max-sm:text-sm">
+            صمم بحب في بلاتفورم | Platform 💙</div>
         </nav>
         <nav class=" md:place-self-center md:justify-self-end max-sm:hidden">
           <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
@@ -527,37 +533,36 @@
       </div>
     </div>
   </footer>
-  <main class="container mx-auto px-10 my-8 transition ease-linear duration-500 " </main>
-    <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/swiper.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
-    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-      document.querySelectorAll(".card").forEach(function (card) {
-        VanillaTilt.init(card, {
-          max: 7,
-          speed: 300,
-        });
+  <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    document.querySelectorAll(".card").forEach(function (card) {
+      VanillaTilt.init(card, {
+        max: 7,
+        speed: 300,
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>

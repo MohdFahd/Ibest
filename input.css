@@ -7,5 +7,5 @@
 @tailwind utilities;
 
 .active {
-  @apply bg-[#00A3A0] py-2 px-7 rounded-xl text-white;
+  @apply bg-[#00A3A0] py-2 px-5 rounded-xl text-white;
 }
