@@ -58,22 +58,22 @@
               class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none "
               placeholder="البحث" />
             <div
-              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              class="bg-secondary rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
               <img src="./assets/icons/search.svg" title="" alt="" />
             </div>
           </div>
         </div>
         <div class=" flex justify-center max-md:hidden">
-          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          <div class="bg-gradient-to-r from-secondary to-primary w-[730px] h-[90px] rounded-2xl  ">
           </div>
         </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
-            <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
+            <li class="active text-xl px-4 mx-2 hover:bg-secondary hover:text-white text-[#AAAAAA]">
               <a href="index.html">المتجر</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleNew = !toggleNew;
                 toggleOffers = false;
@@ -83,7 +83,7 @@
               <a href="#">جديد</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleMostSales = !toggleMostSales;
                   toggleNew = false;
@@ -92,7 +92,7 @@
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleOffers = !toggleOffers;
                 toggleNew = false;
@@ -123,13 +123,13 @@
           </svg>
         </div>
         <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full ">
-          <a href="index.html" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative  active">
+          <a href="index.html" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative  active">
             المتجر
           </a>
           <button @click="
                   toggleNew = !toggleNew;
                   toggleOffers = false;
-                  toggleMostSales = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                  toggleMostSales = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             جديد
 
             <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
@@ -137,13 +137,13 @@
           <button @click="
                 toggleMostSales = !toggleMostSales;
                     toggleNew = false;
-                    toggleOffers = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleOffers = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             الأكثر مبيعاً
           </button>
           <button @click="
                   toggleOffers = !toggleOffers;
                   toggleNew = false;
-                    toggleMostSales = false;" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleMostSales = false;" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             عروض
           </button>
         </div>
@@ -159,11 +159,11 @@
       x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
       class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 z-[-100] ">
       <a href="newes.html"
-        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
+        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-secondary">
         شاشات
         <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
       </a>
-      <div class="border-l-2 border-[#00A3A0]"></div>
+      <div class="border-l-2 border-secondary"></div>
       <a href="newes.html"
         class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
         قطع</a>
@@ -211,7 +211,7 @@
 
   <main class="container mx-auto px-10 my-8">
     <!-- Path -->
-    <div class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold items-center text-center  ">
+    <div class="flex justify-start text-sm sm:text-lg text-secondary font-bold items-center text-center  ">
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
       <a href="./index.html"> المتجر </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
@@ -324,8 +324,8 @@
                 x-on:blur="isInputFocused = false"
                 class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none " />
               <button
-                class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none hover:bg-[#1458A1]"
-                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-[#00A3A0]': !isInputFocused }"
+                class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
+                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-secondary': !isInputFocused }"
                 x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
                 x-on:click="isInputFocused = false">
               </button>
@@ -356,12 +356,12 @@
 
         <nav class="mt-6 flex flex-col justify-center items-center max-md:w-full">
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
             <h2>App store</h2>
           </a>
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/android.svg" class="me-3" title="" alt="" />
             <h2>Google Play</h2>
           </a>

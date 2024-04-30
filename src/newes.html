@@ -58,22 +58,22 @@
               class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none "
               placeholder="البحث" />
             <div
-              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              class="bg-secondary rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
               <img src="./assets/icons/search.svg" title="" alt="" />
             </div>
           </div>
         </div>
         <div class=" flex justify-center max-md:hidden">
-          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          <div class="bg-gradient-to-r from-secondary to-primary w-[730px] h-[90px] rounded-2xl  ">
           </div>
         </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
-            <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
+            <li class="active text-xl px-4 mx-2 hover:bg-secondary hover:text-white text-[#AAAAAA]">
               <a href="index.html">المتجر</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleNew = !toggleNew;
                 toggleOffers = false;
@@ -83,7 +83,7 @@
               <a href="#">جديد</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleMostSales = !toggleMostSales;
                   toggleNew = false;
@@ -92,7 +92,7 @@
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleOffers = !toggleOffers;
                 toggleNew = false;
@@ -123,13 +123,13 @@
           </svg>
         </div>
         <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full ">
-          <a href="index.html" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative  active">
+          <a href="index.html" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative  active">
             المتجر
           </a>
           <button @click="
                   toggleNew = !toggleNew;
                   toggleOffers = false;
-                  toggleMostSales = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                  toggleMostSales = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             جديد
 
             <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
@@ -137,13 +137,13 @@
           <button @click="
                 toggleMostSales = !toggleMostSales;
                     toggleNew = false;
-                    toggleOffers = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleOffers = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             الأكثر مبيعاً
           </button>
           <button @click="
                   toggleOffers = !toggleOffers;
                   toggleNew = false;
-                    toggleMostSales = false;" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleMostSales = false;" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             عروض
           </button>
         </div>
@@ -159,11 +159,11 @@
       x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
       class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 z-[-100] ">
       <a href="newes.html"
-        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
+        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-secondary">
         شاشات
         <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
       </a>
-      <div class="border-l-2 border-[#00A3A0]"></div>
+      <div class="border-l-2 border-secondary"></div>
       <a href="newes.html"
         class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
         قطع</a>
@@ -215,11 +215,11 @@
       @click.away="toggle = false">
       <div class="flex justify-end items-end flex-col self-end justify-self-end cursor-pointer " x-bind:=""
         @click="toggle = !toggle">
-        <div class="flex bg-[#00A3A0] items-center p-3 rounded-2xl w-64 h-[50px] text-white "
+        <div class="flex bg-secondary items-center p-3 rounded-2xl w-64 h-[50px] text-white "
           x-bind:class="{ 'bg-white text-black font-bold shadow-md ': toggle }">
           <div
             class="ml-2 transition-transform ease-linear duration-300 w-[38px] h-[38px] delay-100  flex justify-center items-center  "
-            x-bind:class="{ 'transition ease-linear duration-300 bg-[#00A3A0] rounded-lg -translate-x-48 ' : toggle }">
+            x-bind:class="{ 'transition ease-linear duration-300 bg-secondary rounded-lg -translate-x-48 ' : toggle }">
             <img src="./assets/icons/filter.svg" alt="" class="">
           </div>
           <button class="font-bold  transition-transform text-lg font-bold " tabindex="0" role="button"
@@ -236,15 +236,15 @@
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
         <li
-          class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg cursor-pointer "
+          class="border-b-[1px] border-gray-300 p-2  hover:bg-primary hover:text-white hover:rounded-lg cursor-pointer "
           @click="buttonText = 'سامسونج'; toggle = !toggle">
           سامسونج </li>
         <li
-          class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg cursor-pointer "
+          class="border-b-[1px] border-gray-300 p-2  hover:bg-primary hover:text-white hover:rounded-lg cursor-pointer "
           @click="buttonText = 'شاومي'; toggle = !toggle">
           شاومي
         </li>
-        <li class=" p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg cursor-pointer "
+        <li class=" p-2  hover:bg-primary hover:text-white hover:rounded-lg cursor-pointer "
           @click="buttonText = 'ال جي'; toggle = !toggle">
           ال جي
         </li>
@@ -255,7 +255,7 @@
     <div class="flex items-end justify-end relative md:hidden w-[100%] mt-4 ">
       <div x-data="{ isOpen: false }" class="relative" @click.away="isOpen = false">
         <img loading="lazy" @click="isOpen = !isOpen" src="./assets/icons/filter.svg"
-          class="cursor-pointer  bg-[#00a3a0] p-3 rounded-xl  " title="" alt="" />
+          class="cursor-pointer  bg-secondary p-3 rounded-xl  " title="" alt="" />
         <ul tabindex="0"
           class="z-[1] menu p-2 shadow bg-base-100 rounded-box max-w-56 mt-3 absolute top-11 left-0 transition-transform duration-300  "
           x-show="isOpen" x-transition:enter="transition ease-out duration-300"
@@ -264,14 +264,14 @@
           x-transition:leave="transition ease-in duration-500"
           x-transition:leave-start="opacity-100 transform translate-y-0"
           x-transition:leave-end="opacity-0 transform translate-y-[-10%]">
-          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-primary hover:text-white hover:rounded-lg "
             @click="isOpen = false">
             سامسونج </li>
-          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg "
+          <li class="border-b-[1px] border-gray-300 p-2  hover:bg-primary hover:text-white hover:rounded-lg "
             @click="isOpen = false">
             شاومي
           </li>
-          <li class=" p-2  hover:bg-[#1458A1] hover:text-white hover:rounded-lg " @click="isOpen = false">
+          <li class=" p-2  hover:bg-primary hover:text-white hover:rounded-lg " @click="isOpen = false">
             ال جي
           </li>
         </ul>
@@ -396,8 +396,8 @@
                 x-on:blur="isInputFocused = false"
                 class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none " />
               <button
-                class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none hover:bg-[#1458A1]"
-                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-[#00A3A0]': !isInputFocused }"
+                class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
+                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-secondary': !isInputFocused }"
                 x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
                 x-on:click="isInputFocused = false">
               </button>
@@ -428,12 +428,12 @@
 
         <nav class="mt-6 flex flex-col justify-center items-center max-md:w-full">
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
             <h2>App store</h2>
           </a>
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/android.svg" class="me-3" title="" alt="" />
             <h2>Google Play</h2>
           </a>

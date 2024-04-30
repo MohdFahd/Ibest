@@ -235,3 +235,28 @@ textarea:focus {
 outline: none;
   border: none;
 }
+.rect {
+      margin-top: 30px;
+      position: absolute;
+      bottom: 100px;
+      margin: 0px !important;
+      padding: 0;
+      width: 200px;
+      height: 120px;
+      background-color: #78787c4d;
+
+      transform: translate(-40%, -40%);
+      pointer-events: none;
+
+      opacity: 1;
+    }
+
+    .zoom {
+      opacity: 0;
+      top: 10px;
+      border-radius: 30px;
+    }
+
+    .rect-active {
+      opacity: 1;
+    }

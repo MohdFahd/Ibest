@@ -5,7 +5,13 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+       colors: {
+        primary: '#1458A1',
+        secondary:'#00A3A0'
+     
+      },
+    },
     fontSize: {
       sm: '13px',
       base: '15px',

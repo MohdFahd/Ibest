@@ -42,33 +42,8 @@
   <!-- styles link -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    .rect {
-      margin-top: 30px;
-      position: absolute;
-      bottom: 100px;
-      margin: 0px !important;
-      padding: 0;
-      width: 200px;
-      height: 120px;
-      background-color: #78787c4d;
-
-      transform: translate(-40%, -40%);
-      pointer-events: none;
-
-      opacity: 1;
-    }
-
-    .zoom {
-      opacity: 0;
-      top: 10px;
-      border-radius: 30px;
-    }
-
-    .rect-active {
-      opacity: 1;
-    }
-  </style>
+  <!-- alpine.js -->
+  <script src="./assets/js/alpine.js"></script>
 </head>
 
 <body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false,showVideo:false, }">
@@ -84,22 +59,22 @@
               class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none "
               placeholder="البحث" />
             <div
-              class="bg-[#00A3A0] rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              class="bg-secondary rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
               <img src="./assets/icons/search.svg" title="" alt="" />
             </div>
           </div>
         </div>
         <div class=" flex justify-center max-md:hidden">
-          <div class="bg-gradient-to-r from-[#00A3A0] to-[#1458A1] w-[730px] h-[90px] rounded-2xl  ">
+          <div class="bg-gradient-to-r from-secondary to-primary w-[730px] h-[90px] rounded-2xl  ">
           </div>
         </div>
         <div class="justify-center py-5 hidden md:flex">
           <ul class="flex justify-end items-center">
-            <li class="active text-xl px-4 mx-2 hover:bg-[#00A3A0] hover:text-white text-[#AAAAAA]">
+            <li class="active text-xl px-4 mx-2 hover:bg-secondary hover:text-white text-[#AAAAAA]">
               <a href="index.html">المتجر</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleNew = !toggleNew;
                 toggleOffers = false;
@@ -109,7 +84,7 @@
               <a href="#">جديد</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleMostSales = !toggleMostSales;
                   toggleNew = false;
@@ -118,7 +93,7 @@
               <a href="#">الأكثر مبيعاً</a>
             </li>
             <li
-              class="text-xl text-[#AAAAAA] mx-2 hover:bg-[#00A3A0] hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
               @click="
                 toggleOffers = !toggleOffers;
                 toggleNew = false;
@@ -149,13 +124,13 @@
           </svg>
         </div>
         <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full ">
-          <a href="index.html" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative  active">
+          <a href="index.html" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative  active">
             المتجر
           </a>
           <button @click="
                   toggleNew = !toggleNew;
                   toggleOffers = false;
-                  toggleMostSales = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                  toggleMostSales = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             جديد
 
             <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
@@ -163,13 +138,13 @@
           <button @click="
                 toggleMostSales = !toggleMostSales;
                     toggleNew = false;
-                    toggleOffers = false; " class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleOffers = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             الأكثر مبيعاً
           </button>
           <button @click="
                   toggleOffers = !toggleOffers;
                   toggleNew = false;
-                    toggleMostSales = false;" class="text-[#00A3A0] flex cursor-pointer rounded-lg sm:ml-5 relative ">
+                    toggleMostSales = false;" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative ">
             عروض
           </button>
         </div>
@@ -185,11 +160,11 @@
       x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
       class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl  flex justify-center transition ease-in-out delay-150 max-md:border-t-4  border-gray-300 z-[-100] ">
       <a href="newes.html"
-        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-[#00A3A0]">
+        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-secondary">
         شاشات
         <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
       </a>
-      <div class="border-l-2 border-[#00A3A0]"></div>
+      <div class="border-l-2 border-secondary"></div>
       <a href="newes.html"
         class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
         قطع</a>
@@ -237,7 +212,7 @@
 
   <main class="container mx-auto px-10 my-8">
     <!-- Path -->
-    <div class="flex justify-start text-sm sm:text-lg text-[#00A3A0] font-bold items-center text-center  ">
+    <div class="flex justify-start text-sm sm:text-lg text-secondary font-bold items-center text-center  ">
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
       <a href="./index.html"> المتجر </a>
       <img src="./assets/icons/leftArrow.svg" class="mx-0 md:mx-2 max-sm:w-[5%] " lt="" />
@@ -253,7 +228,7 @@
     <!-- details -->
     <section class="my-5 flex bg-[#EFEFEF] rounded-3xl w-full p-4 relative max-md:flex-col max-[1024px]:flex-col z-50"
       x-data="{ img: 'S24.png',zoom: false }">
-      <h1 class="text-[22px] font-extrabold my-2 max-md:text-lg md:hidden text-[#1458A1] ">
+      <h1 class="text-[22px] font-extrabold my-2 max-md:text-lg md:hidden text-primary ">
         شاشات داخلية جلاكسي S24
       </h1>
       <div class="flex flex-row-reverse max-md:flex-col max-[1024px]:justify-end">
@@ -286,7 +261,7 @@
           </button>
         </div>
       </div>
-      <div class="zoom absolute top-0 left-2 text-3xl text-[#1458A1] text-start z-10 max-md:hidden p-3 font-bold"
+      <div class="zoom absolute top-0 left-2 text-3xl text-primary text-start z-10 max-md:hidden p-3 font-bold"
         x-show="zoom" style="background-image: url('./assets/imgs/phoneVersions/S24.png');" id="zoom">
         معاينة
       </div>
@@ -298,13 +273,13 @@
           <p class="text-lg font-bold mt-6 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-base font-bold mt-3 text-[#1458A1] ">
+          <h2 class="text-base font-bold mt-3 text-primary ">
             الموديلات المتوافقه
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-base font-bold mt-3 text-[#1458A1] ">
+          <h2 class="text-base font-bold mt-3 text-primary ">
             الملاحظات
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
@@ -315,60 +290,62 @@
         <div class="flex justify-center md:justify-end w-full max-md:flex-col-reverse max-md:mt-3 "
           x-data="{ showForm: false,showNotification:false }">
           <button
-            class="btn bg-transparent shadow-none border-none outline-none text-[#00A3A0] rounded-xl px-6 text-lg mx-3 max-md:my-1"
+            class="btn bg-transparent shadow-none border-none outline-none text-secondary rounded-xl px-6 text-lg mx-3 max-md:my-1"
             @click="showVideo = !showVideo">
-            <img src="./assets/icons/youtube-watch.svg" class="mx-2" alt="" />
             فيديو توضيحي
+            <img src="./assets/icons/youtube-watch.svg" class="mx-2" alt="" />
           </button>
-          <button class="btn bg-[#00A3A0] text-white rounded-xl px-6 text-lg mx-3 hover:bg-[#1458A1] "
+          <button class="btn bg-secondary text-white rounded-xl px-6 text-lg mx-3 hover:bg-primary "
             @click="showForm = true">
-            <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
             إضافة للطلب
+            <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
           </button>
           <!-- Open the modal using ID.showModal() method -->
           <dialog id="my_modal_2" class="modal bg-black bg-opacity-50 " x-bind:open="showForm">
             <div class="modal-box bg-[#F9F9F9]">
               <form action="" class=" w-full grid gap-2">
                 <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]"> الاسم الاول </label>
+                  <label for="" class="text-primary"> الاسم الاول </label>
                   <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id=""
                     placeholder="ضع اسمك الأول" required />
                 </div>
                 <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]">الاسم الاخير </label>
+                  <label for="" class="text-primary">الاسم الاخير </label>
                   <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
                     placeholder="ضع اسمك الأخير" />
                 </div>
                 <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]">اسم المحل</label>
+                  <label for="" class="text-primary">اسم المحل</label>
                   <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
                     placeholder="السيفي ستور " />
                 </div>
                 <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]">المدينة</label>
+                  <label for="" class="text-primary">المدينة</label>
                   <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
                     placeholder="اليمن - صنعاء" />
                 </div>
                 <div class="flex flex-col my-2 col-span-12 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]">العنوان</label>
+                  <label for="" class="text-primary">العنوان</label>
                   <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
                     placeholder="صنعاء - شارع الستين الغربي" />
                 </div>
                 <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]"> الهاتف </label>
+                  <label for="" class="text-primary"> الهاتف </label>
                   <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}"
                     minlength="9" maxlength="9" placeholder="770000000" required />
                 </div>
                 <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
-                  <label for="" class="text-[#1458A1]"> الكمية </label>
+                  <label for="" class="text-primary"> الكمية </label>
                   <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}"
                     minlength="9" maxlength="9" placeholder="الكمية" required />
                 </div>
               </form>
               <button
-                class="btn flex bg-[#1458A1] text-[#FFFFFF] col-span-5 px-10 lg:px-16 font-bold text-lg rounded-2xl hover:bg-[#1458A1] max-md:col-span-12 mx-3"
+                class="btn flex bg-primary text-[#FFFFFF] col-span-5 px-10 lg:px-16 font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 mx-3"
                 @click="showForm = false;showNotification = true; setTimeout(() => showNotification = false, 2000)">
-                طلب </button>
+                طلب
+                <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
+              </button>
             </div>
             <form method="dialog" class="modal-backdrop" x-on:click="showForm = false">
               <button>close</button>
@@ -407,7 +384,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#00A3A0] rounded-3xl -z-40 " x-show="showVideo"
+    <section class="bg-secondary rounded-3xl -z-40 " x-show="showVideo"
       x-transition:enter="transition ease-out duration-500"
       x-transition:enter-start="opacity-0 transform translate-y-[-50%]"
       x-transition:leave="transition ease-in duration-500"
@@ -416,13 +393,13 @@
         <img src="./assets/icons/close.svg" class="absolute top-0 right-0 bg-white rounded-full cursor-pointer"
           @click="showVideo = false" alt="">
       </div>
-      <iframe class="w-full rounded-3xl" height="500" src="https://www.youtube.com/embed/3hPoEmlBQdY" frameborder="0"
-        allowfullscreen></iframe>
+      <iframe class="w-full rounded-3xl h-[500px] max-md:h-[200px] " src="https://www.youtube.com/embed/3hPoEmlBQdY"
+        frameborder="0" allowfullscreen></iframe>
     </section>
 
     <div class="flex my-5 justify-center flex-row items-center ">
       <img src="./assets/icons/share.svg" class="max-md:hidden" alt="" />
-      <h2 class="text-lg text-[#1458A1] font-bold mx-2 max-md:hidden">
+      <h2 class="text-lg text-primary font-bold mx-2 max-md:hidden">
         مشاركة :
       </h2>
       <a href="" class="ml-2">
@@ -444,7 +421,7 @@
     </div>
     <!-- More -->
     <section class="mt-4">
-      <h2 class="text-xl font-bold text-[#1458A1] my-2">المزبد في :</h2>
+      <h2 class="text-xl font-bold text-primary my-2">المزبد في :</h2>
       <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./details.html"
           class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 max-[1279px]:mx-auto ">
@@ -517,8 +494,8 @@
                 x-on:blur="isInputFocused = false"
                 class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none " />
               <button
-                class="btn p-4 rounded-[10px] col-span-2 bg-[#00A3A0] text-[#FFFFFF] font-bold border-none hover:bg-[#1458A1]"
-                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-[#00A3A0]': !isInputFocused }"
+                class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
+                :class="{ 'bg-[#007bff]': isInputFocused, 'bg-secondary': !isInputFocused }"
                 x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
                 x-on:click="isInputFocused = false">
               </button>
@@ -549,12 +526,12 @@
 
         <nav class="mt-6 flex flex-col justify-center items-center max-md:w-full">
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
             <h2>App store</h2>
           </a>
           <a href="" title="" target=""
-            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-[#00A3A0]">
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/android.svg" class="me-3" title="" alt="" />
             <h2>Google Play</h2>
           </a>
@@ -678,8 +655,6 @@
       removeOpacity();
     })
   </script>
-  <!-- alpine.js -->
-  <script src="./assets/js/alpine.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.7/build/player/lottie.min.js"></script>
   <!-- Load and display animation -->
   <script>
@@ -688,7 +663,7 @@
       container: document.getElementById('lottie-container'),
       loop: true,
       autoplay: true,
-      path: './assets/check.json' // Replace 'your-animation.json' with the path to your JSON file
+      path: './assets/alerts/check.json' // Replace 'your-animation.json' with the path to your JSON file
     });
 
     document.getElementById('copyIcon').addEventListener('click', function () {
