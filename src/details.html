@@ -236,7 +236,7 @@
         <div class="pro-img-details mx-3 flex justify-center items-center max-md:justify-start relative picture "
           id="picture">
           <img x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-            x-bind:src="'./assets/imgs/phoneVersions/' + img" x-bind:="img" id="pic" @mouseenter="zoom = true"
+            x-bind:src="'./assets/imgs/phoneVersions/' + img" id="pic" @mouseenter="zoom = true"
             @mouseleave="zoom = false"
             class="w-[350px] h-[350px] max-md:w-full max-md:h-auto object-cover rounded-xl bg-white transition-opacity duration-500"
             alt="">
@@ -495,8 +495,9 @@
               <button
                 class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
                 :class="{ 'bg-[#007bff]': isInputFocused, 'bg-secondary': !isInputFocused }"
-                x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }" x-on:click="isInputFocused = false">
-                اشتراك</button>
+                x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
+                x-on:click="isInputFocused = false">
+              </button>
             </div>
           </nav>
           <nav class="self-end justify-self-center  ">
