@@ -61,7 +61,12 @@ textarea:focus {
   background: #1458a1;
   color: #fff;
 }
-
+.active{
+  background-color: #00A3A0;
+  padding: 8px 24px;
+  border-radius: 12px;
+  color: #fff;
+}
 .search-tag:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7454%)
     hue-rotate(221deg) brightness(103%) contrast(102%);
@@ -185,7 +190,6 @@ textarea:focus {
   just remove the comment,
   but I didn't like the transition :| */
 }
-
 .copy {
   box-sizing: border-box;
   width: var(--button-diameter);

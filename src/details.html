@@ -46,7 +46,8 @@
   <script src="./assets/js/alpine.js"></script>
 </head>
 
-<body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false,showVideo:false, }">
+<body class="bg-[#FEFEFE]"
+  x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false,showVideo:false,copy: 'نسخ' }">
   <header class="relative z-50 ">
     <nav class="bg-white drop-shadow-md">
       <div class="flex flex-col">
@@ -336,8 +337,8 @@
                 </div>
                 <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
                   <label for="" class="text-primary"> الكمية </label>
-                  <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}"
-                    minlength="9" maxlength="9" placeholder="الكمية" required />
+                  <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" min="1" value="1" id=""
+                    pattern="[0-9]{9}" minlength="9" maxlength="9" placeholder="الكمية" required />
                 </div>
               </form>
               <button
@@ -360,16 +361,14 @@
             </div>
           </dialog>
         </div>
-        <div class="absolute top-0 left-6 mt-3 max-md:hidden">
-          <button class="copy" id="copyIcon" class=" cursor-pointer bg-white ">
-            <svg xml:space="preserve" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20"
-              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              class="clipboard">
-              <g>
-                <path fill="currentColor"
-                  d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
-                </path>
-              </g>
+        <div class="absolute top-0 left-6 mt-3 max-md:hidden tooltip tooltip-top" x-bind:data-tip="copy"
+          x-on:click="copy = 'تم النسخ' " @click.away="copy = 'نسخ'">
+          <button class="copy " id="copyIcon">
+            <svg xml:space="preserve" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg" class="clipboard">
+              <path
+                d="M15.1667 7V7C16.8741 7 17.7278 7 18.409 7.25638C19.4871 7.66213 20.3379 8.51294 20.7436 9.591C21 10.2722 21 11.1259 21 12.8333V14.6C21 16.8402 21 17.9603 20.564 18.816C20.1805 19.5686 19.5686 20.1805 18.816 20.564C17.9603 21 16.8402 21 14.6 21H12.8333C11.1259 21 10.2722 21 9.591 20.7436C8.51294 20.3379 7.66213 19.4871 7.25638 18.409C7 17.7278 7 16.8741 7 15.1667V15.1667M7.4 15H8.6C10.8402 15 11.9603 15 12.816 14.564C13.5686 14.1805 14.1805 13.5686 14.564 12.816C15 11.9603 15 10.8402 15 8.6V7.4C15 5.15979 15 4.03968 14.564 3.18404C14.1805 2.43139 13.5686 1.81947 12.816 1.43597C11.9603 1 10.8402 1 8.6 1H7.4C5.15979 1 4.03968 1 3.18404 1.43597C2.43139 1.81947 1.81947 2.43139 1.43597 3.18404C1 4.03968 1 5.15979 1 7.4V8.6C1 10.8402 1 11.9603 1.43597 12.816C1.81947 13.5686 2.43139 14.1805 3.18404 14.564C4.03968 15 5.15979 15 7.4 15Z"
+                stroke="#1458A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             <svg xml:space="preserve" viewBox="0 0 24 24" y="0" x="0" height="18" width="18"
               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -421,7 +420,7 @@
     </div>
     <!-- More -->
     <section class="mt-4">
-      <h2 class="text-xl font-bold text-primary my-2">المزبد في :</h2>
+      <h2 class="text-xl font-bold text-primary my-2">المزيد في :</h2>
       <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./details.html"
           class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 max-[1279px]:mx-auto ">
@@ -478,7 +477,7 @@
     <div class="container">
       <div
         class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white  ">
-        <nav class="max-[1023px]:w-full">
+        <nav class="max-[1023px]:w-full ">
           <a class="link link-hover text-lg font-bold mt-4" href="index.html">الرئيسية</a>
           <a class="link link-hover text-lg font-bold mt-4" href="offers.html">العروض</a>
           <a class="link link-hover text-lg font-bold mt-4" href="Trend.html">الأكثر مبيعاً</a>
@@ -486,7 +485,7 @@
         </nav>
         <div class="grid grid-flow-row gap-11 max-md:w-full ">
           <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
-            <h6 class="font-bold text-2xl max-md:text-xl max-sm:text-lg ">
+            <h6 class="font-bold text-lg text-center max-md:text-xl max-sm:text-lg ">
               كُن أول من يعلم ليصلك كل جديد اولاً بأول
             </h6>
             <div x-data="{ isInputFocused: false }" class="grid grid-cols-6 gap-3 my-3">
@@ -502,7 +501,7 @@
             </div>
 
           </nav>
-          <nav class="self-end justify-self-center">
+          <nav class="self-end justify-self-center  ">
             <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
             <div class="flex">
               <img src="./assets/icons/line.svg" class="max-md:hidden" title="" alt="" />
@@ -524,7 +523,7 @@
           </nav>
         </div>
 
-        <nav class="mt-6 flex flex-col justify-center items-center max-md:w-full">
+        <nav class="mt-4 flex flex-col justify-center items-center max-md:w-full ">
           <a href="" title="" target=""
             class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
             <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
@@ -543,7 +542,7 @@
             جميع الحقوق محفوظة &copy; <span x-text="currentYear"></span> مجموعة السيفي
           </div>
           <div class="grid grid-flow-col gap-2 text-base  max-sm:text-sm">
-            صمم بحب في بلاتفورم | Platform 💙</div>
+            صمم بحب 💙 في بلاتفورم | Platform </div>
         </nav>
         <nav class=" md:place-self-center md:justify-self-end max-sm:hidden">
           <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
@@ -551,132 +550,10 @@
       </div>
     </div>
   </footer>
-  <script>
-    // main picture
-    var picture = document.querySelector('#pic');
-    // Main picture container
-    var mainContainer = document.querySelector('#picture');
 
-    // selector
-    var rect = document.querySelector("#rect");
-
-    // Zoom window
-    var zoom = document.querySelector('#zoom');
-
-    // list of pictures 
-
-    // Active side picture
-    let picActive = 1;
-
-    // Width and height of main picture in px
-    let w1 = mainContainer.offsetWidth;
-    let h1 = mainContainer.offsetHeight;
-
-    // Zoom ratio
-    let ratio = 3;
-
-    // Zoom window background-image size
-    zoom.style.backgroundSize = w1 * ratio + 'px ' + h1 * ratio + 'px';
-
-    // Coordinates of mouse cursor
-    let x, y, xx, yy;
-
-    // Width and height of selector
-    let w2 = rect.offsetWidth;
-    let h2 = rect.offsetHeight;
-
-    // zoom window width and height
-    zoom.style.width = w2 * ratio + 'px';
-    zoom.style.height = h2 * ratio + 'px';
-
-    // half of selector shows outside the main picture
-    // We need half of width and height
-    w2 = w2 / 2;
-    h2 = h2 / 2;
-    // moving the selector box 
-    function move(event) {
-      // How far is the mouse cursor from an element
-      // x how far the cursor from left of element
-      x = event.offsetX;
-      // y how far the cursor from the top of an element
-      y = event.offsetY;
-
-      xx = x - w2;
-      yy = y - h2;
-      // Keeping the selector inside the main picture
-      // left of picture
-      if (x < w2) {
-        x = w2;
-        // matching the zoom window with the selector
-        xx = 0;
-      }
-      // right of main picture
-      if (x > w1 - w2) {
-        x = w1 - w2;
-        xx = x - w2;
-      }
-      // top of main picture 
-      if (y < h2) {
-        y = h2;
-        yy = 0;
-      }
-      // bottom of main picture
-      if (y > h1 - h2) {
-        y = h1 - h2;
-      }
-
-      xx = xx * ratio;
-      yy = yy * ratio;
-      // changing the position of the selector
-      rect.style.left = x + 'px';
-      rect.style.top = y + 'px';
-      // changing background image of zoom window
-      zoom.style.backgroundPosition = '-' + xx + 'px ' + '-' + yy + 'px';
-    }
-
-    mainContainer.addEventListener('mousemove', function () {
-      move(event);
-      addOpacity();
-    })
-
-    // show selector
-    // show zoom window
-    function addOpacity() {
-      rect.classList.add('rect-active');
-      zoom.classList.add('rect-active');
-    }
-
-    // Hide the zoom window 
-    function removeOpacity() {
-      zoom.classList.remove('rect-active');
-    }
-
-    mainContainer.addEventListener('mouseout', function () {
-      removeOpacity();
-    })
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.7/build/player/lottie.min.js"></script>
-  <!-- Load and display animation -->
-  <script>
-    // Load animation JSON file
-    var animation = bodymovin.loadAnimation({
-      container: document.getElementById('lottie-container'),
-      loop: true,
-      autoplay: true,
-      path: './assets/alerts/check.json' // Replace 'your-animation.json' with the path to your JSON file
-    });
-
-    document.getElementById('copyIcon').addEventListener('click', function () {
-      var contentToCopy = document.querySelector('.copy-info'); // Select the div to copy its content
-      var range = document.createRange();
-      range.selectNode(contentToCopy);
-      window.getSelection().removeAllRanges(); // Clear previous selections
-      window.getSelection().addRange(range); // Add range to selection
-      document.execCommand('copy'); // Copy the selected content to clipboard
-      window.getSelection().removeAllRanges(); // Clear selection after copying
-    });
-
-  </script>
+  <!-- Script -->
+  <script src="./assets/js/lottie.min.js"></script>
+  <script src="./assets/js/mine.js"></script>
 </body>
 
 </html>
