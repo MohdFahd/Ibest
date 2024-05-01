@@ -52,9 +52,9 @@
     <nav class="bg-white drop-shadow-md">
       <div class="flex flex-col">
         <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10  ">
-          <div>
+          <a href="./index.html">
             <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
-          </div>
+          </a>
           <div class="mt-[26px] relative cursor-pointer">
             <input type="text"
               class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none "
@@ -271,16 +271,16 @@
           <h1 class="text-[22px] font-bold  max-md:text-lg max-md:hidden ">
             شاشات داخلية جلاكسي S24
           </h1>
-          <p class="text-lg font-bold mt-6 max-md:text-lg">
+          <p class="text-lg font-bold mt-5 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-base font-bold mt-3 text-primary ">
+          <h2 class="text-base font-bold mt-5 text-primary">
             الموديلات المتوافقه
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
             s24 ultra , s24 plus
           </p>
-          <h2 class="text-base font-bold mt-3 text-primary ">
+          <h2 class="text-base font-bold mt-5 text-primary ">
             الملاحظات
           </h2>
           <p class="text-lg font-bold mt-1 max-md:text-lg">
@@ -423,7 +423,7 @@
       <h2 class="text-xl font-bold text-primary my-2">المزيد في :</h2>
       <div class="flex flex-wrap justify-start max-md:justify-center ">
         <a href="./details.html"
-          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 max-[1279px]:mx-auto ">
+          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 min-[640px]:ml-auto min-[1024px]:mx-2  ">
           <div>
             <div class="rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
               <figure class="p-3">
@@ -436,7 +436,7 @@
           </div>
         </a>
         <a href="./details.html"
-          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 max-[1279px]:mx-auto ">
+          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 min-[640px]:ml-auto min-[1024px]:mx-2  ">
           <div>
             <div class="rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
               <figure class="p-3">
@@ -449,7 +449,7 @@
           </div>
         </a>
         <a href="./details.html"
-          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 max-[1279px]:mx-auto ">
+          class="flex flex-wrap justify-center cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-700 mx-2 my-2 min-[640px]:ml-auto min-[1024px]:mx-2  ">
           <div>
             <div class="rounded-3xl w-[274px] bg-[#EFEFEF] shadow-md">
               <figure class="p-3">
@@ -495,11 +495,9 @@
               <button
                 class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
                 :class="{ 'bg-[#007bff]': isInputFocused, 'bg-secondary': !isInputFocused }"
-                x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
-                x-on:click="isInputFocused = false">
-              </button>
+                x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }" x-on:click="isInputFocused = false">
+                اشتراك</button>
             </div>
-
           </nav>
           <nav class="self-end justify-self-center  ">
             <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
