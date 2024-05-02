@@ -248,7 +248,7 @@
             <span class="font-bold">www.alsaifiasa.com </span>
           </div>
         </div>
-        <div class="col-span-8 flex bg-[#F9F9F9] rounded-2xl p-7">
+        <div class="col-span-8 max-[1024px]:col-span-12 flex bg-[#F9F9F9] rounded-2xl p-7">
           <form action="" method="post" class="w-full grid gap-2">
             <div class="flex flex-col col-span-12 my-2">
               <label for="" class="text-primary">
@@ -285,11 +285,22 @@
               <textarea name="" id="" rows="5" class="rounded-lg py-2 px-2 bg-white mt-1"></textarea>
             </div>
 
-            <button
-              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12">
+            <!-- <button
+              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn hover:text-primary ">
               إرسال
               <img src="./assets/icons/send.svg" alt="" />
+            </button> -->
+            <button
+              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary ">
+              <span>إرسال
+              </span>
+              <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                  <img src="./assets/icons/send.svg" alt="" />
+                </div>
+              </div>
             </button>
+
           </form>
         </div>
       </div>
