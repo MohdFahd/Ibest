@@ -4368,6 +4368,26 @@ details.collapse summary::-webkit-details-marker {
     font-size: 17px;
   }
 
+  .md\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .md\:text-\[19px\] {
+    font-size: 19px;
+  }
+
+  .md\:text-\[21px\] {
+    font-size: 21px;
+  }
+
+  .md\:text-lg {
+    font-size: 16px;
+  }
+
+  .md\:text-sm {
+    font-size: 12px;
+  }
+
   .md\:shadow-md {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
