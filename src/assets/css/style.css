@@ -3539,10 +3539,6 @@ details.collapse summary::-webkit-details-marker {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.bg-\[url\(\'\.\.\/imgs\/phoneVersions\/S24\.png\'\)\] {
-  background-image: url('../imgs/phoneVersions/S24.png');
-}
-
 .from-secondary {
   --tw-gradient-from: #00A3A0 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 163 160 / 0) var(--tw-gradient-to-position);
@@ -3680,11 +3676,11 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .text-2xl {
-  font-size: 23px;
+  font-size: 22px;
 }
 
 .text-3xl {
-  font-size: 29px;
+  font-size: 28px;
 }
 
 .text-\[22px\] {
@@ -3692,19 +3688,19 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .text-base {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .text-lg {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .text-sm {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .text-xl {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .font-bold {
@@ -4157,19 +4153,19 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .max-md\:text-base {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .max-md\:text-lg {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .max-md\:text-sm {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .max-md\:text-xl {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .max-md\:hover\:text-primary:hover {
@@ -4232,11 +4228,11 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .max-sm\:text-lg {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .max-sm\:text-sm {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -4256,7 +4252,7 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .sm\:text-lg {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .min-\[640px\]\:ml-auto {
@@ -4361,7 +4357,7 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .md\:text-2xl {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .md\:text-\[20px\] {
@@ -4369,7 +4365,7 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .md\:text-xl {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .md\:shadow-md {

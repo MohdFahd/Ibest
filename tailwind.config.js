@@ -13,14 +13,14 @@ module.exports = {
       },
     },
     fontSize: {
-      sm: '13px',
-      base: '15px',
-      xl: '18px',
-      lg: '17px',
-      '2xl': '23px',
-      '3xl': '29px',
-      '4xl': '35px',
-      '5xl': '47px',
+      sm: '12px',
+      base: '14px',
+      xl: '17px',
+      lg: '16px',
+      '2xl': '22px',
+      '3xl': '28px',
+      '4xl': '34px',
+      '5xl': '46px',
     }
   },
   daisyui: {
