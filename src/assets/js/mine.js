@@ -17,47 +17,75 @@
       window.getSelection().removeAllRanges(); // Clear selection after copying
     });
 // The bellow code is for zooming in imgs details page
-    // main picture
-    var picture = document.querySelector('#pic');
-    // Main picture container
-    var mainContainer = document.querySelector('#picture');
+// main picture
+            var picture = document.querySelector('#pic');
 
-    // selector
-    var rect = document.querySelector("#rect");
+            // side pictures
+            var picture1 = document.querySelector('#pic1');
+            var picture2 = document.querySelector('#pic2');
+            var picture3 = document.querySelector('#pic3');
+            var picture4 = document.querySelector('#pic4');
+            var picture5 = document.querySelector('#pic5');
+            var picture6 = document.querySelector('#pic6');
 
-    // Zoom window
-    var zoom = document.querySelector('#zoom');
+            // Main picture container
+            var mainContainer = document.querySelector('#picture');
 
-    // list of pictures 
+            // selector
+            var rect = document.querySelector("#rect");
 
-    // Active side picture
-    let picActive = 1;
+            // Zoom window
+            var zoom = document.querySelector('#zoom');
 
-    // Width and height of main picture in px
-    let w1 = mainContainer.offsetWidth;
-    let h1 = mainContainer.offsetHeight;
+            // list of pictures 
+            picList = [picture1, picture2, picture3, picture4, picture5, picture6]
 
-    // Zoom ratio
-    let ratio = 3;
+            // Active side picture
+            let picActive = 1;
 
-    // Zoom window background-image size
-    zoom.style.backgroundSize = w1 * ratio + 'px ' + h1 * ratio + 'px';
+            // Add a boxshodow to the first piture (Current active picture)
+            picture1.classList.add('img-active');
 
-    // Coordinates of mouse cursor
-    let x, y, xx, yy;
+            // change image 
+            function changeImage(imgSrc, n) {
+                // This will change the main image
+                picture.src = imgSrc;
+                // This will change the background image of the zoom window
+                zoom.style.backgroundImage = "url(" + imgSrc + ")";
+                // removing box shodow from the previous active side picture
+                picList[picActive-1].classList.remove('img-active');
+                // Add box shodow to active side picture
+                picList[n-1].classList.add('img-active');
+                // update the active side picture 
+                picActive = n;
+            }
 
-    // Width and height of selector
-    let w2 = rect.offsetWidth;
-    let h2 = rect.offsetHeight;
 
-    // zoom window width and height
-    zoom.style.width = w2 * ratio + 'px';
-    zoom.style.height = h2 * ratio + 'px';
+            // Width and height of main picture in px
+            let w1 = mainContainer.offsetWidth;
+            let h1 = mainContainer.offsetHeight;
 
-    // half of selector shows outside the main picture
-    // We need half of width and height
-    w2 = w2 / 2;
-    h2 = h2 / 2;
+            // Zoom ratio
+            let ratio = 3;
+
+            // Zoom window background-image size
+            zoom.style.backgroundSize = w1 * ratio + 'px ' + h1 * ratio + 'px';
+
+            // Coordinates of mouse cursor
+            let x, y, xx, yy;
+
+            // Width and height of selector
+            let w2 = rect.offsetWidth;
+            let h2 = rect.offsetHeight;
+
+            // zoom window width and height
+            zoom.style.width = w2 * ratio + 'px';
+            zoom.style.height = h2 * ratio + 'px';
+
+            // half of selector shows outside the main picture
+            // We need half of width and height
+            w2 = w2/2;
+            h2 = h2/2;
     // moving the selector box 
     function move(event) {
       // How far is the mouse cursor from an element

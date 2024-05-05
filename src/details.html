@@ -236,8 +236,7 @@
         <div class="pro-img-details mx-3 flex justify-center items-center max-md:justify-start relative picture "
           id="picture">
           <img x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-            x-bind:src="'./assets/imgs/phoneVersions/' + img" id="pic" @mouseenter="zoom = true"
-            @mouseleave="zoom = false"
+            src='./assets/imgs/phoneVersions/S24.png' id="pic" @mouseenter="zoom = true" @mouseleave="zoom = false"
             class="w-[350px] h-[350px] max-md:w-full max-md:h-auto object-cover rounded-xl bg-white transition-opacity duration-500"
             alt="">
           <div class="rect max-md:hidden" id="rect"></div>
@@ -246,18 +245,22 @@
         <div class="flex flex-col items-center max-md:flex-row  max-md:justify-center max-md:my-2">
           <button class="max-md:mr-2" @click="img = 'S24_Black.png'">
             <img src=" ./assets/imgs/phoneVersions/S24_Black.png"
-              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1  " alt="">
+              class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1  " alt=""
+              id="pic1" onclick="changeImage('./assets/imgs/phoneVersions/S24_Black.png', 1)">
           </button>
           <button class="max-md:mr-2" @click="img = 'S24_Gold.png'">
-            <img src=" ./assets/imgs/phoneVersions/S24_Gold.png"
+            <img src=" ./assets/imgs/phoneVersions/S24_Gold.png" id="pic2"
+              onclick="changeImage(' ./assets/imgs/phoneVersions/S24_Gold.png', 2)"
               class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
           <button class="max-md:mr-2" @click="img = 'S24Gray.png'">
-            <img src="./assets/imgs/phoneVersions/S24Gray.png"
+            <img src="./assets/imgs/phoneVersions/S24Gray.png" id="pic3"
+              onclick="changeImage('./assets/imgs/phoneVersions/S24Gray.png', 3)"
               class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
           <button class="max-md:mr-2" @click="img = 'Samsung-Galaxy-S24-Ultra-Violet-PNG.png'">
-            <img src="./assets/imgs/phoneVersions/Samsung-Galaxy-S24-Ultra-Violet-PNG.png"
+            <img src="./assets/imgs/phoneVersions/Samsung-Galaxy-S24-Ultra-Violet-PNG.png" id="pic4"
+              onclick="changeImage('./assets/imgs/phoneVersions/Samsung-Galaxy-S24-Ultra-Violet-PNG.png', 4)"
               class="w-[80px] h-[80px] object-cover mx-sm:w-[65px] max-sm:h-[65px]  rounded-xl bg-white my-1 " alt="">
           </button>
         </div>
